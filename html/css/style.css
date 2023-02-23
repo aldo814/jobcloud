@@ -281,11 +281,13 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     
     /*footer*/
     #footer{margin-top: 40px;padding: 20px 0}
-    #footer .top{display: block;}
+    #footer .top{display: block;margin-bottom: 10px}
     #footer .top .logo{margin-bottom: 20px}
     #footer .top .info_menu li{margin-right: 10px}
     #footer .bottom span.bold{margin-right: 15px}
     #footer .bottom span{margin-right: 15px}
+    #footer .contact span{display: block;margin-bottom: 5px;}
+    #footer .contact span:last-child{margin-bottom: 0;}
 }
 
 
