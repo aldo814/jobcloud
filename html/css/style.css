@@ -221,8 +221,8 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     #header .header-nav .gnb{display: none}
     #header .header-nav{position: absolute;right: 30px;top: 20px;}
     #header .header-nav .all_menu .menu{margin-right: 0}
-    #header .header-nav .all_menu{border-right: 0;text-indent: -9999px;}
-    #header .header-nav .all_menu a{text-indent: -9999px;padding: 0;width: 15px;display: block;}
+    #header .header-nav .all_menu{border-right: 0;}
+    #header .header-nav .all_menu a{padding: 0;width: 15px;display: block;width: 15px;height: 17px;text-indent: -9999px;}
     #header .header-nav .all_menu:after{display: none;}
     #header .mega_menu #mega_gnb{display: block;height: calc(100vh - 207px);overflow-y: auto;}
     #header .mega_menu #mega_gnb > li + li{margin-left: 0;margin-top: 20px;}

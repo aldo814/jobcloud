@@ -7,11 +7,11 @@ $('.all_menu').click(function() {
 
         $('.gnb').mouseenter(function() {
             $('.all_menu').toggleClass('active');
-            $('.mega_menu').slideDown();
+            $('.mega_menu').slideDown(100);
         });
         $('.gnb').mouseleave(function() {
             $('.all_menu').toggleClass('active');
-            $('.mega_menu').slideUp();
+            $('.mega_menu').slideUp(100);
         });
 
 
