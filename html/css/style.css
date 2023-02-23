@@ -274,7 +274,7 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     
     /*뉴스레터*/
     .newsletter{padding: 30px 20px}
-    .newsletter .input_wrap input{width: calc(100% - 100px)}
+    .newsletter .input_wrap input{width: calc(100% - 100px);padding: 10px}
     .newsletter .input_wrap button{width: 100px}
     .newsletter .tit{font-size: 17px}
     .newsletter .desc{font-size: 14px}
