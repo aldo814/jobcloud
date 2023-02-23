@@ -2,7 +2,7 @@
         $(document).ready(function(){
 $('.all_menu').click(function() {
             $(this).toggleClass('active');
-            $('.mega_menu').slideToggle();
+            $('.mega_menu').slideToggle(100);
         });
 
         $('.gnb').mouseenter(function() {
