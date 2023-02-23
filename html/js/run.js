@@ -1,4 +1,5 @@
-    
+
+        $(document).ready(function(){
 $('.all_menu').click(function() {
             $(this).toggleClass('active');
             $('.mega_menu').slideToggle();
@@ -164,3 +165,5 @@ $('.all_menu').click(function() {
         $('.lecture_list .like').click(function() {
             $(this).toggleClass('active')
         });
+            
+            });
