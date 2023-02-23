@@ -221,14 +221,14 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     #header .header-nav .gnb{display: none}
     #header .header-nav{position: absolute;right: 30px;top: 20px;}
     #header .header-nav .all_menu .menu{margin-right: 0}
-    #header .header-nav .all_menu{border-right: 0;text-indent: -9999px;width: 15px;height: 17px;overflow: hidden}
-    #header .header-nav .all_menu a{text-indent: -9999px;padding: 0;width: 15px;}
+    #header .header-nav .all_menu{border-right: 0;text-indent: -9999px;}
+    #header .header-nav .all_menu a{text-indent: -9999px;padding: 0;width: 15px;display: block;}
     #header .header-nav .all_menu:after{display: none;}
     #header .mega_menu #mega_gnb{display: block;height: calc(100vh - 207px);overflow-y: auto;}
     #header .mega_menu #mega_gnb > li + li{margin-left: 0;margin-top: 20px;}
     .lock{overflow: hidden;width: 100%;height: 100vh;}
     #header .header-nav .all_menu.active{margin-top: 6px}
-    #header .header-nav .all_menu.active span{transition: all 0.5s}
+    #header .header-nav .all_menu.active span{transition:all 0.3s }
     #header .header-nav .all_menu.active span:nth-child(2){display: none}
     #header .header-nav .all_menu.active span:nth-child(1){transform: rotate(45deg);}
      #header .header-nav .all_menu.active span:nth-child(3){transform: rotate(-45deg);margin-top: -2px}
