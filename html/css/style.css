@@ -1,0 +1,145 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{text-decoration: none;color: inherit;}
+body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
+.inner{width: 1200px;margin: auto;}
+.hide{text-indent: -99999px;position: absolute;left: -99999px;overflow: hidden}
+
+/* 탑 배너 */
+.top_banner{background: #d6edff;position: relative;}
+.top_banner .inner{position: relative;}
+.top_banner a{position: absolute;display: block;right: 0;top: 50%;transform: translateY(-50%);}
+.top_banner a:after{content: '';display: inline-block;background: url(../images/close_btn.png) no-repeat;width: 12px;height: 12px;margin-left: 10px}
+
+/*header*/
+.util_wrap{display: flex;justify-content: flex-end;margin-top: 20px;}
+.util_wrap li{font-size: 14px;margin-right: 20px;padding-right: 20px;position: relative;}
+.util_wrap li:after{content: '';display: block;width: 1px;height: 14px;background: #dddddd;position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
+.util_wrap li:last-child{margin-right: 0;padding-right: 0}
+.util_wrap li:last-child:after{display: none}
+#header{position: relative;} 
+#header .logo{margin-top: 10px;}
+#header .logo img{display: block;}
+#header .header_top{padding: 10px 0 50px 0}
+#header .inner{position: relative}
+#header .search_wrap{border-bottom: 1px solid #7e7e7e;width: 380px;padding: 10px 0;display: flex;position: absolute;left: 50%;transform: translateX(-50%);bottom: 30px}
+#header .search_wrap input{border: 0;width: calc(100% - 20px)}
+#header .search_wrap input::placeholder{color: #cccccc;}
+#header .search_wrap button{display: block;background: url(../images/search_btn.png) no-repeat;width: 14px;height: 14px;border: 0;text-indent: -9999px;}
+#header .header-nav{border-top:1px solid #dddddd;border-bottom: 1px solid #dddddd }
+#header .header-nav a{font-size: 16px; }
+#header .header-nav .all_menu{border-right: 1px solid #ddd;position: relative;}
+#header .header-nav .all_menu a{display: flex;padding: 20px 60px 20px 0;}
+#header .header-nav .all_menu .menu{margin-right: 10px;margin-top: 1px}
+#header .header-nav .all_menu .menu span{width: 15px;height: 2px;background: #333;display: block;}
+#header .header-nav .all_menu .menu span:nth-child(2){width: 10px;margin: 5px 0}
+#header .header-nav .all_menu:after{content: '';display: block;background:  url(../images/menu_arrow.png) no-repeat;width: 12px;height: 7px;position: absolute;right: 30px;top: 50%;transform: translateY(-50%)}
+#header .header-nav .all_menu.active:after{transform: rotate(180deg);margin-top: -5px}
+#header .header-nav .inner{display: flex;}
+#header .header-nav .gnb{display: flex;}
+#header .header-nav .gnb li a{padding: 20px;display: block;}
+#header .header-nav .gnb_right{margin-left: auto}
+#header .mega_menu{position: absolute;background: #fff;width: 100%;z-index: 55;box-shadow: 0 10px 10px rgba(221, 221, 221, 0.26);display: none}
+#header .mega_menu #mega_gnb{display: flex;padding: 30px 0 50px 0}
+#header .mega_menu #mega_gnb > li + li{margin-left: 50px}
+#header .mega_menu #mega_gnb .tit{font-weight: 500;margin-bottom: 10px;color: #0082cc}
+#header .mega_menu #mega_gnb li ul li + li{margin-top: 5px}
+
+.visual {position: relative;}
+/* 메인 배너 */
+.visual_wrap{overflow: hidden;width: 1200px;padding-bottom: 20px;margin: auto;margin-bottom: 40px}
+.visual{margin: 30px 0}
+.visual .swiper-slide{border-radius: 10px;overflow: hidden}
+.visual .swiper-slide img{display: block;border-radius: 10px;overflow: hidden}
+.swiper_bottom{background: #fff;width: 290px;position: absolute;bottom: -25px;left: 50px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);height: 50px;z-index: 222;border-radius: 10px;}
+.swiper_bottom .wrap-autoplay-control button{width:9px;height: 13px;cursor: pointer;border: 0;position: absolute;left: 30px;top: 50%;transform: translateY(-50%);border: 0;display: block;text-indent: -9999px;}
+.swiper_bottom .wrap-autoplay-control .swiper-button-pause{background: url(../images/stop_btn.png) no-repeat;}
+.swiper_bottom .wrap-autoplay-control .swiper-button-play{background: url(../images/play_btn.png) no-repeat center;display: none}
+.swiper_bottom .swiper-button-prev:after,
+.swiper_bottom .swiper-button-next:after{display: none}
+.swiper_bottom .swiper-button-prev,
+.swiper_bottom .swiper-button-next{width: 14px;height: 12px;top: 50%;transform: translateY(-50%);margin-top: 0}
+.swiper_bottom .swiper-button-prev{background: url(../images/mv_prev.png) no-repeat;left: 60px;}
+.swiper_bottom .swiper-button-next{background: url(../images/mv_next.png) no-repeat;left: 90px;right: auto}
+.swiper_bottom .swiper-pagination{width: 100px;position: absolute;left: auto;right: 50px;top: 50%;transform: translateY(-50%);height: 1px;}
+.swiper_bottom .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background: #1689cf }
+.swiper_bottom .swiper-counter{font-size: 13px;}
+.swiper_bottom .swiper-counter .count{color: #1689cf;position: absolute;right:157px;top: 50%;transform: translateY(-50%)}
+.swiper_bottom .total{position: absolute;right: 30px;top: 50%;transform: translateY(-50%)}
+
+.section{margin: 60px 0}
+.main_tit{font-size: 24px;font-weight: 600;margin-bottom: 20px}
+
+/* 인기 강좌 */
+.lecture_list{position: relative;}
+.lecture_list .lt_swiper-button-next,
+.lecture_list .lt_swiper-button-prev{width: 17px;height: 52px;text-indent: -9999px;position: absolute;top: 50%;transform: translateY(-50%);cursor: pointer}
+.lecture_list .lt_swiper-button-next{background: url(../images/slide_next.png) no-repeat;right: -50px;}
+.lecture_list .lt_swiper-button-prev{background: url(../images/slide_prev.png) no-repeat;left: -50px;}
+.lecture_list .swiper-button-disabled{opacity: 0.3}
+.lecture_list .swiper-container{overflow: hidden;padding-right: 9px}
+.lecture_list .item{border-radius: 10px;overflow: hidden;border: 1px solid #dddddd;}
+.lecture_list .item .img{height: 180px;position: relative;}
+.lecture_list .item a{display: block;width: 100%;height: 100%;}
+.lecture_list .item .img img{display: block;width: 100%;height: 100%;}
+.lecture_list .item .img .like{position: absolute;right: 20px;top: 20px;background: url(../images/like_btn.png) no-repeat;width: 20px;height: 17px;text-indent: -9999px;}
+.lecture_list .item .img .like.active{background: url(../images/like_btn_active.png) no-repeat;}
+.lecture_list .item .text{padding: 20px;position: relative}
+.lecture_list .item .text .state{display: inline-block;font-size: 12px;background: #ccc;padding: 5px 8px;color: #fff;border-radius: 5px;font-family: '굴림', 'Gulim';position: absolute;left: 20px;top: -10px}
+.lecture_list .item .text .state.blue{background: #0c92b9;}
+.lecture_list .item .text .state.orange{background: #b9510c}
+.lecture_list .item .text .state.green{background: #45b90c}
+.lecture_list .item .text .tit{font-size: 16px;line-height: 1.6;overflow: hidden;font-weight: 600;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.lecture_list .item .text ul{margin-top: 20px}
+.lecture_list .item .text ul li{font-size: 14px;color: #888888;padding-left: 25px;position: relative;}
+.lecture_list .item .text ul li + li{margin-top: 10px;}
+.lecture_list .item .text ul li.date:before{content: '';display: block;background: url(../images/date_ico.png) no-repeat;width: 16px;height: 16px;position: absolute;left: 0;top: 50%;transform: translateY(-50%)}
+.lecture_list .item .text ul li.name:before{content: '';display: block;background: url(../images/name_ico.png) no-repeat;width: 16px;height: 16px;position: absolute;left: 0;top: 50%;transform: translateY(-50%)}
