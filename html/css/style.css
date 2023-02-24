@@ -119,6 +119,7 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
 .swiper_bottom .total{position: absolute;right: 30px;top: 50%;transform: translateY(-50%)}
 
 .section{margin: 60px 0}
+.mb40{margin-bottom: 40px}
 .main_tit{font-size: 24px;font-weight: 600;}
 
 /* 인기 강좌 */
