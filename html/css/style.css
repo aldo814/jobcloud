@@ -192,7 +192,7 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
 .newsletter .input_wrap{display: flex;}
 .newsletter .input_wrap input{font-family: 'Noto sans KR';border: 0;height: 40px;padding: 20px 15px;box-sizing: border-box;border-radius: 5px;width: 500px;margin-right: 10px;}
 .newsletter .input_wrap input::placeholder{color: #dddddd;}
-.newsletter .input_wrap  button{background: #2b45ca;color: #fff;font-weight: 500;font-family: 'Noto Sans Kr';width: 150px;border-radius: 5px;border: 0}
+.newsletter .input_wrap  button{background: #2b45ca;color: #fff;font-weight: 500;font-family: 'Noto Sans Kr';width: 150px;border-radius: 5px;border: 0;cursor: pointer}
 
 /* footer */
 #footer{background: #f6f6f6;margin-top:60px;border-top:1px solid #dddddd;padding:  40px 0;color: #484848;font-size: 14px}
