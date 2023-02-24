@@ -289,7 +289,8 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     #footer .top .info_menu{font-size: 12px}
     #footer .top .info_menu li{margin-right: 5px}
     #footer .bottom span.bold{margin-right: 10px}
-    #footer .bottom span{margin-right: 15px}
+    #footer .bottom span{margin-right: 10px}
+    #footer .bottom .name{display: block;margin-bottom: 10px}
     #footer .contact span{display: block;margin-bottom: 10px;}
     #footer .contact span:last-child{margin-bottom: 0;}
 }
