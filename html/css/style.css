@@ -149,7 +149,7 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
 .lecture_list .item .text ul li.name:before{content: '';display: block;background: url(../images/name_ico.png) no-repeat;width: 16px;height: 16px;position: absolute;left: 0;top: 50%;transform: translateY(-50%)}
 .lecture_list .item:hover,
 .lecture_list .item:active,
-.lecture_list .item:focus{margin-top: -0;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);transition: all 0.3s}
+.lecture_list .item:focus{margin-top: 5px;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);transition: all 0.3s}
 
 /* 리얼후기 */
 .review_area{position: relative;}
@@ -294,7 +294,8 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     #footer .bottom span{margin-right: 10px}
     #footer .bottom .name{display: block;margin-bottom: 10px}
     #footer .contact span{display: block;margin-bottom: 10px;}
-    #footer .contact span:last-child{margin-bottom: 0;}
+    #footer .contact span:last-child{margin-bottom: 0;word-break: keep-all}
+    
 }
 
 
