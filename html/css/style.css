@@ -70,10 +70,10 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
 #header .logo img{display: block;}
 #header .header_top{padding: 10px 0 50px 0}
 #header .inner{position: relative}
-#header .search_wrap{border-bottom: 1px solid #7e7e7e;width: 380px;padding: 10px 0;display: flex;position: absolute;left: 50%;transform: translateX(-50%);bottom: 30px}
-#header .search_wrap input{border: 0;width: calc(100% - 20px);font-family: 'Noto Sans KR'}
+#header .search_wrap{border-bottom: 1px solid #7e7e7e;width: 380px;padding: 10px 0;display: flex;position: absolute;left: 50%;transform: translateX(-50%);bottom: 30px;align-items: center}
+#header .search_wrap input{border: 0;width: calc(100% - 20px);font-family: 'Noto Sans KR';font-size: 16px}
 #header .search_wrap input::placeholder{color: #cccccc;}
-#header .search_wrap button{display: block;background: url(../images/search_btn.png) no-repeat;width: 14px;height: 14px;border: 0;text-indent: -9999px;}
+#header .search_wrap button{display: block;background: url(../images/search_btn.png) no-repeat;width: 14px;height: 14px;border: 0;text-indent: -9999px;cursor: pointer}
 #header .header-nav{border-top:1px solid #dddddd;border-bottom: 1px solid #dddddd }
 #header .header-nav a{font-size: 16px; }
 #header .header-nav .all_menu{border-right: 1px solid #ddd;position: relative;}
@@ -86,8 +86,11 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
 #header .header-nav .inner{display: flex;}
 #header .header-nav .gnb{display: flex;}
 #header .header-nav .gnb li a{padding: 20px;display: block;}
+#header .header-nav .gnb li a:hover,
+#header .header-nav .gnb li a:active,
+#header .header-nav .gnb li a:focus{font-weight: 500}
 #header .header-nav .gnb_right{margin-left: auto}
-#header .mega_menu{position: absolute;background: #fff;width: 100%;z-index: 555;box-shadow: 0 10px 10px rgba(221, 221, 221, 0.26);display: none}
+#header .mega_menu{position: absolute;background: #fff;width: 100%;z-index: 555;border-bottom: 1px solid #dddddd;display: none}
 #header .mega_menu #mega_gnb{display: flex;padding: 30px 0 50px 0;;z-index: 999}
 #header .mega_menu #mega_gnb > li + li{margin-left: 50px}
 #header .mega_menu #mega_gnb .tit{font-weight: 500;margin-bottom: 10px;color: #0082cc}
@@ -187,7 +190,7 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
 .newsletter .tit{font-size: 20px;font-weight: 500;}
 .newsletter .desc{margin: 20px 0}
 .newsletter .input_wrap{display: flex;}
-.newsletter .input_wrap input{font-family: 'Noto sans KR';border: 0;height: 40px;padding: 20px;box-sizing: border-box;border-radius: 5px;width: 500px;margin-right: 10px;}
+.newsletter .input_wrap input{font-family: 'Noto sans KR';border: 0;height: 40px;padding: 20px 15px;box-sizing: border-box;border-radius: 5px;width: 500px;margin-right: 10px;}
 .newsletter .input_wrap input::placeholder{color: #dddddd;}
 .newsletter .input_wrap  button{background: #2b45ca;color: #fff;font-weight: 500;font-family: 'Noto Sans Kr';width: 150px;border-radius: 5px;border: 0}
 
@@ -286,7 +289,7 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     #footer .top .info_menu li{margin-right: 10px}
     #footer .bottom span.bold{margin-right: 15px}
     #footer .bottom span{margin-right: 15px}
-    #footer .contact span{display: block;margin-bottom: 5px;}
+    #footer .contact span{display: block;margin-bottom: 10px;}
     #footer .contact span:last-child{margin-bottom: 0;}
 }
 
