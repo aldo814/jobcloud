@@ -55,6 +55,8 @@ body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .hide{text-indent: -99999px;position: absolute;left: -99999px;overflow: hidden}
 .tct{text-align: center;}
 .gray{color: #888}
+.blue{color: #0082cc}
+.bold{font-weight: 500}
 .mt20{margin-top: 20px}
 .f18{font-size: 18px}
 .f16{font-size: 16px}
@@ -63,6 +65,9 @@ body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .mt50{margin-top: 50px;}
 .green{color: #00c57d}
 .red{color: red}
+.tit_style01{font-size: 20px;text-align: center;font-weight: 600}
+.btn_style01{font-size: 16px;padding: 10px 15px;border-radius: 5px;display: inline-block}
+.btn_style02{font-size: 14px;padding: 5px 15px;border-radius: 5px;display: inline-block;}
 
 /* 탑 배너 */
 .top_banner{background: #d6edff;position: relative;height: 50px}
@@ -145,8 +150,8 @@ body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .lecture_list .item .img{height: 180px;position: relative;}
 .lecture_list .item a{display: block;width: 100%;height: 100%;}
 .lecture_list .item .img img{display: block;width: 100%;height: 100%;}
-.lecture_list .item .img .like{position: absolute;right: 20px;top: 20px;background: url(../images/like_btn.png) no-repeat;width: 20px;height: 17px;text-indent: -9999px;border: 0;cursor: pointer;z-index: 55}
-.lecture_list .item .img .like.active{background: url(../images/like_btn_active.png) no-repeat;}
+.lecture_list .item .like{position: absolute;right: 20px;top: 20px;background: url(../images/like_btn.png) no-repeat;width: 20px;height: 17px;text-indent: -9999px;border: 0;cursor: pointer;z-index: 9999;}
+.lecture_list .item .like.active{background: url(../images/like_btn_active.png) no-repeat;}
 .lecture_list .item .text{padding: 20px;position: relative}
 .lecture_list .item .text .state{display: inline-block;font-size: 12px;background: #ccc;padding: 5px 8px;color: #fff;border-radius: 5px;font-family: '굴림', 'Gulim';position: absolute;left: 20px;top: -10px}
 .lecture_list .item .text .state.blue{background: #0c92b9;}
@@ -335,6 +340,71 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .pw_reset .id_find div{margin-bottom: 10px;}
 .pw_reset .id_find div:nth-child(3){margin-top: 30px}
 .pw_reset .id_find div label{font-size: 16px}
+
+/*.list_wrap*/
+.list_wrap{display: flex;margin-top: 60px;}
+.list_wrap .snb{width: 250px;margin-right: 50px;}
+.list_wrap .snb .tit{font-size: 20px;font-weight: bold;padding-bottom: 30px;border-bottom: 2px solid #000;}
+.list_wrap .snb ul li.active a{color: #0082cc;font-weight: 500}
+.list_wrap .snb ul li a{padding: 14px 10px;display: block;border-bottom: 1px solid #eaeaea;}
+.list_wrap .snb ul li a:hover,
+.list_wrap .snb ul li a:active,
+.list_wrap .snb ul li a:focus{color: #0082cc;font-weight: 500}
+.list_wrap .content{width: calc(100% - 300px);}
+
+/* 나의 강의실 */
+.mp_lecture hr{border: 0;border-bottom: 2px solid #dddddd;margin:30px 0} 
+.mp_lecture .mpl_top{display: flex;justify-content: space-between;margin-bottom: 60px;}
+.mp_lecture .mpl_top > .item{width: calc(50% - 10px);margin-right: 20px;;background: #f9fafc;border-radius: 10px;border: 1px solid #eaeaea;padding: 20px;}
+.mp_lecture .mpl_top > .item:last-child{margin-right: 0}
+.mp_lecture .mpl_top > .item .tit{margin-top: 10px;font-weight: 500;}
+.mp_lecture .mpl_top > .item .progress_top{display: flex;justify-content: space-between;margin-top: 66px;}
+.mp_lecture .mpl_top > .item .progress_area{height: 10px;border: 1px solid #dddddd;background: #fff;margin-top: 10px;border-radius: 10px;overflow: hidden;}
+.mp_lecture .mpl_top > .item .progress_area span{display: block;background: #00c57d;height: 100%;border-radius: 10px}
+.mp_lecture .mpl_top > .item .btn_wrap{margin-top: 30px;}
+.mp_lecture .mpl_top > .item ul {margin-top:30px; }
+.mp_lecture .mpl_top > .item ul li{display: flex;align-items: center;font-size: 14px;margin-bottom: 10px;}
+.mp_lecture .mpl_top > .item ul li strong{background: #ebeaea;padding: 8px 12px;border-radius: 5px;margin-right: 10px;}
+
+/* 탭메뉴 */
+
+.tabs ul {
+  width: 100%;
+  display:table;
+  table-layout: fixed;
+  padding:0
+}
+.tabs li {
+  display: table-cell;
+  background: #f6f7f9;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  border-bottom: 1px solid #222;
+  text-align: center;
+}
+.tabs li.active {
+  background: #fff;
+  border-top: 1px solid #222;
+  border-left: 1px solid #222;
+  border-right: 1px solid #222;
+  border-bottom: 0;
+}
+.tabs li.active a {
+  color: #0051a4;
+  font-weight: 500;
+}
+.tabs li a {
+  font-size: 14px;
+  color: #222;
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  text-decoration: none;color: #000
+}
+
+
 
 
 /* -----------반응형 start---------*/
