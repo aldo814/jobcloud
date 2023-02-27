@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잡클라우드</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <!--header-->
+
+    <div class="inner">
+        <ul class="util_wrap">
+            <li>
+                <a href="#">로그인</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+        <div class="inner header_top">
+            <h1 class="logo">
+                <img src="images/logo.png" alt="JOBCLOUD">
+            </h1>
+            <div class="search_wrap">
+                <label for="search" class="hide">검색</label>
+                <input type="text" id="search" placeholder="원하는 강좌를 찾아보세요.">
+                <button type="submit">검색</button>
+            </div>
+        </div>
+
+        <div class="header-nav">
+            <div class="inner">
+                <div class="all_menu">
+                    <a href="#">
+                        <div class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p>전체 카테고리</p>
+                    </a>
+                </div>
+                <ul class="gnb_left gnb">
+                    <li>
+                        <a href="#">온라인 과정</a>
+                    </li>
+
+                    <li>
+                        <a href="#">집합 과정</a>
+                    </li>
+                    <li>
+                        <a href="#">화상교육 과정</a>
+                    </li>
+                </ul>
+                <ul class="gnb_right gnb">
+                    <li>
+                        <a href="#">인사이트</a>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mega_menu">
+            <div class="inner">
+                <ul id="mega_gnb">
+                    <li>
+                        <p class="tit">온라인 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">화상교육 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                              <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                              <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--//header-->
+    <div class="join_form">
+        <h3 class="tit">회원가입</h3>
+        <div class="step_area">
+            <div class="item item01 active">
+                <span></span>
+                <div class="txt">
+                    <span>STEP1</span>
+                    <p>약관동의</p>
+                </div>
+            </div>
+            <div class="item item02">
+                <span></span>
+                <div class="txt">
+                    <span>STEP2</span>
+                    <p>정보입력</p>
+                </div>
+            </div>
+            <div class="item item03">
+                <span></span>
+                <div class="txt">
+                    <span>STEP3</span>
+                    <p>가입 완료</p>
+                </div>
+            </div>
+        </div>
+        <div class="all_agree">
+            <div>
+                <input type="checkbox" class="check" id="check1">
+                <label for="check1">전체 동의</label>
+            </div>
+        </div>
+        <div class="terms_area">
+            <p class="f18">이용약관(필수)</p>
+            <div class="terms_cont">
+                <p class="f14">이용약관 내용</p>
+            </div>
+            <div>
+                <input type="checkbox" class="check" id="check2">
+                <label for="check2">이용약관에 동의합니다.</label>
+            </div>
+        </div>
+        
+        <div class="terms_area">
+            <p class="f18">개인정보 수집 및 이용(필수) </p>
+            <div class="terms_cont">
+                <p class="f14">개인정보 수집 및 이용 내용</p>
+            </div>
+            <div>
+                <input type="checkbox" class="check" id="check3">
+                <label for="check3">개인정보 수집 및 이용 내용</label>
+            </div>
+        </div>
+        
+        <div class="terms_area">
+            <p class="f18">개인정보 제3자 제공 (필수)
+</p>
+            <div class="terms_cont">
+                <p class="f14">개인정보 제3자 제공 내용</p>
+            </div>
+            <div>
+                <input type="checkbox" class="check" id="check4">
+                <label for="check4">개인정보 제3자 제공에 동의합니다.
+</label>
+            </div>
+        </div>
+        
+        <div class="terms_area">
+            <p class="f18">마케팅 수신(선택)</p>
+            <div class="terms_cont">
+                <p class="f14">1. 수집항목 : 이메일, 휴대전화번호<br>
+2. 이용목적 : 마케팅 및 광고에 활용, 신규 서비스(제품) 개발 및 특화, 이벤트 등 광고성 정보 전달<br>
+3. 보유기간 : 별도 동의 철회 시 까지
+</p>
+            </div>
+            <ul class="check_wrap">
+                <li class="checks">
+                 <input type="checkbox" class="check" id="check5">
+                <label for="check5">이메일
+</label></li>
+           <li class="checks">
+                 <input type="checkbox" class="check" id="check6">
+                <label for="check6">문자메시지(SMS)
+</label></li>
+            </ul>
+        </div>
+        <p class="reference_mark f14 gray mt20">
+            위 선택 동의 항목에 동의하지 않으셔도 회원가입 및 서비스 이용이 가능합니다.<br>
+     다만, 상품 소개 및 이벤트 안내가 제한될 수 있습니다. 
+        </p>
+        <div class="join_btn">
+            <button type="button" class="gray_btn">취소</button>
+            <button type="button" class="blue_btn">다음 단계</button>
+        </div>
+    </div>
+    
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <img src="images/foot_logo.png" alt="JOBCLOUD">
+                </h1>
+                <ul class="info_menu">
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li class="bold">
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">제휴문의</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <span class="name bold">회사명</span>
+                <span>대표이사 : 홍길동</span>
+                <span>사업자등록번호 : 111-11-11111</span>
+                <p>서울시 구로구 디지털로 30길 31(구로동), 코오롱빌란트 2차 703호</p>
+                <div class="contact">
+                <span>대표전화 : 1577-1234</span>
+                <span>교육문의 : 1577-5678</span>
+                <span>이메일문의 : helpdesk@jobcloud.co.kr</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body></html>

@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.2;
 }
 ol, ul {
 	list-style: none;
@@ -52,6 +52,13 @@ a{text-decoration: none;color: inherit;}
 body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
 .inner{width: 1200px;margin: auto;}
 .hide{text-indent: -99999px;position: absolute;left: -99999px;overflow: hidden}
+.tct{text-align: center;}
+.gray{color: #888}
+.mt20{margin-top: 20px}
+.f18{font-size: 18px}
+.f16{font-size: 16px}
+.f14{font-size: 14px}
+.gray_box{background: #f5f5f5;padding: 15px 25px;border: 1px solid #dddddd;border-radius: 5px;}
 
 /* 탑 배너 */
 .top_banner{background: #d6edff;position: relative;height: 50px}
@@ -207,6 +214,61 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
 #footer .bottom p{margin: 10px 0}
 
 
+/*-- 회원가입 --*/
+.join_form{margin-top: 80px;max-width: 800px;width: calc(100% - 40px);margin-left: auto;margin-right: auto;}
+.join_form .tit{font-size: 24px;text-align: center;font-weight: bold}
+.join_form .step_area{display: flex;justify-content: center;margin-top: 60px;border-bottom: 1px solid #dddddd;margin-bottom: 30px;padding-bottom: 30px;}
+.join_form .step_area .item{padding:  20px;background: #fff;border: 1px solid #dddddd;;border-radius: 10px;display: flex;align-items: center;position: relative;margin-right: 150px;}
+.join_form .step_area .item > span{width: 45px;height: 45px;border-radius: 50%;border: 1px solid #dddddd;margin-right: 10px}
+.join_form .step_area .item .txt{color: #888;}
+.join_form .step_area .item .txt span{font-size: 12px;margin-bottom: 10px;display: block;}
+.join_form .step_area  .item:after{content: ''; display: block;width: 50px;height: 10px;border-bottom: 10px dotted #dddddd;position: absolute;right: -98px;}
+.join_form .step_area  .item:last-child{margin-right: 0}
+.join_form .step_area  .item:last-child:after{display: none}
+.join_form .step_area .item .txt p{font-size: 16px;font-weight: 500;}
+.join_form .step_area .item01 > span{background: url(../images/join_step_ico01.png) no-repeat center;}
+.join_form .step_area .item02 > span{background: url(../images/join_step_ico02.png) no-repeat center;}
+.join_form .step_area .item03 > span{background: url(../images/join_step_ico03.png) no-repeat center;}
+.join_form .step_area .item01.active > span{background: url(../images/join_step_ico01_active.png) no-repeat center #fff;}
+.join_form .step_area .item02.active > span{background: url(../images/join_step_ico02_active.png) no-repeat center #fff;}
+.join_form .step_area .item03.active > span{background: url(../images/join_step_ico03_active.png) no-repeat center #fff;}
+.join_form .step_area .item.active{border: 1px solid #fff;background: #00c57d}
+.join_form .step_area .item.active .txt{color: #fff;}
+/* check box css*/
+input[type=checkbox] + label { display: block;cursor: pointer;m}
+input[type=checkbox] {display: none;}
+input[type=checkbox] + label:before {content:'✔';border: 0.1em solid #dddddd;border-radius: 0.2em; display: inline-block;width: 20px;height: 20px; margin-right: 10px;vertical-align: bottom;color: transparent;transition: .2s;padding-left: 2px;box-sizing: border-box;vertical-align: middle;margin-top: -3px}
+input[type=checkbox]:checked + label:before {color: #0082cc;}
+
+.join_form .terms_area{margin-top: 30px;}
+.join_form .f18{margin-bottom: 10px;}
+.join_form .terms_cont{border: 1px solid #dddddd;padding: 10px;border-radius: 10px;height: 125px;overflow-y: auto;color: #888;margin-bottom: 15px;}
+.join_form .terms_area label{font-size: 14px;} 
+.join_form .terms_area .check_wrap{display: flex;}
+.join_form .terms_area .check_wrap li{margin-right: 50px;}
+.join_form .terms_area .check_wrap li:last-child{margin-right: 0}
+.join_form .reference_mark{position: relative;padding-left: 20px}
+.join_form .reference_mark:before{content: '\203B';display: block;position: absolute;left: 0;top: 0}
+.join_form .join_btn{text-align: center;margin-top: 60px;}
+.join_form .join_btn button{width: 100px;padding: 11px;border: 0;border-radius: 5px;font-size: 16px;margin-right: 10px;font-family: 'Noto Sans KR'}
+.join_form .join_btn button:last-child{margin-right: 0}
+.join_form .join_btn button.gray_btn{background: #dddddd;color: #888888;}
+.join_form .join_btn button.blue_btn{background: #0082cc;color: #fff}
+
+.join_form .input_area{padding: 0 14px}
+.join_form .input_area > .item{margin-bottom: 30px;}
+.join_form .input_area > .item:last-child{margin-bottom: 0}
+.join_form .input_area > .item *{display: block;}
+.join_form .input_area > .item label{font-size: 16px;margin-bottom: 5px;font-weight: 500}
+.join_form .input_area > .item input{border: 0;padding:10px 0;width: 100%;font-size: 16px;font-family: 'Noto Sans KR';border-bottom: 1px solid #eaeaea;}
+.join_form .input_area > .item input::placeholder{color: #cccccc;}
+.join_form .input_area > .item .f14{margin-top: 10px;}
+.join_form .input_area .id_wrap{display: flex;border-bottom: 1px solid #eaeaea;}
+.join_form .input_area .id_wrap input{border-bottom: 0}
+.join_form .input_area .id_wrap button{width: 80px;border-radius: 5px;height: 30px;background: #f8f8f8;color: #888888;font-size: 14px;border: 1px solid #ddd;font-family: 'Noto Sans KR'}
+.join_form .join_complete .f16{margin-top: 60px;line-height: 1.8;font-weight: 500}
+.join_form .join_complete .gray_box{display: inline-block;margin-top: 30px;}
+
 /* -----------반응형 start---------*/
 @media all and (max-width:1200px){
     .inner,.visual_wrap{width: calc(100% - 40px)}
@@ -240,9 +302,14 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     /*뉴스레터*/
     .newsletter{background-image: none;}
     
+    
+    /*-- 회원가입 --*/
+    .join_form{margin-top: 40px;}
 }
 
 @media all and (max-width:768px){
+    .f18{font-size: 16px}
+    .f16{font-size: 15px};
     /*header*/
     .util_wrap li{margin-right: 10px;padding-right: 10px;}
     .util_wrap li a{font-size: 13px}
@@ -296,9 +363,25 @@ body,html{font-family: 'Noto Sans KR', sans-serif;color: #333}
     #footer .contact span{display: block;margin-bottom: 10px;}
     #footer .contact span:last-child{margin-bottom: 0;word-break: keep-all}
     
+    
+    /*--회원가입--*/
+    .join_form .tit{font-size: 18px;}
+    .join_form .step_area{justify-content: space-between;margin-top: 30px;margin-bottom: 20px;padding-bottom: 20px;}
+    .join_form .step_area .item:after{display: none}
+    .join_form .step_area .item{margin-right: 20px;padding: 15px 10px;width: calc(33.333% - 13.333px)}
+    .join_form .step_area .item > span{width: 35px;height: 35px;}
+    .join_form .step_area .item .txt p{font-size: 14px;}
+    .join_form .join_btn{margin-top: 40px;}
+    .join_form .join_btn button{font-size: 14px;}
+    .join_form .input_area > .item label{font-size: 15px;}
+    .join_form .input_area > .item input{font-size: 15px;}
+    .join_form .join_complete .f16{margin-top: 40px;}
+    
 }
 
 
 @media all and (max-width:480px){
-    
+     /*--회원가입--*/
+    .join_form .step_area .item{display: block;text-align: center}
+    .join_form .step_area .item > span{display: inline-block;margin-bottom: 10px;margin-right: 0}
 }
