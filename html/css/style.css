@@ -366,6 +366,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
     
     /*--회원가입--*/
     .join_form .tit{font-size: 18px;}
+    .join_form .input_area{padding: 0}
     .join_form .step_area{justify-content: space-between;margin-top: 30px;margin-bottom: 20px;padding-bottom: 20px;}
     .join_form .step_area .item:after{display: none}
     .join_form .step_area .item{margin-right: 20px;padding: 15px 10px;width: calc(33.333% - 13.333px)}
