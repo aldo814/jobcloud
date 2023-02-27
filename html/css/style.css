@@ -456,7 +456,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
     .join_form .step_area .item > span{display: inline-block;margin-bottom: 10px;margin-right: 0}
     
      /* 로그인 */
-    .login_wrap{max-width: 100%;margin-top: 100px}
+    .login_wrap{max-width: 100%;margin-top: 40px}
     .login_wrap .logo_area{padding: 30px 20px}
     .login_wrap .logo_area img{width: 200px}
     .login_wrap .cont_area{padding: 30px 20px}
