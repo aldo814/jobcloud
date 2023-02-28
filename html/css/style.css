@@ -476,7 +476,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .notice_top .notice_search button{border: 0;}
 .notice_top .notice_search input{padding: 10px;font-size: 14px;}
 .notice_top .notice_search input::placeholder{color: #cccccc;}
-.notice_top .notice_search button{font-size: 14px;color: #888888;padding: 10px 15px;border-left: 1px solid #ddd;background: #eaeaea;height: 100%;cursor: pointer}
+.notice_top .notice_search button{font-size: 14px;color: #888888;padding: 0 15px;border-left: 1px solid #ddd;background: #eaeaea;height: 40px;cursor: pointer}
 
 /* 마이페이지 회원정보 */
 .input_style{border: 1px solid #eaeaea;padding: 5px 10px;font-size: 14px;box-sizing: border-box;border-radius: 0}
