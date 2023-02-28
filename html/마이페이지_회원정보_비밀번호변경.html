@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잡클라우드</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/run.js"></script>
+
+</head>
+
+<body>
+    <!--header-->
+
+    <div class="inner">
+        <ul class="util_wrap">
+            <li>
+                <a href="#">로그인</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+        <div class="inner header_top">
+            <h1 class="logo">
+                <img src="images/logo.png" alt="JOBCLOUD">
+            </h1>
+            <div class="search_wrap">
+                <label for="search" class="hide">검색</label>
+                <input type="text" id="search" placeholder="원하는 강좌를 찾아보세요.">
+                <button type="submit">검색</button>
+            </div>
+        </div>
+
+        <div class="header-nav">
+            <div class="inner">
+                <div class="all_menu">
+                    <a href="#">
+                        <div class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p>전체 카테고리</p>
+                    </a>
+                </div>
+                <ul class="gnb_left gnb">
+                    <li>
+                        <a href="#">온라인 과정</a>
+                    </li>
+
+                    <li>
+                        <a href="#">집합 과정</a>
+                    </li>
+                    <li>
+                        <a href="#">화상교육 과정</a>
+                    </li>
+                </ul>
+                <ul class="gnb_right gnb">
+                    <li>
+                        <a href="#">인사이트</a>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mega_menu">
+            <div class="inner">
+                <ul id="mega_gnb">
+                    <li>
+                        <p class="tit">온라인 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">화상교육 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--//header-->
+    <div class="container">
+        <div class="list_wrap">
+            <div class="snb">
+                <h3 class="tit">마이페이지</h3>
+                <ul>
+                    <li class="active">
+                        <a href="#">나의 강의실</a>
+                    </li>
+                    <li>
+                        <a href="#">활동 이력</a>
+                    </li>
+                    <li>
+                        <a href="#">회원정보</a>
+                    </li>
+                    <li>
+                        <a href="#">회원탈퇴</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3 class="tit_style01">회원 정보</h3>
+
+                <div class="table_style01 row_table">
+                    <table>
+                        <caption>회원정보</caption>
+                        <colgroup>
+                            <col style="width:180px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th colspan="row">이름</th>
+                                <td class="tlt f16">홍길동</td>
+                            </tr>
+                            <tr>
+                                <th colspan="row">아이디</th>
+                                <td class="tlt f16">kildong@hong.com</td>
+                            </tr>
+                            <tr>
+                                <th colspan="row">비밀번호</th>
+                                <td class="tlt">
+                                    <a href="#" class="gray_btn btn_style02">비밀번호 변경</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="row">연락처</th>
+                                <td class="tlt">
+                                    <div class="tel_input">
+                                        <label for="tel1" class="hide">첫번째 번호입력</label>
+                                        <input type="text" id="tel1" value="010" class="input_style">
+                                        <label for="tel2" class="hide">두번째 번호입력</label>
+                                        <input type="text" id="tel2" value="1234" class="input_style">
+                                        <label for="tel3" class="hide">세번째 번호입력</label>
+                                        <input type="text" id="tel3" value="5678" class="input_style">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="row">이메일</th>
+                                <td class="tlt">
+                                    <input type="text" class="input_style" value="hong.kildong@naver.com">
+                                    <p class="f12 reference_mark mt10">주로 사용하는 이메일 정보 기입 시 작성된 메일로 전달됩니다. </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="row">마케팅 수신동의</th>
+                                <td class="tlt">
+                                    <div>
+                                        <input type="checkbox" class="check" id="check1">
+                                        <label for="check1">마케팅 수신동의</label>
+                                    </div>
+                                    <p class="f12 reference_mark mt10">마케팅 수신동의를 거부하셔도 개인정보변경 및 수강독려 등의 광고성 정보를 제외한 정보에 대해서는 수신될 수 있습니다. </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="row">수신매체</th>
+                                <td class="tlt">
+                                    <ul class="check_wrap">
+                                        <li class="checks">
+                                            <input type="checkbox" class="check" id="check5">
+                                            <label for="check5">이메일
+                                            </label>
+                                        </li>
+                                        <li class="checks">
+                                            <input type="checkbox" class="check" id="check6">
+                                            <label for="check6">문자메시지(SMS)
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="btn_wrap">
+                    <a href="#" class="btn_style04 blue_btn">정보수정</a>
+                    <a href="#" class="btn_style04 gray_btn black">취소</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--팝업-->
+    <div class="shadow"></div>
+    <div class="popup pasPop">
+        <div class="pop_head">
+            <p> 비밀번호변경</p>
+            <a href="#" class="close_btn">닫기</a>
+        </div>
+        <div class="pop_cont pop_cont02">
+            <h3 class="pop_tit">비밀번호 변경</h3>
+            <div class="join_form">
+            <div class="input_area">
+               <div class="item">
+                    <label for="password1">현재 비밀번호</label>
+                    <input type="password" id="password1" placeholder="현재 비밀번호를 입력하세요.">
+                </div>
+                <div class="item">
+                    <label for="password2">변경 비밀번호</label>
+                    <input type="password2" id="password" placeholder="변경희망 비밀번호를 입력하세요.">
+                    <p class="f14 red">
+                        비밀번호 규칙에 맞지 않습니다.
+비밀번호는 영문, 숫자, 특수문자 조합으로 8자 이상을 권장합니다. 
+                    </p>
+                </div>
+                <div class="item">
+                    <label for="password3">비밀번호 확인</label>
+                    <input type="password" id="password3" placeholder="비밀번호를 확인합니다.">
+                    <p class="f14 green">
+                        사용가능한 비밀번호입니다.
+                    </p>
+                </div>
+</div>
+            </div>
+
+            <div class="btn_two">
+                <a href="#" class="blue_btn">비밀번호변경</a>
+                <a href="#" class="gray_btn">취소</a>
+            </div>
+        </div>
+    </div>
+    <!--//팝업-->
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <img src="images/foot_logo.png" alt="JOBCLOUD">
+                </h1>
+                <ul class="info_menu">
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li class="bold">
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">제휴문의</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <span class="name bold">회사명</span>
+                <span>대표이사 : 홍길동</span>
+                <span>사업자등록번호 : 111-11-11111</span>
+                <p>서울시 구로구 디지털로 30길 31(구로동), 코오롱빌란트 2차 703호</p>
+                <div class="contact">
+                    <span>대표전화 : 1577-1234</span>
+                    <span>교육문의 : 1577-5678</span>
+                    <span>이메일문의 : helpdesk@jobcloud.co.kr</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body></html>
