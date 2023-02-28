@@ -671,6 +671,7 @@ background: url(../images/select_arrow.png) no-repeat right 10px center;; border
     .tel_input input{width: calc(33.333% - 3.333px)}
     .input_style{max-width: 100%;}
     .m_show{display: block;}
+    .big_btn{font-size: 16px;padding: 10px 15px;}
 }
 
 
@@ -700,4 +701,8 @@ background: url(../images/select_arrow.png) no-repeat right 10px center;; border
     .notice_top .notice_search input{width: calc(100% - 80px)}
     
     .btn_wrap a{max-width: 100px;width: 80px;font-size: 14px;}
+    
+    .review_pop .rate_wrap{display: block;}
+    
+    .cert_pop .cert_area{margin-top: 20px;}
 }
