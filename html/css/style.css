@@ -548,6 +548,7 @@ background: url(../images/select_arrow.png) no-repeat right 10px center;; border
 @media all and (max-width:768px){
     .f18{font-size: 16px}
     .f16{font-size: 15px !important}
+    .mt50{margin-top: 30px;}
     /*header*/
     .util_wrap li{margin-right: 10px;padding-right: 10px;}
     .util_wrap li a{font-size: 13px}
@@ -692,7 +693,11 @@ background: url(../images/select_arrow.png) no-repeat right 10px center;; border
     .login_wrap .login_box .id{background-size: 18px;width: 25px;}
     .login_wrap .login_box .pw{background-size: 18px;width: 25px}
     .popup .pop_cont{padding: 20px 30px}
-    .pop_tit{font-size: 20px;}
+    .pop_tit{font-size: 18px;}
+    .id_find label,
+    .id_find input{font-size: 15px;}
+    .join_form .input_area .id_wrap button{width: 90px;}
+    
     
     /* 테이블 */
     .notice_top{display: block;}
