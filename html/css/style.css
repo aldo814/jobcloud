@@ -693,7 +693,7 @@ background: url(../images/select_arrow.png) no-repeat right 10px center;; border
     .login_wrap .login_box .pw{background-size: 18px;width: 25px}
     .popup .pop_cont{padding: 20px 30px}
     .popup .border{padding: 20px 0}
-    .popup .id_complete p{font-size: 14px;}
+    .popup .id_complete p{font-size: 14px;word-break: keep-all}
     .big_btn{font-size: 14px;}
     .pop_tit{font-size: 18px;}
     .id_find label,
