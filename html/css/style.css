@@ -492,9 +492,9 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .table_style01.row_table tr:nth-child(1){border-top: 1px solid #ccc}
 /* select box */
 .select_style {
-padding: 5px 40px 5px 15px; 
+padding: 5px 40px 5px 10px; 
 border: 1px solid #eaeaea;font-family: 'Noto Sans KR';
-background: url(../images/select_arrow.png) no-repeat right 15px center;; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none;appearance: none;box-sizing: border-box}
+background: url(../images/select_arrow.png) no-repeat right 10px center;; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none;appearance: none;box-sizing: border-box}
 .select_styleselect::-ms-expand {display: none;}
 
 /* 회원탈퇴 */
