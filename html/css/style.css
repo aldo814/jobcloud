@@ -499,7 +499,8 @@ background: url(../images/select_arrow.png) no-repeat right 10px center;; border
 
 /* 회원탈퇴 */
 .white_box{border: 1px solid #eaeaea;border-radius: 10px;padding: 20px;}
-.secession input{max-width: 229px;width: 100%;}
+.secession input,
+.secession select{max-width: 224px;width: 100%;}
 
 /* -----------반응형 start---------*/
 @media all and (max-width:1500px){
