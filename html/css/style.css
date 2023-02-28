@@ -689,14 +689,17 @@ background: url(../images/select_arrow.png) no-repeat right 10px center;; border
     .login_wrap .cont_area{padding: 30px 20px}
     .login_wrap .login_box input{font-size: 14px}
     .login_wrap .sub_area a{font-size: 13px}
-    .login_wrap .big_btn{font-size: 16px;}
     .login_wrap .login_box .id{background-size: 18px;width: 25px;}
     .login_wrap .login_box .pw{background-size: 18px;width: 25px}
     .popup .pop_cont{padding: 20px 30px}
+    .popup .border{padding: 20px 0}
+    .popup .id_complete p{font-size: 14px;}
+    .big_btn{font-size: 14px;}
     .pop_tit{font-size: 18px;}
     .id_find label,
     .id_find input{font-size: 15px;}
     .join_form .input_area .id_wrap button{width: 90px;}
+    .popup .btn_two a{font-size: 14px;padding: 10px;}
     
     
     /* 테이블 */
