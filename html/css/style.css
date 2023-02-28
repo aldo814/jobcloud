@@ -380,15 +380,15 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .mp_lecture .mpl_top > .item .progress_top{display: flex;justify-content: space-between;margin-top: 66px;}
 .mp_lecture .mpl_top > .item .progress_area{height: 10px;border: 1px solid #dddddd;background: #fff;margin-top: 10px;border-radius: 10px;overflow: hidden;}
 .mp_lecture .mpl_top > .item .progress_area span{display: block;background: #00c57d;height: 100%;border-radius: 10px}
-.mp_lecture .mpl_top > .item .btn_wrap{margin-top: 30px;}
+.mp_lecture .mpl_top > .item .btn_area{margin-top: 30px;}
 .mp_lecture .mpl_top > .item ul {margin-top:30px; }
 .mp_lecture .cont_list li{display: flex;align-items: center;font-size: 14px;margin-bottom: 10px;}
 .cont_list li strong{background: #ebeaea;padding: 8px 0;border-radius: 5px;margin-right: 10px;width: 78px;text-align: center;box-sizing: border-box}
 
 /* 탭메뉴 */
-.tabs{margin-bottom: 30px;}
-.tabs ul {width: 100%;display:table;table-layout: fixed;padding:0}
-.tabs li {display: table-cell;background: #fff;border-top: 1px solid #eaeaea;border-right: 1px solid #eaeaea;padding: 10px;border-bottom: 1px solid #0082cc;text-align: center;border-radius: 10px 10px 0 0  ;vertical-align: middle;word-break: keep-all}
+.tabs{margin-bottom: 30px;overflow-y: auto}
+.tabs ul {min-width: 100%;width: auto;display:table;table-layout: fixed;padding:0}
+.tabs li {display: table-cell;background: #fff;border-top: 1px solid #eaeaea;border-right: 1px solid #eaeaea;padding: 10px;border-bottom: 1px solid #0082cc;text-align: center;border-radius: 10px 10px 0 0  ;vertical-align: middle;word-break: keep-all;white-space: nowrap}
 .tabs li.active {background: #fff;border-top: 1px solid #0082cc;border-left: 1px solid #0082cc; border-right: 1px solid #0082cc;border-bottom: 0;}
 .tabs li.active a {color: #0082cc;font-weight: 500;}
 .tabs li a {font-size: 16px;color: #888888;display: block;width: 100%;height: 100%;vertical-align: middle}
@@ -476,7 +476,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .notice_top .notice_search button{border: 0;}
 .notice_top .notice_search input{padding: 10px;font-size: 14px;}
 .notice_top .notice_search input::placeholder{color: #cccccc;}
-.notice_top .notice_search button{font-size: 14px;color: #888888;padding: 10px 15px;border-left: 1px solid #ddd;}
+.notice_top .notice_search button{font-size: 14px;color: #888888;padding: 10px 15px;border-left: 1px solid #ddd;background: #eaeaea}
 
 /* 마이페이지 회원정보 */
 .input_style{border: 1px solid #eaeaea;padding: 5px 10px;font-size: 14px;box-sizing: border-box}
@@ -494,7 +494,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .select_style {
 padding: 5px 40px 5px 15px; 
 border: 1px solid #eaeaea;font-family: 'Noto Sans KR';
-background: url(../images/select_arrow.png) no-repeat right 15px center;; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none;appearance: none;}
+background: url(../images/select_arrow.png) no-repeat right 15px center;; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none;appearance: none;box-sizing: border-box}
 .select_styleselect::-ms-expand {display: none;}
 
 /* 회원탈퇴 */
@@ -631,7 +631,7 @@ background: url(../images/select_arrow.png) no-repeat right 15px center;; border
     .mp_lecture .mp_lecture_list .middle .cont_list > li{width: 100%;margin-right: 0;}
     .mp_lecture .mp_lecture_list .middle a{width: 100%;padding: 15px;box-sizing: border-box;font-size: 14px}
     .mp_lecture .mp_lecture_list .bottom{display: block;text-align: center;}
-    .mp_lecture .mp_lecture_list .bottom .f14{margin-bottom: 10px}
+    .mp_lecture .mp_lecture_list .bottom .f14{margin-bottom: 10px;word-break: keep-all}
     .paging{display: none}
     .m_paging{display: flex;}
     .check_wrap li{margin-right: 15px;}
