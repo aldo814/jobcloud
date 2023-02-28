@@ -473,7 +473,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .notice_top{display: flex;align-items: center;justify-content: space-between;margin-bottom: 30px;}
 .notice_top .notice_search{border: 1px solid #dddddd;border-radius: 10px;overflow: hidden;display: flex;}
 .notice_top .notice_search input,
-.notice_top .notice_search button{border: 0;}
+.notice_top .notice_search button{border: 0;height: 100%}
 .notice_top .notice_search input{padding: 10px;font-size: 14px;}
 .notice_top .notice_search input::placeholder{color: #cccccc;}
 .notice_top .notice_search button{font-size: 14px;color: #888888;padding: 10px 15px;border-left: 1px solid #ddd;background: #eaeaea}
