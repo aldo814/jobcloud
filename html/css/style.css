@@ -479,7 +479,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .notice_top .notice_search button{font-size: 14px;color: #888888;padding: 10px 15px;border-left: 1px solid #ddd;background: #eaeaea}
 
 /* 마이페이지 회원정보 */
-.input_style{border: 1px solid #eaeaea;padding: 5px 10px;font-size: 14px;box-sizing: border-box}
+.input_style{border: 1px solid #eaeaea;padding: 5px 10px;font-size: 14px;box-sizing: border-box;border-radius: 0}
 .tel_input{display: flex;}
 .tel_input input{width: 90px;text-align: center;margin-right: 5px;}
 /* 비밀번호변경 팝업*/
