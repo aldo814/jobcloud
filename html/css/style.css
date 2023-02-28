@@ -655,7 +655,7 @@ background: url(../images/select_arrow.png) no-repeat right 10px center;; border
     .table_style01.notice_table table .hit{display: none }
     .table_style01.notice_table table td{padding: 5px 0;text-align: left}
     .table_style01.notice_table table tr{padding: 10px;}
-    .table_style01.notice_table table .tit{font-weight: 500;font-size: 16px;}
+    .table_style01.notice_table table .tit{font-weight: 500;}
     .table_style01.notice_table table .date{color: #888}
     
     /*가로 테이블*/
