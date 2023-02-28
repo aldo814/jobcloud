@@ -161,7 +161,7 @@
                 <a href="#" class="link_join">회원가입</a>
                 <div class="look_box">
                     <a href="#">아이디 찾기</a>
-                    <a href="#">비밀번호 찾기</a>
+                    <a href="#" onclick="javascript:openModal('modal1');">비밀번호 찾기</a>
                 </div>
             </div>
         </div>
@@ -174,10 +174,10 @@
     
     <!--팝업-->
     <div class="shadow"></div>
-   <div class="popup">
+   <div class="popup modal1">
         <div class="pop_head">
             <p>아이디 찾기</p>
-            <a href="#" class="close_btn">닫기</a>
+            <a href="#" class="close_btn" onclick="close_pop()">닫기</a>
         </div>
         <div class="pop_cont">
             <h3 class="pop_tit">아이디 찾기</h3>
@@ -188,7 +188,7 @@
 </p>
             </div>
             <div class="btn_two">
-                 <a href="#" class="blue_btn">로그인 페이지로 이동</a>
+                 <a href="#" class="blue_btn" onclick="close_pop()">로그인 페이지로 이동</a>
                 <a href="#" class="gray_btn">비밀번호 찾기</a>
             </div>
         </div>

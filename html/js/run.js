@@ -184,19 +184,47 @@ $(document).ready(function () {
         var activeTab = $(this).attr("rel");
         $("#" + activeTab).fadeIn();
     });
-    
+
     /* 메뉴 더보기 */
-    $('.more_area .more_btn').click(function(){
+    $('.more_area .more_btn').click(function () {
         $(this).next().show();
     });
-    
+
     // 외부영역 클릭 시 팝업 닫기
-$(document).mouseup(function (e){
-	var more_area = $(".more_cont");
-	if(more_area.has(e.target).length === 0){
-		more_area.fadeOut(200);
-	}
-});
+    $(document).mouseup(function (e) {
+        var more_area = $(".more_cont");
+        if (more_area.has(e.target).length === 0) {
+            more_area.fadeOut(200);
+        }
+    });
+    /* 첨부파일 */
+    $('.fileInput').change(function () {
+        var numfiles = $(this)[0].files.length;
+        var parent = $(this).closest('.input-file');
+        parent.find('ins').remove();
+        for (i = 0; i < numfiles; i++) {
+            parent.append('<ins>' + $(this)[0].files[i].name + '</ins>')
+        }
+    });
+
+    /* faq */
+    $('.faq_wrap .tit a').click(function () {
+        $(this).parent().parent().next().find('div').slideToggle("200");
+        $(this).parent().parent().next().toggleClass('active')
+    });
 
 
 });
+
+    function openModal(modalname) {
+        document.get
+        $("." + modalname).show();
+        $('body').addClass('not_scroll');
+        $('.shadow').show();
+    }
+
+    function close_pop(flag) {
+        $('.popup').hide();
+        $('body').removeClass('not_scroll');
+        $('.shadow').hide();
+    };
