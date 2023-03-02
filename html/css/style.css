@@ -733,7 +733,10 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .table_style01.row_table table th,
     .table_style01.row_table table td,
     .table_style01.row_table table tbody{display: block;}
-    .table_style01.row_table table th{text-align: left;border-bottom:1px solid #ccc }
+    .table_style01.row_table table th{text-align: left;}
+    .table_style01 table tr{border-bottom: 0}
+    .table_style01.row_table table td,
+    .table_style01.row_table table th{border-bottom:1px solid #ccc }
     .table_style01.row_table table th,
     .table_style01.row_table table td{padding: 10px;font-size: 14px;}
     .tel_input{max-width: 421px;}
