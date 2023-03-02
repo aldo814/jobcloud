@@ -543,7 +543,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 
 /* 공지사항 작성 */
 .tit_wrap{display: flex;align-items: center;}
-.tit_wrap input{margin-right: 20px;}
+.tit_wrap input{margin-right: 20px;width: calc(100% - 90px);}
 .tit_wrap div{margin-top: 3px;}
 .input-file { position:relative; overflow:hidden;  padding:0;display:block;max-width:100%;cursor:pointer;}
 .input-file .btn { white-space:nowrap; display:inline-block; vertical-align:top;}
@@ -603,7 +603,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .write_btn{padding-bottom: 80px;}
     .write_btn .green_btn{position:absolute;bottom: 0;top: auto}
     .tit_wrap{display: block;}
-    .tit_wrap input{margin-bottom: 10px;}
+    .tit_wrap input{margin-bottom: 10px;width: 100%;margin-right: 0}
     
 }
 
