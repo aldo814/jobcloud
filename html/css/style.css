@@ -411,6 +411,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .mp_lecture .mp_lecture_list .item .more_cont{background: #fff;position: absolute;right: -75px;top: 15px;width: 100px;border: 1px solid #eaeaea;text-align: center;border-radius: 10px;display: none;z-index: 99999}
 .mp_lecture .mp_lecture_list .item .more_cont.active{display: block;}
 .mp_lecture .mp_lecture_list .item .more_cont li {border-bottom: 1px solid #eaeaea;}
+.mp_lecture .mp_lecture_list .item .more_cont li:last-child{border-bottom: 0}
 .mp_lecture .mp_lecture_list .item .more_cont li a{display: block;padding: 5px 10px;font-size: 14px;color: #888888;}
 .mp_lecture .mp_lecture_list .item .more_cont li a:hover,
 .mp_lecture .mp_lecture_list .item .more_cont li a:active,
