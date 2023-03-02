@@ -553,7 +553,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 
 /*faq*/
 .faq_wrap .answer td{padding: 0;background: #f2f4f6;}
-.faq_wrap .answer{border-bottom: 0 !important}
+.faq_wrap .table_style01  .answer{border-bottom: 0 !important;padding: 0}
 .faq_wrap .answer img{max-width: 100%;}
 .faq_wrap .answer.active tr{border-bottom: 1px solid #ccc;}
 .faq_wrap .answer td div{display: none;padding: 20px;}
@@ -734,7 +734,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .table_style01.row_table table td,
     .table_style01.row_table table tbody{display: block;}
     .table_style01.row_table table th{text-align: left;}
-    .table_style01 table tr{border-bottom: 0}
+    .table_style01.row_table table tr{border-bottom: 0}
     .table_style01.row_table table td,
     .table_style01.row_table table th{border-bottom:1px solid #ccc }
     .table_style01.row_table table th,
