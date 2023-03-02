@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잡클라우드</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/run.js"></script>
+
+</head>
+
+<body>
+    <!--header-->
+
+    <div class="inner">
+        <ul class="util_wrap">
+            <li>
+                <a href="#">로그인</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+        <div class="inner header_top">
+            <h1 class="logo">
+                <img src="images/user/logo.png" alt="JOBCLOUD">
+            </h1>
+            <div class="search_wrap">
+                <label for="search" class="hide">검색</label>
+                <input type="text" id="search" placeholder="원하는 강좌를 찾아보세요.">
+                <button type="submit">검색</button>
+            </div>
+        </div>
+
+        <div class="header-nav">
+            <div class="inner">
+                <div class="all_menu">
+                    <a href="#">
+                        <div class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p>전체 카테고리</p>
+                    </a>
+                </div>
+                <ul class="gnb_left gnb">
+                    <li>
+                        <a href="#">온라인 과정</a>
+                    </li>
+
+                    <li>
+                        <a href="#">집합 과정</a>
+                    </li>
+                    <li>
+                        <a href="#">화상교육 과정</a>
+                    </li>
+                </ul>
+                <ul class="gnb_right gnb">
+                    <li>
+                        <a href="#">인사이트</a>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mega_menu">
+            <div class="inner">
+                <ul id="mega_gnb">
+                    <li>
+                        <p class="tit">온라인 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">화상교육 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--//header-->
+    <div class="container">
+        <div class="list_wrap">
+            <div class="snb">
+                <h3 class="tit">커뮤니티</h3>
+                <ul>
+                    <li class="active">
+                        <a href="#">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Q&amp;A</a>
+                    </li>
+                    <li>
+                        <a href="#">수강후기</a>
+                    </li>
+                    <li>
+                        <a href="#">자유게시판</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3 class="tit_style01">공지사항</h3>
+
+                <div class="notice_top">
+                    <p class="f16">총 00개</p>
+                    <div class="notice_search">
+                        <label class="hide" for="notice_search">검색</label>
+                        <input type="text" placeholder="검색어를 입력하세요." id="notice_search">
+                        <button type="submit">검색</button>
+                    </div>
+                </div>
+                <div class="table_style01 notice_table">
+                    <table>
+                        <caption>공지사항</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">분류</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                                <th scope="col">조회</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="number">214</td>
+                                <td class="category">자유게시판</td>
+                                <td class="tlt tit"><a href="#">공지사항입니다. 공지사항은 최상단 영역 고정됩니다.</a></td>
+                                <td class="name">관리자</td>
+                                <td class="date">2023-02-01</td>
+                                <td class="hit">2,432</td>
+                            </tr>
+                            <tr>
+                                <td class="number">214</td>
+                                <td class="category">자유게시판</td>
+                                <td class="tlt tit"><a href="#">공지사항입니다. 공지사항은 최상단 영역 고정됩니다.</a></td>
+                                <td class="name">관리자</td>
+                                <td class="date">2023-02-01</td>
+                                <td class="hit">2,432</td>
+                            </tr>
+                            <tr>
+                                <td class="number">214</td>
+                                <td class="category">자유게시판</td>
+                                <td class="tlt tit"><a href="#">공지사항입니다. 공지사항은 최상단 영역 고정됩니다.</a></td>
+                                <td class="name">관리자</td>
+                                <td class="date">2023-02-01</td>
+                                <td class="hit">2,432</td>
+                            </tr>
+                            <tr>
+                                <td class="number">214</td>
+                                <td class="category">자유게시판</td>
+                                <td class="tlt tit"><a href="#">공지사항입니다. 공지사항은 최상단 영역 고정됩니다.</a></td>
+                                <td class="name">관리자</td>
+                                <td class="date">2023-02-01</td>
+                                <td class="hit">2,432</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <div class="write_btn">
+               
+                <a href="#" class="btn_style05 green_btn">작성</a>
+                <!--페이징-->
+                <ul class="paging">
+                    <li class="first arrow"><a href="#">처음페이지로</a></li>
+                    <li class="prev arrow"><a href="#">이전페이지로</a></li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                     <li>
+                        <a href="#">6</a>
+                    </li>
+                     <li>
+                        <a href="#">7</a>
+                    </li>
+                     <li>
+                        <a href="#">8</a>
+                    </li>
+                     <li>
+                        <a href="#">9</a>
+                    </li>
+                     <li>
+                        <a href="#">10</a>
+                    </li>
+                    <li class="next arrow">
+                        <a href="#">다음페이지로</a>
+                    </li>
+                    <li class="last arrow">
+                        <a href="#">마지막페이지로</a>
+                    </li>
+                </ul>
+
+                <!--모바일 페이징-->
+                <div class="m_paging">
+                    <a href="#" class="prev">이전페이지로</a>
+                    <p>
+                        <span class="cut">1</span>/
+                        <span>10</span>
+                    </p>
+                    <a href="#" class="next">다음페이지로</a>
+                </div>
+                <!--//모바일 페이징-->
+
+                <!--//페이징-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <img src="images/user/foot_logo.png" alt="JOBCLOUD">
+                </h1>
+                <ul class="info_menu">
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li class="bold">
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">제휴문의</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <span class="name bold">회사명</span>
+                <span>대표이사 : 홍길동</span>
+                <span>사업자등록번호 : 111-11-11111</span>
+                <p>서울시 구로구 디지털로 30길 31(구로동), 코오롱빌란트 2차 703호</p>
+                <div class="contact">
+                    <span>대표전화 : 1577-1234</span>
+                    <span>교육문의 : 1577-5678</span>
+                    <span>이메일문의 : helpdesk@jobcloud.co.kr</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body></html>

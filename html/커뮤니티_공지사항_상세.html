@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잡클라우드</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/run.js"></script>
+
+</head>
+
+<body>
+    <!--header-->
+
+    <div class="inner">
+        <ul class="util_wrap">
+            <li>
+                <a href="#">로그인</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+        <div class="inner header_top">
+            <h1 class="logo">
+                <img src="images/user/logo.png" alt="JOBCLOUD">
+            </h1>
+            <div class="search_wrap">
+                <label for="search" class="hide">검색</label>
+                <input type="text" id="search" placeholder="원하는 강좌를 찾아보세요.">
+                <button type="submit">검색</button>
+            </div>
+        </div>
+
+        <div class="header-nav">
+            <div class="inner">
+                <div class="all_menu">
+                    <a href="#">
+                        <div class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p>전체 카테고리</p>
+                    </a>
+                </div>
+                <ul class="gnb_left gnb">
+                    <li>
+                        <a href="#">온라인 과정</a>
+                    </li>
+
+                    <li>
+                        <a href="#">집합 과정</a>
+                    </li>
+                    <li>
+                        <a href="#">화상교육 과정</a>
+                    </li>
+                </ul>
+                <ul class="gnb_right gnb">
+                    <li>
+                        <a href="#">인사이트</a>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mega_menu">
+            <div class="inner">
+                <ul id="mega_gnb">
+                    <li>
+                        <p class="tit">온라인 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">화상교육 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--//header-->
+    <div class="container">
+        <div class="list_wrap">
+            <div class="snb">
+                <h3 class="tit">커뮤니티</h3>
+                <ul>
+                    <li class="active">
+                        <a href="#">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Q&amp;A</a>
+                    </li>
+                    <li>
+                        <a href="#">수강후기</a>
+                    </li>
+                    <li>
+                        <a href="#">자유게시판</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+               <div class="notice_view">
+                <h3 class="tit_style01">공지사항</h3>
+                <div class="table_style01 row_table">
+                    <table>
+                        <caption>공지사항 상세</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col">제목</th>
+                                <td colspan="5" class="tlt f16">게시물의 제목이 노출됩니다.</td>
+                            </tr>
+                            <tr>
+                                 <th scope="col">작성자</th>
+                                 <td class="tlt f16">홍길동</td>
+                                  <th scope="col">작성일</th>
+                                 <td class="tlt f16">2023-02-01</td>
+                                  <th scope="col">조회</th>
+                                 <td class="tlt f16">1,234</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">첨부</th>
+                                <td colspan="5" class="tlt">
+                                   <div class="view_down">
+                                    <a href="#">첨부된 파일명.hwpx(1.34mb)</a>
+                                    <a href="#" class="btn_style02 gray_btn03">다운로드</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="notice_view_cont">
+                    <img src="images/user/notice_sample.png" alt="">
+                    <p class="f16 mt30">
+                        게시물 작성 내용이 보여집니다. <br>
+에디터를 이용한 작성으로 이미지, 테이블, 폰트 크기, 색상 등 에디터의 속성을 그대로 유지하여 출력됩니다. <br>
+게시물 작성 시 작성된 내용 기반 내용이 출력됩니다. 
+
+                    </p>
+                </div>
+                <div class="notice_view_btn">
+                   <div class="left_btn">
+                    <a href="#" class="btn_style05 gray_btn black">삭제</a>
+                    </div>
+                    <div class="right_btn">
+                         <a href="#" class="btn_style05 green_btn left_btn">수정</a>
+                          <a href="#" class="btn_style05 gray_btn03 left_btn">목록</a>
+                    </div>
+                </div>
+                
+                <div class="comment_area">
+                    <textarea></textarea>
+                    <button type="button" class="blue_btn">댓글 작성</button>
+                </div>
+                
+                <div class="comment_list">
+                    <p class="comment_top f16">
+                        총 00개
+                    </p>
+                    
+                    <div class="item">
+                        <p class="text f16">
+                            댓글 내용이 출력됩니다. 댓글 내용이 출력됩니다. 댓글 내용이 출력됩니다.
+                        </p>
+                        <div class="bt_wrap">
+                            <ul class="dnn">
+                                <li class="f14 gray"> 
+                                    작성자
+                                </li>
+                                <li class="f14 gray"> 
+                                    작성일
+                                </li>
+                            </ul>
+                            <div class="bt_btn">
+                                <a href="#" class="btn_style02 gray_btn03 f16">댓글</a>
+                                <a href="#" class="btn_style02 gray_btn f16 black">삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item reply">
+                        <p class="text f16">
+                            댓글 내용이 출력됩니다. 댓글 내용이 출력됩니다. 댓글 내용이 출력됩니다.
+                        </p>
+                        <div class="bt_wrap">
+                            <ul class="dnn">
+                                <li class="f14 gray"> 
+                                    작성자
+                                </li>
+                                <li class="f14 gray"> 
+                                    작성일
+                                </li>
+                            </ul>
+                            <div class="bt_btn">
+                                
+                                <a href="#" class="btn_style02 gray_btn f16 black">삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reply">
+                        <p class="text f16">
+                            댓글 내용이 출력됩니다. 댓글 내용이 출력됩니다. 댓글 내용이 출력됩니다.
+                        </p>
+                        <div class="bt_wrap">
+                            <ul class="dnn">
+                                <li class="f14 gray"> 
+                                    작성자
+                                </li>
+                                <li class="f14 gray"> 
+                                    작성일
+                                </li>
+                            </ul>
+                            <div class="bt_btn">
+                                <a href="#" class="btn_style02 gray_btn f16 black">삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p class="text f16">
+                            댓글 내용이 출력됩니다. 댓글 내용이 출력됩니다. 댓글 내용이 출력됩니다.
+                        </p>
+                        <div class="bt_wrap">
+                            <ul class="dnn">
+                                <li class="f14 gray"> 
+                                    작성자
+                                </li>
+                                <li class="f14 gray"> 
+                                    작성일
+                                </li>
+                            </ul>
+                            <div class="bt_btn">
+                                <a href="#" class="btn_style02 gray_btn03 f16">댓글</a>
+                                <a href="#" class="btn_style02 gray_btn f16 black">삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--페이징-->
+     <ul class="paging">
+                                <li class="first arrow"><a href="#">처음페이지로</a></li>
+                                <li class="prev arrow"><a href="#">이전페이지로</a></li>
+                                <li class="active">
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                                <li>
+                                    <a href="#">5</a>
+                                </li>
+                                <li class="next arrow">
+                                    <a href="#">다음페이지로</a>
+                                </li>
+                                 <li class="last arrow">
+                                    <a href="#">마지막페이지로</a>
+                                </li>
+                            </ul>
+                            
+                            <!--모바일 페이징-->
+                            <div class="m_paging">
+                               <a href="#" class="prev">이전페이지로</a>
+                               <p>
+                                   <span class="cut">1</span>/
+                                   <span>10</span>
+                               </p>
+                                <a href="#" class="next">다음페이지로</a>
+                            </div>
+                            <!--//모바일 페이징-->
+                                
+<!--//페이징-->
+                
+                <div class="table_style01 row_table mt50">
+                    <table>
+                        <caption>이전글 다음글</caption>
+                        <colgroup>
+                            <col style="width: 120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">이전글</th>
+                                <td class="tlt f16">
+                                    <a href="#">게시물의 제목이 노출됩니다.</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">다음글</th>
+                                <td class="tlt f16"><a href="#">게시물의 제목이 노출됩니다.</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <img src="images/user/foot_logo.png" alt="JOBCLOUD">
+                </h1>
+                <ul class="info_menu">
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li class="bold">
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">제휴문의</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <span class="name bold">회사명</span>
+                <span>대표이사 : 홍길동</span>
+                <span>사업자등록번호 : 111-11-11111</span>
+                <p>서울시 구로구 디지털로 30길 31(구로동), 코오롱빌란트 2차 703호</p>
+                <div class="contact">
+                    <span>대표전화 : 1577-1234</span>
+                    <span>교육문의 : 1577-5678</span>
+                    <span>이메일문의 : helpdesk@jobcloud.co.kr</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body></html>

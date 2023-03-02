@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잡클라우드</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/run.js"></script>
+
+</head>
+
+<body>
+    <!--header-->
+
+    <div class="inner">
+        <ul class="util_wrap">
+            <li>
+                <a href="#">로그인</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+        <div class="inner header_top">
+            <h1 class="logo">
+                <img src="images/user/logo.png" alt="JOBCLOUD">
+            </h1>
+            <div class="search_wrap">
+                <label for="search" class="hide">검색</label>
+                <input type="text" id="search" placeholder="원하는 강좌를 찾아보세요.">
+                <button type="submit">검색</button>
+            </div>
+        </div>
+
+        <div class="header-nav">
+            <div class="inner">
+                <div class="all_menu">
+                    <a href="#">
+                        <div class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p>전체 카테고리</p>
+                    </a>
+                </div>
+                <ul class="gnb_left gnb">
+                    <li>
+                        <a href="#">온라인 과정</a>
+                    </li>
+
+                    <li>
+                        <a href="#">집합 과정</a>
+                    </li>
+                    <li>
+                        <a href="#">화상교육 과정</a>
+                    </li>
+                </ul>
+                <ul class="gnb_right gnb">
+                    <li>
+                        <a href="#">인사이트</a>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mega_menu">
+            <div class="inner">
+                <ul id="mega_gnb">
+                    <li>
+                        <p class="tit">온라인 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="tit">화상교육 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <p class="tit">집합 과정</p>
+                        <ul>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">하위 메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--//header-->
+    <div class="container">
+        <div class="list_wrap">
+            <div class="snb">
+                <h3 class="tit">커뮤니티</h3>
+                <ul>
+                    <li class="active">
+                        <a href="#">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Q&amp;A</a>
+                    </li>
+                    <li>
+                        <a href="#">수강후기</a>
+                    </li>
+                    <li>
+                        <a href="#">자유게시판</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3 class="tit_style01">공지사항</h3>
+                <div class="notice_write">
+                    <div class="table_style01 row_table">
+                        <table>
+                            <caption>공지사항 작성</caption>
+                            <colgroup>
+                                <col style="width: 120px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">제목</th>
+                                    <td class="tlt">
+                                        <div class="tit_wrap">
+                                           
+                                            <input type="text" class="input_style mw400" placeholder="제목을 입력하세요.">
+                                            <div>
+                                                <input type="checkbox" class="check" id="check1">
+                                                <label for="check1" class="f14 gray">비밀글</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="name">작성자</label>
+                                    </th>
+                                    <td class="tlt">
+                                        <input type="text" class="input_style mw300" id="name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="ps">비밀번호</label>
+                                    </th>
+                                    <td class="tlt"><input type="password" class="input_style mw300" id="ps"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="check2">공지사항</label>
+                                    </th>
+                                    <td class="tlt">
+                                        <div>
+                                            <input type="checkbox" class="check" id="check2">
+                                            <label for="check2" class="f14 gray">공지사항</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">내용</th>
+                                    <td class="tlt">
+                                        에디터
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">파일첨부</th>
+                                    <td class="tlt">
+                                        <label class="input-file">
+                                            <b class="btn btn-primary btn_style02 gray_btn03">
+                                                파일 선택</b>
+                                            <input type="file" class="fileInput" multiple>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="trt mt30">
+                         <a href="#" class="btn_style05 blue_btn left_btn">저장</a>
+                          <a href="#" class="btn_style05 gray_btn03 left_btn">취소</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <img src="images/user/foot_logo.png" alt="JOBCLOUD">
+                </h1>
+                <ul class="info_menu">
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li class="bold">
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">제휴문의</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <span class="name bold">회사명</span>
+                <span>대표이사 : 홍길동</span>
+                <span>사업자등록번호 : 111-11-11111</span>
+                <p>서울시 구로구 디지털로 30길 31(구로동), 코오롱빌란트 2차 703호</p>
+                <div class="contact">
+                    <span>대표전화 : 1577-1234</span>
+                    <span>교육문의 : 1577-5678</span>
+                    <span>이메일문의 : helpdesk@jobcloud.co.kr</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body></html>
