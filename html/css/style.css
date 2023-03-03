@@ -638,6 +638,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .lv_list li{border-bottom: 1px solid #eaeaea;padding-bottom: 15px;margin-bottom: 15px;display: flex;align-items: center}
 .lv_list li .tit{font-weight: 500;width: 120px;margin-right: 5px}
 .lv_list li .txt{width: calc(100% - 125px);}
+.lv_list li .txt select{font-size: 16px}
 .map_txt{display: flex;align-items: center;flex-wrap: wrap}
 .map_txt p{margin-right: 15px}
 .guide_txt{display: flex;align-items: center;}
@@ -1003,7 +1004,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lv_list li .tit{width: 100px;}
     .lv_list li .txt{width: calc(100% - 105px)}
     .lv_list li .tit,
-    .lv_list li .txt{font-size: 15px;}
+    .lv_list li .txt,
+    .lv_list li .txt select{font-size: 15px;}
     .lecture_view .lv_header .btn_area .like_btn,
     .lecture_view .lv_header .btn_area .like_btn.active{width: 50px;background-size: 20px;}
     .lecture_view .lv_cont{margin: 40px 0}
@@ -1014,7 +1016,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lecture_view .lv_review .lv_review_list .item{flex-direction: column;margin: 10px 0;padding: 10px 0}
     .lecture_view .lv_review .lv_review_list .item .txt_area{width: 100%;margin-top: 15px;}
     .lecture_view .lv_review .lv_review_list .item .top .name,
-    .lecture_view .lv_review .lv_review_list .item .text{font-size: 15px;}
+    .lecture_view .lv_review .lv_review_list .item .text{font-size: 14px;}
     .lecture_view .more_btn{font-size: 16px;padding: 15px 30px 15px 10px;width: 200px;background-position:  right 15px center;background-size: 13px;}
     
     
@@ -1052,6 +1054,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .cont_list.harf_cl{display: block;}
     .cont_list.harf_cl li{width: 100%;}
     .popup .pop_cont{max-height: calc(100vh - 200px)}
+    
+    .lecture_list .swiper-slide .img{height: 45vw}
 }
 
 
