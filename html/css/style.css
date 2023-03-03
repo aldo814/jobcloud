@@ -533,7 +533,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .select_style {
 padding: 5.5px 40px 5.5px 10px; 
 border: 1px solid #eaeaea;font-family: 'Noto Sans KR';
-background: url(../images/user/select_arrow.png) no-repeat right 10px center;; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none;appearance: none;box-sizing: border-box}
+background: url(../images/user/select_arrow.png) no-repeat right 10px center;; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none;appearance: none;box-sizing: border-box;color: #333}
 .select_styleselect::-ms-expand {display: none;}
 
 /* 회원탈퇴 */
@@ -873,7 +873,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lt_swiper-button-prev{background-size: 10px;width: 10px;height: 28px}
     .lecture_list .item .text .tit{font-size: 15px}
     .lecture_list .item .text ul li{font-size: 13px}
-    .lecture_list .item .img{height: 40vw}
+    .lecture_list .item .img{height: 30vw}
     
     /*리뷰*/
     .review_area .img{left: 50%;transform: translateX(-50%)}
@@ -1017,6 +1017,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lecture_view .lv_review .lv_review_list .item .text{font-size: 15px;}
     .lecture_view .more_btn{font-size: 16px;padding: 15px 30px 15px 10px;width: 200px;background-position:  right 15px center;background-size: 13px;}
     
+    
     .ac_view_area .left .top .txt{padding-top: 0;}
     
     /*강의실*/
@@ -1041,8 +1042,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .notice_table.table_style01 .index06,
     .notice_table.table_style01 .index07{display: inline-block;}
     
-    .lr_view .comment_area .blue_btn{width: 80px;}
-    .lr_view .comment_area textarea{width: calc(100% - 100px)}
+    .lr_view .comment_area .blue_btn{width: 90px;}
+    .lr_view .comment_area textarea{width: calc(100% - 110px)}
     .lr_view .qna_wrap .item .txt{font-size: 15px}
     .lr_view .qna_wrap .item .date{font-size: 14px;}
     .lr_view .survey .txt{width: calc(100% - 100px);}
@@ -1101,7 +1102,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     /* 교육과정 목록 */
     .lecture_sub_list .lecture_list .item{width: 100%;margin-right: 0}
-    
+    .lecture_list .item .img{height: 50vw}
     /* 교육과정 상세 */
     .lecture_view .lv_review .lv_review_top .tit{margin-bottom: 10px;}
     .lv_list li{display: block;}
