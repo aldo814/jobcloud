@@ -1107,6 +1107,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     /* 교육과정 목록 */
     .lecture_sub_list .lecture_list .item{width: 100%;margin-right: 0}
+    .lecture_sub_list .lecture_list .item .img{height: 55vw}
     .lecture_list .item .img{height: 50vw}
     /* 교육과정 상세 */
     .lecture_view .lv_review .lv_review_top .tit{margin-bottom: 10px;}
