@@ -1135,6 +1135,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lr_view .survey{display: block;}
     .lr_view .survey .txt{width: 100%;text-align: center;}
     .lr_view .survey .blue_btn{padding:  10px;font-size: 14px;margin: 20px auto 0 auto}
+    
+    .lecture_list .item .img{height: 45vw}
 }
 
 
