@@ -212,9 +212,154 @@ $(document).ready(function () {
         $(this).parent().parent().next().find('div').slideToggle("200");
         $(this).parent().parent().next().toggleClass('active')
     });
+    
+    /* 좌측메뉴 */
+ $(".snb .active ul").show();
+    $(".snb ul li > a").click(function() {
+        if ($(this).next().is(":hidden")) {
+            $(".snb ul li ul").slideUp();
+            $(this).next().slideDown();
+            $(this).parent().addClass('active');
+             $(this).parent().siblings().removeClass('active')
+        } else {
+            $(".snb ul li ul").slideUp();
+        }
+    });
+    
+    //스크롤 이동
+    $('.go_review a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
 
+        var target = this.hash;
+        var $target = $(target);
 
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+    
+    /* 공유하기 */
+    $('.share > a').click(function(){
+       $('.share_layer').fadeToggle(100); 
+    });
+    
+
+    /*툴팁*/
+    $('.qa_wrap a').mouseenter(function(){
+       $(this).next().fadeIn(100); 
+    });
+     $('.qa_wrap a').mouseleave(function(){
+       $(this).next().fadeOut(100); 
+    });
+    
+    $('.like_btn').click(function(){
+       $(this).toggleClass('active') 
+    });
+    
+    /* 수강후기 더보기 btn */
+    $(".lv_review_list .item").slice(0, 5).css("display", "flex"); // 초기갯수
+    $("#load").click(function(e){ // 클릭시 more
+        e.preventDefault();
+        $(".lv_review_list .item:hidden").slice(0, 5).fadeIn(200).css('display', 'flex'); // 클릭시 more 갯수 지저정
+        if($(".lv_review_list .item:hidden").length == 0){ // 컨텐츠 남아있는지 확인
+            $('#load').fadeOut(100); 
+        }
+    });
+    
+    
+    var swiper = new Swiper('.lv_slide .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.lv_slide .lt_swiper-button-next',
+            prevEl: '.lv_slide .lt_swiper-button-prev',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 4,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            280: {
+                slidesPerView: 1,
+            },
+        }
+    });
+    
+    // a href='#' 클릭 무시 스크립트
+		$('a[href="#"]').click(function (ignore) {
+			ignore.preventDefault();
+		});
+    
+    
+    /* 강의실 슬라이드 */
+     var swiper = new Swiper('.lvr_slide .swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.lvr_slide .lt_swiper-button-next',
+            prevEl: '.lvr_slide .lt_swiper-button-prev',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            480: {
+                slidesPerView: 2,
+            },
+            280: {
+                slidesPerView: 1,
+            },
+        }
+    });
+    
+    // input file
+    const dt = new DataTransfer(); // Permet de manipuler les fichiers de l'input file
+
+$("#attachment").on('change', function(e){
+	for(var i = 0; i < this.files.length; i++){
+		let fileBloc = $('<span/>', {class: 'file-block'}),
+			 fileName = $('<span/>', {class: 'name', text: this.files.item(i).name});
+		fileBloc.prepend('<span class="file-delete"><span class="del">삭제</span></span>')
+			.prepend(fileName);
+		$("#filesList > #files-names").append(fileBloc);
+	};
+	for (let file of this.files) {
+		dt.items.add(file);
+	}
+	this.files = dt.files;
+
+	$('span.file-delete').click(function(){
+		let name = $(this).next('span.name').text();
+		$(this).parent().remove();
+		for(let i = 0; i < dt.items.length; i++){
+			if(name === dt.items[i].getAsFile().name){
+				dt.items.remove(i);
+				continue;
+			}
+		}
+		document.getElementById('attachment').files = dt.files;
+	});
 });
+    
+});
+
+
 
     function openModal(modalname) {
         document.get

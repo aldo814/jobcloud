@@ -51,11 +51,13 @@ table {
 input:active,
 input:focus{outline: none}
 table caption{text-indent: -9999px;position: absolute;left: -999999px;}
-button,input{font-family: 'Noto SAns KR'}
+button,input,textarea{font-family: 'Noto SAns KR'}
 a{text-decoration: none;color: inherit;}
 body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .inner{width: 1200px;margin: auto;}
 .hide{text-indent: -99999px;position: absolute;left: -99999px;overflow: hidden}
+hr.border_gray{border: 0;border-top: 1px solid #cccccc;}
+hr.border_gray02{border: 0;border-top: 1px solid #eaeaea;}
 .tct{text-align: center;}
 .tlt{text-align: left !important;}
 .trt{text-align: right}
@@ -63,20 +65,30 @@ body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .blue{color: #0082cc}
 .black{color: #333 !important}
 .bold{font-weight: 500}
+.bold02{font-weight: 600}
 .mt30{margin-top: 30px}
 .mt20{margin-top: 20px}
+.mg20{margin: 20px 0}
+.mb20{margin-bottom: 20px}
 .mt10{margin-top: 10px}
+.mt5{margin-top: 5px}
+.pd60{padding: 60px 0 0 0}
+.f20{font-size: 20px}
 .f18{font-size: 18px}
 .f16{font-size: 16px !important}
 .f14{font-size: 14px}
+.f13{font-size: 13px}
 .f12{font-size: 12px}
+.white_box02{border: 1px solid #eaeaea;padding: 10px;box-sizing: border-box;}
 .gray_box{background: #f5f5f5;padding: 15px 25px;border: 1px solid #dddddd;border-radius: 5px;}
 .gray_box02{background: #f9fafc;padding: 10px;border-radius: 10px;}
 .mt50{margin-top: 50px;}
+.gray_box03{background:  #f9fafc;border: 1px solid #eaeaea;padding: 10px;box-sizing: border-box;}
 .green{color: #00c57d !important}
 .red{color: #f94444 !important}
 .red_btn{background: #f94444;color: #fff}
-.tit_style01{font-size: 20px;text-align: center;font-weight: 600;margin-bottom: 30px;}
+.tit_style01{font-size: 20px;text-align: center;font-weight: 500;margin-bottom: 30px;}
+.tit_style02{font-size: 20px;font-weight: 600;margin-bottom: 20px;}
 .btn_style01{font-size: 16px;padding: 10px 15px;border-radius: 5px;display: inline-block}
 .btn_style02{font-size: 14px;padding: 7px 15px;border-radius: 5px;display: inline-block;}
 .btn_style03{font-size: 14px;padding: 7px 27px;border-radius: 5px;display: inline-block;}
@@ -88,8 +100,12 @@ body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .btn_wrap a + a{margin-left: 10px;}
 .bar_list li{margin-bottom: 5px;position: relative;padding-left: 10px;}
 .bar_list li:before{content: '-';display: block;position: absolute;left: 0;top: 0;}
+.mw560{max-width: 560px !important;}
+.mw700{max-width: 700px !important;}
+.mw450{max-width: 450px !important;}
 .mw400{max-width: 400px;width: 100%;}
 .mw300{max-width: 300px;width: 100%;}
+.textarea{border: 1px solid #eaeaea;resize: none;width: 100%;padding: 10px;font-size: 14px;box-sizing: border-box;min-height: 200px;}
 /* 탑 배너 */
 .top_banner{background: #d6edff;position: relative;height: 50px}
 .top_banner .inner{position: relative;}
@@ -167,7 +183,7 @@ body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .lt_swiper-button-prev{background: url(../images/user/slide_prev.png) no-repeat;left: -50px;}
 .swiper-button-disabled{opacity: 0.3}
 .lecture_list .swiper-container{overflow-x: hidden;overflow-y: visible !important;}
-.lecture_list .item{border-radius: 10px;overflow: hidden;border: 1px solid #dddddd;margin-top: 20px;box-sizing: border-box}
+.lecture_list .item{border-radius: 10px;overflow: hidden;border: 1px solid #dddddd;margin-top: 20px;box-sizing: border-box;position: relative}
 .lecture_list .item .img{height: 180px;position: relative;}
 .lecture_list .item a{display: block;width: 100%;height: 100%;}
 .lecture_list .item .img img{display: block;width: 100%;height: 100%;}
@@ -176,10 +192,12 @@ body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .like.like_gray{background: url(../images/user/like_btn_gray.png);width: 21px;}
 .like.active{background: url(../images/user/like_btn_active.png) no-repeat;}
 .lecture_list .item .text{padding: 20px;position: relative}
-.lecture_list .item .text .state{display: inline-block;font-size: 12px;background: #ccc;padding: 5px 8px;color: #fff;border-radius: 5px;font-family: '굴림', 'Gulim';position: absolute;left: 20px;top: -10px}
-.lecture_list .item .text .state.blue{background: #0c92b9;}
-.lecture_list .item .text .state.orange{background: #b9510c}
-.lecture_list .item .text .state.green{background: #45b90c}
+.state{display: inline-block;font-size: 12px;background: #ccc;padding: 5px 8px;color: #fff;border-radius: 5px;font-family: '굴림', 'Gulim';position: absolute;left: 20px;top: -10px}
+.state.blue{background: #0c92b9;}
+.state_wrap{position: absolute;left: 20px;top: -10px} 
+.state_wrap .state{position: static;margin-right: 5px;} 
+.lecture_list .item .text .state.orange{background: #b9510c !important}
+.lecture_list .item .text .state.green{background: #45b90c;color: #fff !important}
 .lecture_list .item .text .tit{font-size: 16px;overflow: hidden;font-weight: 600;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;line-height:25px; height:50px;}
 .lecture_list .item .text ul{margin-top: 20px}
 .lecture_list .item .text ul li{font-size: 14px;color: #888888;padding-left: 25px;position: relative;}
@@ -272,6 +290,13 @@ input[type=checkbox] {display: none;}
 input[type=checkbox] + label:before {content:'✔';border: 0.1em solid #dddddd;border-radius: 0.2em; display: inline-block;width: 20px;height: 20px; margin-right: 10px;vertical-align: bottom;color: transparent;transition: .2s;padding-left: 2px;box-sizing: border-box;vertical-align: middle;margin-top: -3px;text-align:center;}
 input[type=checkbox]:checked + label:before {color: #0082cc;}
 
+/* radio */
+.radio {position: relative;}
+.radio input[type="radio"] {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
+.radio input[type="radio"] + label {display: inline-block;position: relative;padding-left: 20px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;}
+.radio input[type="radio"] + label:before {content: '';position: absolute;left: 0;top: 2px;width: 16px;height: 16px;text-align: center;background: #fff;border: 1px solid #dddddd;border-radius: 100%;}
+.radio input[type="radio"]:checked + label:after {content: '';position: absolute;top: 5px;left: 3px;width: 10px;height:10px;background: #0082cc;border:1px solid #0082cc;border-radius: 100%;}
+
 .join_form .terms_area{margin-top: 30px;}
 .join_form .f18{margin-bottom: 10px;}
 .join_form .terms_cont{border: 1px solid #dddddd;padding: 10px;border-radius: 10px;height: 125px;overflow-y: auto;color: #888;margin-bottom: 15px;}
@@ -341,7 +366,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .popup{position: fixed;left: 50%;top: 50%;transform: translate(-50%,-50%);z-index: 99999;max-width: 560px;width: calc(100% - 40px); }
 .popup .pop_head{background: #0082cc;color: #fff;padding: 15px;display: flex;justify-content: space-between;align-items: center;font-size: 16px;}
 .popup .pop_head .close_btn{background: url(../images/user/pop_close.png) no-repeat;width: 18px;height: 18px;text-indent: -9999px;}
-.popup .pop_cont {background: #fff;padding: 50px 60px;}
+.popup .pop_cont {background: #fff;padding: 50px 60px;max-height:calc(100vh - 100px);overflow-y: auto}
 .popup .pop_cont.pop_cont02{padding: 20px;}
 .popup .btn_two {display: flex;margin-top: 30px;justify-content: space-between;}
 .popup .btn_two a{width: calc(50% - 5px);text-align: center;padding: 15px;box-sizing: border-box;border-radius: 5px;font-size: 16px;font-weight: 500;display: flex;justify-content: center;align-items: center;word-break: keep-all}
@@ -369,11 +394,17 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .list_wrap{display: flex;margin-top: 60px;}
 .list_wrap .snb{width: 250px;margin-right: 50px;}
 .list_wrap .snb .tit{font-size: 20px;font-weight: bold;padding-bottom: 30px;border-bottom: 2px solid #000;}
-.list_wrap .snb ul li.active a{color: #0082cc;font-weight: 500}
-.list_wrap .snb ul li a{padding: 14px 10px;display: block;border-bottom: 1px solid #eaeaea;}
+.list_wrap .snb  li.active > a{color: #0082cc;font-weight: 500}
+.list_wrap .snb > ul > li > a{padding: 14px 10px;display: block;border-bottom: 1px solid #eaeaea;position: relative}
+.list_wrap .snb > ul > li > a:only-child:after{display: none;}
+.list_wrap .snb > ul > li > a:after{content: '';display: block;background: url(../images/user/snb_arrow.png) no-repeat;width: 9px;height: 17px;position: absolute;right: 10px;top: 50%;transform: translateY(-50%)}
+.list_wrap .snb  ul > li.active > a:after{transform: rotate(90deg);margin-top: -8px;}
+.list_wrap .snb li.active ul{display: block;}
 .list_wrap .snb ul li a:hover,
 .list_wrap .snb ul li a:active,
 .list_wrap .snb ul li a:focus{color: #0082cc;font-weight: 500}
+.list_wrap .snb > ul li > ul{background: #f9fafc;padding:  0 20px;border-bottom: 1px solid #eaeaea;display: none;} 
+.list_wrap .snb > ul li > ul li a{padding: 10px 0;display: block;border-bottom: 1px solid #ffffff;font-size: 14px;color: #888888;}
 .list_wrap .content{width: calc(100% - 300px);}
 
 /* 나의 강의실 */
@@ -401,7 +432,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 
 .mp_lecture .mp_lecture_list .item{border: 1px solid #eaeaea;padding:20px;border-radius: 10px;margin-top: 20px;box-sizing: border-box}
 .mp_lecture .mp_lecture_list .item:first-child{margin-top: 0}
-.mp_lecture .state{display: inline-block;font-size: 12px;background: #ccc;padding: 5px 8px;color: #fff;border-radius: 5px;font-family: '굴림', 'Gulim';}
+.mp_lecture .state{display: inline-block;font-size: 12px;background: #ccc;padding: 5px 8px;color: #fff;border-radius: 5px;font-family: '굴림', 'Gulim';position: static;}
 .mp_lecture  .state.blue{background: #0c92b9;}
 .mp_lecture  .state.orange{background: #b9510c}
 .mp_lecture  .state.green{background: #45b90c;color: #fff !important}
@@ -486,9 +517,10 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .notice_top .notice_search button{font-size: 14px;color: #888888;padding: 10px 15px;border-left: 1px solid #ddd;background: #eaeaea;height: 40px;cursor: pointer}
 
 /* 마이페이지 회원정보 */
-.input_style{border: 1px solid #eaeaea;padding: 5px 10px;font-size: 14px;box-sizing: border-box;border-radius: 0}
+.input_style{border: 1px solid #eaeaea;padding: 5px 10px;font-size: 14px;box-sizing: border-box;border-radius: 0;max-width: 100%}
 .tel_input{display: flex;}
-.tel_input input{width: 90px;text-align: center;margin-right: 5px;}
+.tel_input input{max-width: 90px;width: calc(33.333% - 3.333px);text-align: center;margin-right: 5px;}
+
 /* 비밀번호변경 팝업*/
 .pasPop .join_form{margin-top: 0;width: 100%;}
 .pasPop .join_form .f14{word-break: keep-all}
@@ -505,7 +537,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .select_styleselect::-ms-expand {display: none;}
 
 /* 회원탈퇴 */
-.white_box{border: 1px solid #eaeaea;border-radius: 10px;padding: 20px;}
+.white_box{border: 1px solid #eaeaea;border-radius: 10px;padding: 20px;box-sizing: border-box}
 .secession input,
 .secession select{max-width: 224px;width: 100%;}
 
@@ -524,7 +556,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .notice_view_btn a + a{margin-left: 5px;}
 .comment_area{display: flex;margin-bottom: 30px;}
 .comment_area textarea{border: 1px solid #eaeaea;resize: none;height: 80px;border-radius: 5px;width: calc(100% - 130px);margin-right: 10px;padding: 10px;}
-.comment_area button{border: 0;font-size: 16px;border-radius: 5px;width: 120px;}
+.comment_area button{border: 0;font-size: 16px;border-radius: 5px;width: 120px;cursor: pointer}
 .comment_top{margin-bottom: 10px;}
 .comment_list .item{border-top: 1px solid #dddddd;padding: 20px 0}
 .bt_wrap{display: flex;justify-content: space-between;margin-top: 20px;align-items: center}
@@ -550,6 +582,11 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .input-file ins {white-space:nowrap; display: block;max-width:100%; overflow:hidden; text-overflow:ellipsis;font-size:14px;margin-top: 5px;}
 .input-file:after { content:"";display:block; clear:both; } 
 .input-file input {width:0.1px;height:0.1px;opacity:0;overflow:hidden;position:absolute;top:-100px;z-index:-1;}
+.input-file02{display: block;}
+.input-file02 .file-block{display: block;margin-top: 10px;color: #888;font-size: 14px;}
+.input-file02 .file-block:last-child{border-bottom: 1px solid #eaeaea;padding-bottom: 10px;}
+.input-file02 .file-block .name{margin-top: 5px;display: inline-block}
+.input-file02 .file-block .del{display: inline-block;text-indent: -9999px;background: url(../images/user/file_del.png) no-repeat;width: 16px;height: 16px;margin-left: 10px;cursor: pointer}
 .notice_write .trt a + a{margin-left: 5px;}
 
 /*faq*/
@@ -558,6 +595,179 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .faq_wrap .answer img{max-width: 100%;}
 .faq_wrap .answer.active tr{border-bottom: 1px solid #ccc;}
 .faq_wrap .answer td div{display: none;padding: 20px;}
+
+/* 교육과정 목록 */
+.lecture_sub_list .lecture_list{display: flex;flex-wrap: wrap;}
+.lecture_sub_list .lecture_list .item{width: calc(33.333% - 13.333px);margin-right: 20px;margin-top: 20px;}
+.lecture_sub_list .lecture_list .item:nth-child(3n){margin-right: 0}
+.lecture_list .item .text .state.state02{left: 80px;}
+.orange_st {background: #f3551e !important;}
+.gray_st {background: #bbbbbb !important;}
+
+
+/* 사용자 교육과정 */
+.lecture_view .lv_tit{position: relative;}
+.lecture_view .lv_tit .state{position: sticky;}
+.tit_wrap02{display: flex;justify-content: space-between;margin: 10px 0 20px 0;border-bottom: 2px solid #cccccc;padding-bottom: 20px;align-items: center;}
+.tit_wrap02 .tit{font-size: 20px;font-weight: 500;}
+.lecture_view .lv_tit .tit{width: calc(100% - 100px)}
+.lecture_view .lv_tit .ico_set {display: flex;align-items: center;}
+.lecture_view .lv_tit .ico_set li + li{margin-left: 20px;}
+.like_gray2{background: url(../images/user/like_btn_gray2.png);}
+.lecture_view .lv_tit .ico_set .share{position: relative;}
+.lecture_view .lv_tit .ico_set .share > a{background: url(../images/user/share_icon.png) no-repeat;width: 18px;height: 19px;text-indent: -9999px;display: block}
+.lecture_view .lv_tit .share_layer{position: absolute;background: #fff;border: 1px solid #eaeaea;padding:5px 10px;right: 0;z-index: 22222;border-radius: 5px;left: 0;bottom: -45px;width: 176px;box-sizing: border-box;display: none}
+.lecture_view .lv_tit .share_layer .flex{display: flex;align-items: center;}
+.lecture_view .lv_tit .share_layer a{margin-right: 10px;vertical-align: middle}
+.lecture_view .lv_tit .share_layer a img{display: block;}
+.lecture_view .lv_tit .share_layer .facebook{margin-top: -2px;}
+.lecture_view .lv_tit .share_layer a:last-child{margin-right: 0}
+.lecture_view .lv_header{display: flex;}
+.lecture_view .lv_header .left{width: 500px;}
+.lecture_view .lv_header .left .img{border-radius: 10px;overflow: hidden;height: 315px;}
+.lecture_view .lv_header .left .img img{display: block;width: 100%;height: 100%;}
+.lecture_view .lv_header .rating_wrap{background: #f9fafc;margin: 20px 0;border:1px solid #eaeaea;display: flex;justify-content: space-between;padding: 15px;border-radius: 10px;}
+.lecture_view .lv_header .rating_wrap .go_review a{position: relative;padding-right: 20px;background: url(../images/user/lt_arrow.png) no-repeat right center;display: inline-block}
+.lecture_view .lv_header .rating_wrap .go_review strong{font-weight: bold;border-bottom: 1px solid #000;}
+.rate02{background: url(../images/user/star_bg02.png) no-repeat;width: 121px;height: 20px;position: relative;}
+.lecture_view .lv_header .tag{display: flex;flex-wrap: wrap;}
+.lecture_view .lv_header .tag li{margin-right: 5px;}
+.lecture_view .lv_header .tag li a{border: 1px solid #eaeaea;padding: 5px 15px;border-radius: 5px;font-size: 14px;color: #888888;display: block;margin-bottom: 5px;}
+.rate02 span{position: absolute;background: url(../images/user/star02.png);width: auto;height: 20px;}
+.lecture_view .lv_header .right{width: calc(100% - 550px);margin-left: 50px;}
+.lv_list li{border-bottom: 1px solid #eaeaea;padding-bottom: 15px;margin-bottom: 15px;display: flex;align-items: center}
+.lv_list li .tit{font-weight: 500;width: 120px;margin-right: 5px}
+.lv_list li .txt{width: calc(100% - 125px);}
+.map_txt{display: flex;align-items: center;flex-wrap: wrap}
+.map_txt p{margin-right: 15px}
+.guide_txt{display: flex;align-items: center;}
+.guide_txt .qa_wrap{position: relative;}
+.guide_txt .qa_mark{background: url(../images/user/qs_mark.png) no-repeat;width: 20px;height: 20px;text-indent: -9999px;display: block;margin-left: 15px;}
+.guide_txt .qa_wrap p{background: #f9fafc;padding: 10px;border: 1px solid #eaeaea;padding: 10px;font-size: 12px;top: 0;color: #888888;word-break: keep-all;position: absolute;min-width: 260px;border-radius: 10px;transform: translateY(-100%);left: 100%;display: none;max-width: 500px}
+.down{border-bottom: 1px solid #000;}
+.lecture_view .lv_header .btn_area{display: flex;}
+.lecture_view .lv_header .btn_area a{padding: 10px;padding: 22px 10px;font-size: 20px;border-radius: 10px;margin-right: 10px;text-align: center;align-items: center;box-sizing: border-box}
+.lecture_view .lv_header .btn_area a:last-child{margin-right: 0}
+.lecture_view .lv_header .btn_area .blue_btn{width: 60%}
+.lecture_view .lv_header .btn_area .gray_btn02{width: calc(40% - 70px);}
+.lecture_view .lv_header .btn_area .like_btn{border: 1px solid #eaeaea;text-indent: -9999px;background: url(../images/user/big_like.png) no-repeat center;width: 70px;}
+.lecture_view .lv_header .btn_area .like_btn.active{background: url(../images/user/big_like_active.png) no-repeat center}
+.lecture_view .lv_cont{border-top: 1px solid #cccccc;margin: 60px 0;padding-top: 30px}
+.lecture_view .lv_review .lv_review_top{display: flex;justify-content:space-between}
+.lecture_view .lv_review .lv_review_top .tit{font-size: 20px;font-weight: 500}
+.lecture_view .lv_review .lv_review_top .tit span{font-size: 16px;font-weight: 400}
+.lecture_view .lv_review .lv_review_top .rate_area{display: flex;align-items: center;}
+.lecture_view .lv_review .lv_review_top .rate_area p{margin-left:15px; font-weight: 500}
+.lecture_view .lv_review .lv_review_list .item:nth-child(1){border-top: 1px solid #eaeaea;}
+.lecture_view .lv_review .lv_review_list .item{margin: 20px 0;padding: 20px 0;border-bottom: 1px solid #eaeaea;display: flex;display: none}
+.lecture_view .lv_review .lv_review_list .item .rate02{margin-right: 30px;}
+.lecture_view .lv_review .lv_review_list .item .txt_area{width: calc(100% - 151px)}
+.lecture_view .lv_review .lv_review_list .item .top{display: flex;margin-bottom: 15px;align-items: center;}
+.lecture_view .lv_review .lv_review_list .item .top .name{margin-right: 10px;}
+.lecture_view .lv_review .lv_review_list .item .top .date{font-size: 14px;color: #888888}
+.lecture_view .more_btn{border:1px solid #eaeaea;width: 300px;text-align: center;display: block;padding: 18px 30px 18px 10px;font-size: 18px;border-radius: 5px;margin: 30px auto 0 auto;color: #888888;background: url(../images/user/more_arrow.png) no-repeat right 40px center;box-sizing: border-box}
+
+/* 수강신청 */
+.ac_view_area{display: flex;}
+.ac_view_area .left{width: 65%;margin-right: 30px;padding-right: 30px;border-right: 1px solid #eaeaea;}
+.lv_list li:first-child{border-top: 1px solid #eaeaea;padding-top: 15px}
+.ac_view_area .left .top{display: flex;align-items: flex-start;margin-bottom: 20px;padding-top: 20px;}
+.ac_view_area .left .top .img{width: 200px;border-radius: 10px;overflow: hidden;height: 125px;}
+.ac_view_area .left .top .img img{display: block;width: 100%;height: 100%;}
+.ac_view_area .left .top .txt{position: relative;padding-top: 
+20px;width: calc(100% - 220px);margin-left: 20px;}
+.ac_view_area .left .top .state{position: static;margin-bottom: 10px;}
+.ac_view_area .right{width: calc(35% - 60px);padding-top: 30px;}
+.ac_view_area .right h3{padding-bottom: 15px;}
+.ac_view_area .right .lv_list li .tit{width: 70px}
+.ac_view_area .right .lv_list li .txt{width: calc(100% - 75px)}
+.ac_view_area .right .big_btn{padding: 19px 10px;box-sizing: border-box;}
+
+
+/*강의실*/
+.lr_view .tit_wrap02{display: flex;align-items: center;}
+.lr_view .tit_wrap02 a{background: url(../images/user/main_arrow.png) no-repeat left 15px center;border: 1px solid #eaeaea;border-radius: 5px;padding: 10px 10px 10px 30px;}
+.lr_view .state{position: static;}
+.lr_view .section01{display: flex;}
+.lr_view .section01 .left{width: 390px;margin-right: 20px;position: relative;}
+.lr_view .section01 .right{width: calc(100% - 410px)}
+.lr_view .cont_list li{display: flex;align-items: center;margin-bottom: 10px}
+.lr_view .cont_list li:last-child{margin-bottom: 0}
+.lr_view .section01 .left a{position: absolute;right: 20px;bottom: 20px;}
+.lr_view .section01 .right .progress_area{margin-top: 20px;}
+.lr_view .section01 .right .progress_area .txt{display: flex;align-items: center;font-size: 14px;}
+.lr_view .section01 .right  .progress{border-radius: 5px;overflow: hidden;;display: flex;border: 1px solid #eaeaea;;margin: 10px 0;}
+.lr_view .section01 .right  .progress > div span{padding: 5px 10px;display: block;font-size: 14px;color: #888888;box-sizing: border-box;height: 100%;word-break: keep-all}
+.lr_view .section01 .right  .progress > div .blue_bar{background:#0082cc;color: #fff !important; }
+.lr_view .section01 .right  .progress > div  .green_bar{background:#00c57d;color: #fff !important; }
+.lr_view .section01 .right  .percent{display: flex;justify-content: space-between;font-size: 14px;}
+.lr_view .section02{display: flex;}
+.lr_view .section02 > div{flex: 1;padding-right: 20px;margin-right: 20px;border-right: 1px solid #eaeaea;}
+.lr_view .section02 > div:last-child{padding-right: 0;margin-right: 0;border-right: 0}
+.lr_view .section02 > div .f20{margin-top: 10px;text-align: right}
+
+.lv_list02{font-size: 16px;}
+.lv_list02 li{display: flex;margin-bottom: 10px;}
+.lv_list02 li:last-child{margin-bottom: 0}
+.lv_list02 li .tit{font-weight: bold;width: 80px;margin-right: 10px}
+.lv_list02 li .desc{width: calc(100% - 90px)}
+.lvr_slide{position: relative;}
+.lvr_slide .swiper-container{overflow: hidden}
+.lr_view .lvr_slide .cont_list{margin: 15px 0 0 0}
+.lr_view .lvr_slide .item{border: 1px solid #eaeaea;border-radius: 10px;box-sizing: border-box}
+.lr_view .lvr_slide .item .txt{padding: 20px;}
+.lr_view .lvr_slide .bt{display: flex;border-top: 1px solid #eaeaea}
+.lr_view .lvr_slide .bt > *{width: 50%;text-align: center;padding: 18px;}
+.lr_view .lvr_slide .bt > * + *{border-left: 1px solid #eaeaea}
+.lr_view .comment_area {margin-bottom: 10px;}
+.lr_view .comment_area .blue_btn{width: 150px;}
+.lr_view .comment_area textarea{width: calc(100% - 170px)}
+.lr_view .qna_wrap .item{margin-bottom: 10px;}
+.lr_view .qna_wrap .item:last-child{margin-bottom: 0}
+.lr_view .qna_wrap .item .txt{font-size: 16px;padding-top: 5px;}
+.lr_view .qna_wrap .item .date{font-size: 14px;color: #888888;margin-top: 15px;}
+.lr_view .qna_wrap .item > div{position: relative;padding-left: 45px;}
+.lr_view .qna_wrap .item > div + div{border-top: 1px solid #eaeaea;padding-top: 20px;margin-top: 20px;}
+.lr_view .qna_wrap .item  .q:before{content: 'Q';width: 30px;height: 30px;display: flex;justify-content: center;text-align: center;background: #f2f4f6;border-radius: 5px;align-items: center;color: #0082cc;position: absolute;left: 0;top: 0}
+.lr_view .qna_wrap .item  .a:before{content: 'A ';width: 30px;height: 30px;display: flex;justify-content: center;text-align: center;background: #0082cc;border-radius: 5px;align-items: center;color: #fff;position: absolute;left: 0;top: 20px}
+
+/* 설문조사 */
+.lr_view .survey{background: #f9fafc;padding: 20px;border-radius: 10px;display: flex;justify-content: space-between}
+.lr_view .survey .f18{margin-bottom: 10px;}
+.lr_view .survey .blue_btn{width: 140px;text-align: center;display: flex;justify-content: center;align-items: center;border-radius: 10px;font-size: 16px;}
+
+/* 교육장소팝업 */
+.lv_list.no_btop li:first-child{border-top: 0;padding-top: 0}
+.map_pop .lv_list li .tit{width: 90px;}
+.map_pop .lv_list li .txt{width: calc(100% - 100px)}
+
+/*강좌 미리보기팝업*/
+.video_pop .video_wrap iframe,
+.video_pop .video_wrap video{width: 100%;}
+
+/* 교육과정 팝업 */
+.pop_tit02 .state{position: static;margin-bottom: 10px;}
+.pop_tit02 p{font-size: 18px;font-weight: 500;padding-bottom: 15px;margin-bottom: 15px;border-bottom: 1px solid #eaeaea;}
+.cont_list.harf_cl{display: flex;flex-wrap: wrap;}
+.cont_list.harf_cl li{display: flex;align-items: center;margin-bottom: 10px;width: calc(50% - 10px);margin-right: 20px;font-size: 14px;}
+.cont_list.harf_cl li:nth-child(2n){margin-right: 0}
+
+/* 시험 팝업 */
+.test_list .item{margin-bottom: 20px;}
+.test_list .item:last-child{margin-bottom: 0}
+.test_list .q{margin-bottom: 15px;}
+.test_list .multi{padding-left: 10px;}
+.test_list .multi li{margin-bottom: 10px;font-size: 14px;}
+.test_list .textarea{min-height: 100px}
+
+/* 시험 채점 */
+.grade_pop .item{margin-bottom: 10px;}
+.test_list .grade{background: #f5f5f5;padding: 5px;border-radius: 10px;display: flex;border: 1px solid #eaeaea;margin-bottom: 20px;align-items: flex-start}
+.test_list .grade span{color: #fff;padding: 3px 10px;background: #ddd;border-radius: 5px;font-size: 14px;margin-right: 10px;width: 30px;margin-right: 10px;text-align: center;}
+.test_list .grade  .txt{font-size: 14px;padding-top: 3px;width: calc(100% - 45px);word-break: keep-all}
+.test_list .grade .bg_blue{background: #0082cc}
+.test_list .grade .bg_red{background: #f94444}
+.score_btn{display: flex;justify-content: space-between;align-items: center}
 
 /* -----------반응형 start---------*/
 @media all and (max-width:1500px){
@@ -570,6 +780,12 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lt_swiper-button-next{right: 0}
     .lt_swiper-button-prev{left: 0}
     
+    .lecture_sub_list .lecture_list{padding: 0;}
+    .lecture_view .lv_tit .share_layer{left:-156px;}
+    
+    /* 강의실 */
+    .lr_view .section01 .right .progress > div span{padding: 5px;}
+    .lvr_slide{padding: 0 50px;}
 }
 
 @media all and (max-width:1024px){
@@ -605,12 +821,36 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .tit_wrap{display: block;}
     .tit_wrap input{margin-bottom: 10px;width: 100%;margin-right: 0}
     
+    /* 교육과정 목록 */
+    .lecture_sub_list .lecture_list .item{width: calc(50% - 10px);}
+    .lecture_sub_list .lecture_list .item:nth-child(2n){margin-right: 0}
+    .lecture_sub_list .lecture_list .item:nth-child(3n){margin-right: auto}
+    
+    /* 교육과정 상세 */
+    .lecture_view .lv_header{display: block;}
+    .lecture_view .lv_header .left{width: 100%;margin-bottom: 20px;}
+    .lecture_view .lv_header .right{width: 100%;margin-left: 0}
+    .lecture_view .lv_header .left .img{height: 65vw}
+    
+    /* 수강신청 */
+    .ac_view_area{display: block;}
+    .ac_view_area .left{width: 100%;margin-right: 0;padding-right: 0;border-right: 0;}
+    .ac_view_area .right{width: 100%;}
+    .ac_view_area .right .big_btn{max-width: 320px;width: 100%;margin: 30px auto 0 auto;}
+    
+    /* 강의실 */
+    .lr_view .section01{display: block;}
+    .lr_view .section01 .left,
+    .lr_view .section01 .right{width: 100%;}
+    .lr_view .section01 .left{margin-bottom: 20px;}
 }
 
 @media all and (max-width:768px){
     .f18{font-size: 16px}
     .f16{font-size: 15px !important}
+    .f20{font-size: 18px;}
     .mt50{margin-top: 30px;}
+    .pd60{padding: 40px 0}
     .btn_style01,
     .btn_style03,
     .btn_style04,
@@ -633,6 +873,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lt_swiper-button-prev{background-size: 10px;width: 10px;height: 28px}
     .lecture_list .item .text .tit{font-size: 15px}
     .lecture_list .item .text ul li{font-size: 13px}
+    .lecture_list .item .img{height: 40vw}
     
     /*리뷰*/
     .review_area .img{left: 50%;transform: translateX(-50%)}
@@ -740,8 +981,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .table_style01.row_table table th{border-bottom:1px solid #ccc }
     .table_style01.row_table table th,
     .table_style01.row_table table td{padding: 10px;font-size: 14px;}
-    .tel_input{max-width: 421px;}
-    .tel_input input{width: calc(33.333% - 3.333px)}
+    .tel_input{max-width: 421px;width: 100%;}
     .input_style{max-width: 100%;}
     .m_show{display: block;}
     .big_btn{font-size: 16px;padding: 10px 15px;}
@@ -753,6 +993,64 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     /* faq */
     .table_style01.notice_table table .answer td{padding: 0}
+    
+    
+    /* 교육과정 상세 */
+    .lecture_view .lv_tit .tit{font-size: 18px;}
+    .lecture_view .lv_header .tag li a{font-size: 13px}
+    .lecture_view .lv_header .rating_wrap .go_review a{font-size: 15px;}
+    .lecture_view .lv_header .btn_area a{font-size: 16px;padding: 15px 0}
+    .lv_list li .tit{width: 100px;}
+    .lv_list li .txt{width: calc(100% - 105px)}
+    .lv_list li .tit,
+    .lv_list li .txt{font-size: 15px;}
+    .lecture_view .lv_header .btn_area .like_btn,
+    .lecture_view .lv_header .btn_area .like_btn.active{width: 50px;background-size: 20px;}
+    .lecture_view .lv_cont{margin: 40px 0}
+    .lecture_view .lv_header .btn_area .blue_btn{width: calc(50% - 25px);}
+    .lecture_view .lv_header .btn_area .gray_btn02{width: calc(50% - 25px)}
+    .lecture_view .lv_header .btn_area a{padding: 10px 0;font-size: 15px;}
+    .lecture_view .lv_review .lv_review_top .tit{font-size: 18px;}
+    .lecture_view .lv_review .lv_review_list .item{flex-direction: column;margin: 10px 0;padding: 10px 0}
+    .lecture_view .lv_review .lv_review_list .item .txt_area{width: 100%;margin-top: 15px;}
+    .lecture_view .lv_review .lv_review_list .item .top .name,
+    .lecture_view .lv_review .lv_review_list .item .text{font-size: 15px;}
+    .lecture_view .more_btn{font-size: 16px;padding: 15px 30px 15px 10px;width: 200px;background-position:  right 15px center;background-size: 13px;}
+    
+    .ac_view_area .left .top .txt{padding-top: 0;}
+    
+    /*강의실*/
+    .lr_view .tit_wrap02 a{position: absolute;right: 20px;top: 170px;font-size: 13px;padding: 5px 5px 5px 20px;background-position: left 5px center;}
+    .lr_view .section01 .right .progress_area .txt p,
+    .lr_view .section01 .right .percent{font-size: 12px;}
+    .lr_view .section01 .right .progress > div span{font-size: 12px;}
+    
+    .cont_list li strong,
+    .cont_list li p{font-size: 15px;}
+    
+    /* 학습목차 table */
+    .lr_view .notice_table.table_style01 tr{position: relative;}
+    .notice_table.table_style01 .index01:before{content: '차시 : ';display: inline-block;margin-right: 3px;}
+    .notice_table.table_style01 .index02:before{content: '진도율 : ';display: inline-block;margin-right: 3px;}
+    .notice_table.table_style01 .index03:before{content: '학습시간 : ';display: inline-block;margin-right: 3px;}
+    .notice_table.table_style01 .index04:before{content: '학습일자 : ';display: inline-block;margin-right: 3px;}
+    .notice_table.table_style01 .index03,
+    .notice_table.table_style01 .index04{display: inline-block;color: #888}
+    .notice_table.table_style01 .index03{margin-right: 10px}
+    .notice_table.table_style01 .index05{display: block}
+    .notice_table.table_style01 .index06,
+    .notice_table.table_style01 .index07{display: inline-block;}
+    
+    .lr_view .comment_area .blue_btn{width: 80px;}
+    .lr_view .comment_area textarea{width: calc(100% - 100px)}
+    .lr_view .qna_wrap .item .txt{font-size: 15px}
+    .lr_view .qna_wrap .item .date{font-size: 14px;}
+    .lr_view .survey .txt{width: calc(100% - 100px);}
+    .lr_view .survey .blue_btn{width: 90px;}
+    
+    .cont_list.harf_cl{display: block;}
+    .cont_list.harf_cl li{width: 100%;}
+    .popup .pop_cont{max-height: calc(100vh - 200px)}
 }
 
 
@@ -800,10 +1098,44 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .view_down a + a{margin-left: 0;margin-top: 10px;}
     .comment_area button{font-size: 14px;width: 80px;}
     .comment_area textarea{width: calc(100% - 90px);height: 60px;}
+    
+    /* 교육과정 목록 */
+    .lecture_sub_list .lecture_list .item{width: 100%;margin-right: 0}
+    
+    /* 교육과정 상세 */
+    .lecture_view .lv_review .lv_review_top .tit{margin-bottom: 10px;}
+    .lv_list li{display: block;}
+    .lv_list li .tit, 
+    .lv_list li .txt{width: 100% !important}
+    .lv_list li .tit{margin-bottom: 10px;}
+    
+    /* 수강신청 */
+    .ac_view_area .left .top{display: block;}
+    .ac_view_area .left .top .img{width: 100%;height: 55vw}
+    .ac_view_area .left .top .txt{width: 100%;margin-left: 0;margin-top: 20px;}
+    
+    /*강의실*/
+    .lr_view .section01 .left{overflow: hidden}
+    .lr_view .section01 .left a{position: static;float: right;margin-top: 10px;}
+    .lr_view .section01 .right .progress_wrap{white-space: nowrap;overflow-x: auto;overflow-y: hidden}
+    .lr_view .section01 .right .progress{display: table;}
+    .lr_view .section01 .right .progress > div {display: table-cell}
+    .lr_view .section02 > div{padding-right: 15px;margin-right: 15px;}
+    .lv_list02 li{display: block;}
+    .lv_list02 li .tit{width: 100%;margin-bottom: 5px;font-size: 15px;}
+    .lv_list02 li .txt{font-size: 15px; }
+    
+    .lr_view .survey{display: block;}
+    .lr_view .survey .txt{width: 100%;text-align: center;}
+    .lr_view .survey .blue_btn{padding:  10px;font-size: 14px;margin: 20px auto 0 auto}
 }
 
 
 @media all and (max-width:300px){
     .write_btn{padding-bottom: 60px;}
     .write_btn .green_btn{top: auto;bottom: 0}
+    
+    /* 교육과정 상세 */
+    .lecture_view .lv_review .lv_review_top{display: block;margin-bottom: 20px;}
+    
 }
