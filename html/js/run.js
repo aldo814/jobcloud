@@ -320,7 +320,7 @@ $(document).ready(function () {
                 slidesPerView: 3,
             },
             480: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             280: {
                 slidesPerView: 1,
