@@ -4,7 +4,14 @@ $(document).ready(function () {
         $('.mega_menu').slideToggle(300);
     });
 
-
+   //Header
+   $('.header-nav').hover(function () {
+      $(".all_menu").toggleClass('active');
+      $('.mega_menu').slideToggle(300);
+   }, function () {
+      $(".all_menu").toggleClass('active');
+      $('.mega_menu').slideToggle(300);
+   });
 
     if (window.innerWidth < 1024) {
         $('#header .header-nav .all_menu a').click(function () {
@@ -162,9 +169,9 @@ $(document).ready(function () {
     });
 
     /*찜하기 버튼*/
-    $('.like').click(function () {
+    /*$('.like').click(function () {
         $(this).toggleClass('active')
-    });
+    });*/
 
     /* 탭메뉴 */
     // 탭 컨텐츠 숨기기
@@ -296,9 +303,9 @@ $(document).ready(function () {
     });
     
     // a href='#' 클릭 무시 스크립트
-		$('a[href="#"]').click(function (ignore) {
-			ignore.preventDefault();
-		});
+      $('a[href="#"]').click(function (ignore) {
+         ignore.preventDefault();
+      });
     
     
     /* 강의실 슬라이드 */
@@ -332,29 +339,29 @@ $(document).ready(function () {
     const dt = new DataTransfer(); // Permet de manipuler les fichiers de l'input file
 
 $("#attachment").on('change', function(e){
-	for(var i = 0; i < this.files.length; i++){
-		let fileBloc = $('<span/>', {class: 'file-block'}),
-			 fileName = $('<span/>', {class: 'name', text: this.files.item(i).name});
-		fileBloc.prepend('<span class="file-delete"><span class="del">삭제</span></span>')
-			.prepend(fileName);
-		$("#filesList > #files-names").append(fileBloc);
-	};
-	for (let file of this.files) {
-		dt.items.add(file);
-	}
-	this.files = dt.files;
+   for(var i = 0; i < this.files.length; i++){
+      let fileBloc = $('<span/>', {class: 'file-block'}),
+          fileName = $('<span/>', {class: 'name', text: this.files.item(i).name});
+      fileBloc.prepend('<span class="file-delete"><span class="del">삭제</span></span>')
+         .prepend(fileName);
+      $("#filesList > #files-names").append(fileBloc);
+   };
+   for (let file of this.files) {
+      dt.items.add(file);
+   }
+   this.files = dt.files;
 
-	$('span.file-delete').click(function(){
-		let name = $(this).next('span.name').text();
-		$(this).parent().remove();
-		for(let i = 0; i < dt.items.length; i++){
-			if(name === dt.items[i].getAsFile().name){
-				dt.items.remove(i);
-				continue;
-			}
-		}
-		document.getElementById('attachment').files = dt.files;
-	});
+   $('span.file-delete').click(function(){
+      let name = $(this).next('span.name').text();
+      $(this).parent().remove();
+      for(let i = 0; i < dt.items.length; i++){
+         if(name === dt.items[i].getAsFile().name){
+            dt.items.remove(i);
+            continue;
+         }
+      }
+      document.getElementById('attachment').files = dt.files;
+   });
 });
 
 });
@@ -379,4 +386,3 @@ $("#attachment").on('change', function(e){
        function closeWindow() {  
         window.close();  
         }  
-
