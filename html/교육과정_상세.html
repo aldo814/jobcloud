@@ -29,7 +29,24 @@
 	window.open("교육과정_강좌미리보기팝업.html","popOpen","width="+nWidth+",height="+nHeight+", left="+xPos+", top="+yPos+", toolbars=no, resizable=no, scrollbars=no");
 }
     
-   
+       //윈도우팝업
+    function popOpen02()
+
+{
+
+	var nWidth = "700";
+
+	var nHeight = "705";			  
+
+	var xPos = (document.body.clientWidth / 2) - (nWidth / 2); 
+
+	xPos += window.screenLeft;	 //듀얼 모니터
+
+	var yPos = (screen.availHeight / 2) - (nHeight / 2);
+
+	window.open("교육과정_장소확인팝업.html","popOpen","width="+nWidth+",height="+nHeight+", left="+xPos+", top="+yPos+", toolbars=no, resizable=no, scrollbars=no");
+}
+    
     </script>
 </head>
 
@@ -267,7 +284,7 @@
                             <p class="tit">교육 장소</p>
                             <div class="txt map_txt">
                                 <p>인키움 교육장</p>
-                                <a href="#" class="btn_style02 gray_btn03">지도보기</a>
+                                <a href="#" class="btn_style02 gray_btn03" onclick="popOpen02();">지도보기</a>
                             </div>
                         </li>
                         <li>

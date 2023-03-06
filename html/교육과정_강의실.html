@@ -28,6 +28,42 @@
 
 	window.open("교육과정_설문조사_팝업.html","popOpen","width="+nWidth+",height="+nHeight+", left="+xPos+", top="+yPos+", toolbars=no, resizable=no, scrollbars=no");
 }
+    
+     function popOpen02()
+
+{
+
+	var nWidth = "700";
+
+	var nHeight = "600";			  
+
+	var xPos = (document.body.clientWidth / 2) - (nWidth / 2); 
+
+	xPos += window.screenLeft;	 //듀얼 모니터
+
+	var yPos = (screen.availHeight / 2) - (nHeight / 2);
+
+	window.open("교육과정_시험팝업.html","popOpen","width="+nWidth+",height="+nHeight+", left="+xPos+", top="+yPos+", toolbars=no, resizable=no, scrollbars=no");
+}
+    
+       //윈도우팝업
+    function popOpen03()
+
+{
+
+	var nWidth = "700";
+
+	var nHeight = "670";			  
+
+	var xPos = (document.body.clientWidth / 2) - (nWidth / 2); 
+
+	xPos += window.screenLeft;	 //듀얼 모니터
+
+	var yPos = (screen.availHeight / 2) - (nHeight / 2);
+
+	window.open("교육과정_과제팝업.html","popOpen","width="+nWidth+",height="+nHeight+", left="+xPos+", top="+yPos+", toolbars=no, resizable=no, scrollbars=no");
+}
+    
     </script>
 </head>
 
@@ -285,7 +321,7 @@
                                 </div>
                                 <div class="bt">
                                     <p class="blue">제출 완료</p>
-                                    <a href="#">상세 보기</a>
+                                    <a href="#" onclick="popOpen03()">상세 보기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -302,7 +338,7 @@
                                 </div>
                                 <div class="bt">
                                     <p class="gray">미응시</p>
-                                    <a href="#">상세 보기</a>
+                                    <a href="#" onclick="popOpen02()">상세 보기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -319,7 +355,7 @@
                                 </div>
                                 <div class="bt">
                                     <p class="gray">미응시</p>
-                                    <a href="#">상세 보기</a>
+                                    <a href="#" onclick="popOpen02()">상세 보기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -336,7 +372,7 @@
                                 </div>
                                 <div class="bt">
                                     <p class="gray">미응시</p>
-                                    <a href="#">상세 보기</a>
+                                    <a href="#" onclick="popOpen02()">상세 보기</a>
                                 </div>
                             </div>
                         </div>
