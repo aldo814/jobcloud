@@ -848,6 +848,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 }
 
 @media all and (max-width:768px){
+    .tit_style02{font-size: 18px;}
     .f18{font-size: 16px}
     .f16{font-size: 15px !important}
     .f20{font-size: 18px;}
@@ -1130,9 +1131,10 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lr_view .section01 .right .progress > div {display: table-cell}
     .lr_view .section02 > div{padding-right: 15px;margin-right: 15px;}
     .lv_list02 li{display: block;}
+    .lvr_slide{padding: 0 30px;}
     .lv_list02 li .tit{width: 100%;margin-bottom: 5px;font-size: 15px;}
     .lv_list02 li .txt{font-size: 15px; }
-    
+    .lr_view .lvr_slide .bt > *{padding: 10px}
     .lr_view .survey{display: block;}
     .lr_view .survey .txt{width: 100%;text-align: center;}
     .lr_view .survey .blue_btn{padding:  10px;font-size: 14px;margin: 20px auto 0 auto}
