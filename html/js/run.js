@@ -356,15 +356,7 @@ $("#attachment").on('change', function(e){
 		document.getElementById('attachment').files = dt.files;
 	});
 });
-    
-    //팝업
-     if ($(".popup").css("display") == "none") { 
-        $('.shadow').hide();
-         $('body').removeClass('not_scroll');
-     } else {
-         $('.shadow').show();
-         $('body').addClass('not_scroll');
-    }
+
 });
 
 
