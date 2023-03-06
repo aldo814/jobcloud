@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/run.js"></script>
-    
+
 </head>
 
 <body>
@@ -122,10 +122,10 @@
                             <li>
                                 <a href="#">하위 메뉴</a>
                             </li>
-                              <li>
+                            <li>
                                 <a href="#">하위 메뉴</a>
                             </li>
-                              <li>
+                            <li>
                                 <a href="#">하위 메뉴</a>
                             </li>
                         </ul>
@@ -134,66 +134,136 @@
             </div>
         </div>
     </header>
-    <!--//header-->   <div class="container">
-    <div class="login_wrap">
-        <div class="logo_area">
-            <img src="images/user/logo02.png" alt="JOBCLOUD">
-        </div>
-        <div class="cont_area">
-            <div class="login_box">
-                <div>
-                    <span class="id"></span>
-                    <input type="text" placeholder="아이디(이메일)를 입력하세요.">
-                </div>
-                <div>
-                    <span class="pw"></span>
-                    <input type="password" placeholder="비밀번호를 입력하세요.">
-                </div>
+    <!--//header-->
+    <div class="container">
+        <div class="list_wrap">
+            <div class="snb">
+                <h3 class="tit">마이페이지</h3>
+                <ul>
+                    <li class="active">
+                        <a href="#">나의 강의실</a>
+                    </li>
+                    <li>
+                        <a href="#">활동 이력</a>
+                    </li>
+                    <li>
+                        <a href="#">회원정보</a>
+                    </li>
+                    <li>
+                        <a href="#">회원탈퇴</a>
+                    </li>
+                </ul>
             </div>
-            <div class="check_area">
-               <div class="check_style">
-                <input type="checkbox" id="remb">
-                <label for="remb">아이디 기억하기</label>
-                </div>
-            </div>
-            <button class="blue_btn big_btn" type="submit">로그인</button>
-            <div class="sub_area">
-                <a href="#" class="link_join">회원가입</a>
-                <div class="look_box">
-                    <a href="#">아이디 찾기</a>
-                    <a href="#" onclick="javascript:openModal('modal1');">비밀번호 찾기</a>
+            <div class="content">
+                <div class="secession">
+                    <h3 class="tit_style01">회원 탈퇴</h3>
+                    <div class="white_box">
+                        <p class="16 bold">알려드립니다.</p>
+                        <p class="f14 mt20">
+                            탈퇴 시 회원님의 개인정보 및 수강이력, 작성 게시물 등의 모든 정보가 삭제됩니다. <br>
+                            한번 삭제된 정보는 복구가 불가능합니다.
+
+                        </p>
+                        <p class="mt20 f14 bold">삭제되는 정보</p>
+                        <div class="gray_box02 mt10">
+                            <ul class="bar_list">
+                                <li class="f14 gray">계정 정보 및 개인 정보</li>
+                                <li class="f14 gray">수강이력 및 수료 정보</li>
+                                <li class="f14 gray">작성된 게시물/댓글 내용 및 관련 댓글 내용</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt20">
+                        <input type="checkbox" class="check" id="check1">
+                        <label for="check1" class="gray f14">상기 내용에 동의합니다.</label>
+                    </div>
+
+                    <div class="table_style01 row_table mt30">
+                        <table>
+                            <caption>회원탈퇴</caption>
+                            <colgroup>
+                                <col style="width:180px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th colspan="row">아이디</th>
+                                    <td class="tlt f16">kildong@hong.com</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="row">비밀번호 확인</th>
+                                    <td class="tlt">
+                                        <input type="password" class="input_style">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="row">탈퇴 사유</th>
+                                    <td class="tlt">
+                                        <select class="select_style gray">
+                                            <option>탈퇴하시는 이유가 무엇인가요?</option>
+                                            <option>사용빈도가 낮아서</option>
+                                            <option>다른 사이트가 더 좋아서</option>
+                                            <option>이용이 불편하고 장애가 많아서</option>
+                                            <option>삭제하고 싶은 내용이 있어서</option>
+                                            <option>콘텐츠가 불만족스러워서</option>
+                                            <option>기타</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="btn_wrap">
+                        <a href="#" class="btn_style04 red_btn">회원탈퇴</a>
+                        <a href="#" class="btn_style04 gray_btn black">취소</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
-        <div class="login_banner">
-        <img src="images/user/sub_banner01.png" alt="">
-        </div>
-    </div>
-    
+
     <!--팝업-->
     <div class="shadow" style="display: block"></div>
-   <div class="popup modal1" style="display: block">
+    <div class="popup join_form " style="display: block">
         <div class="pop_head">
-            <p>아이디 찾기</p>
+            <p>비밀번호변경</p>
             <a href="#" class="close_btn" onclick="close_pop()">닫기</a>
         </div>
         <div class="pop_cont">
-            <h3 class="pop_tit">아이디 찾기</h3>
-            <div class="border id_complete">
-                <p>ㅇㅇㅇ 님의 아이디는<br>
-<strong class="blue">sasdf@gmail.com</strong><br>
-입니다.
-</p>
+            <h3 class="pop_tit">비밀번호 변경</h3>
+            <div class="id_complete">
+                <div class="input_area">
+                    <div class="item">
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" placeholder="비밀번호를 입력하세요. ">
+                    </div>
+                        <div class="item">
+                        <label for="password02">변경 비밀번호</label>
+                        <input type="password" id="password02" placeholder="변경희망 비밀번호를 입력하세요. ">
+                        <p class="green tlt f14 mt10">
+                            사용가능한 비밀번호입니다.
+                        </p>
+                    </div>
+                    <div class="item">
+                        <label for="password">비밀번호 확인</label>
+                        <input type="password" id="password" placeholder="비밀번호를 확인합니다. ">
+                          <p class="red tlt f14 mt10">
+                            비밀번호 규칙에 맞지 않습니다.
+
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="btn_two">
-                 <a href="#" class="blue_btn" onclick="close_pop()">로그인 페이지로 이동</a>
-                <a href="#" class="gray_btn">비밀번호 찾기</a>
+                <a href="#" class="green_btn">비밀번호변경</a>
+                <a href="#" class="gray_btn" onclick="close_pop()">취소</a>
             </div>
         </div>
     </div>
     <!--//팝업-->
+
 
     <footer id="footer">
         <div class="inner">
@@ -225,9 +295,9 @@
                 <span>사업자등록번호 : 111-11-11111</span>
                 <p>서울시 구로구 디지털로 30길 31(구로동), 코오롱빌란트 2차 703호</p>
                 <div class="contact">
-                <span>대표전화 : 1577-1234</span>
-                <span>교육문의 : 1577-5678</span>
-                <span>이메일문의 : helpdesk@jobcloud.co.kr</span>
+                    <span>대표전화 : 1577-1234</span>
+                    <span>교육문의 : 1577-5678</span>
+                    <span>이메일문의 : helpdesk@jobcloud.co.kr</span>
                 </div>
             </div>
         </div>
