@@ -10,7 +10,25 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/run.js"></script>
+<script>
+    
+        function popOpen()
 
+{
+
+	var nWidth = "700";
+
+	var nHeight = "820";			  
+
+	var xPos = (document.body.clientWidth / 2) - (nWidth / 2); 
+
+	xPos += window.screenLeft;	 //듀얼 모니터
+
+	var yPos = (screen.availHeight / 2) - (nHeight / 2);
+
+	window.open("교육과정_설문조사_팝업.html","popOpen","width="+nWidth+",height="+nHeight+", left="+xPos+", top="+yPos+", toolbars=no, resizable=no, scrollbars=no");
+}
+    </script>
 </head>
 
 <body>
@@ -410,7 +428,7 @@
                         <p class="date">2023-02-04</p>
                     </div>
                     <div class="a">
-                        <p class="txt">답변 내용이 보여지는 부분입니다.
+                        <p class="txt">답변 내용이 보여지는 부분입니다.<br>
                             질문에 대한 부분 확인 후 강사나 관리자가 답변을 작성합니다.
                         </p>
                         <p class="date">2023-02-14</p>
@@ -442,7 +460,7 @@
 
                     </p>
                 </div>
-                <a href="#" class="blue_btn">설문 응답</a>
+                <a href="#" class="blue_btn" onclick="popOpen()">설문 응답</a>
             </div>
 
         </div>

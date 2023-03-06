@@ -373,3 +373,10 @@ $("#attachment").on('change', function(e){
         $('body').removeClass('not_scroll');
         $('.shadow').hide();
     };
+
+ 
+    /*윈도우창 닫기*/
+       function closeWindow() {  
+        window.close();  
+        }  
+

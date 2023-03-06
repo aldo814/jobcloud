@@ -10,7 +10,27 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/run.js"></script>
+<script>
+    //윈도우팝업
+    function popOpen()
 
+{
+
+	var nWidth = "700";
+
+	var nHeight = "500";			  
+
+	var xPos = (document.body.clientWidth / 2) - (nWidth / 2); 
+
+	xPos += window.screenLeft;	 //듀얼 모니터
+
+	var yPos = (screen.availHeight / 2) - (nHeight / 2);
+
+	window.open("교육과정_강좌미리보기팝업.html","popOpen","width="+nWidth+",height="+nHeight+", left="+xPos+", top="+yPos+", toolbars=no, resizable=no, scrollbars=no");
+}
+    
+   
+    </script>
 </head>
 
 <body>
@@ -274,7 +294,7 @@
                     </ul>
                     <div class="btn_area">
                         <a href="#" class="blue_btn">수강신청</a>
-                        <a href="#" class="gray_btn02">미리보기</a>
+                        <a href="#" class="gray_btn02" onclick="popOpen()">미리보기</a>
                         <a href="#" class="like_btn">찜하기</a>
                     </div>
                 </div>
