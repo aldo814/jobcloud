@@ -176,7 +176,7 @@
                             <tr>
                                 <th colspan="row">비밀번호</th>
                                 <td class="tlt">
-                                    <a href="#" class="gray_btn btn_style02">비밀번호 변경</a>
+                                    <a href="#" class="gray_btn btn_style02"  onclick="javascript:openModal('modal1');">비밀번호 변경</a>
                                 </td>
                             </tr>
                             <tr>
@@ -239,46 +239,47 @@
         </div>
     </div>
 
+   
     <!--팝업-->
-    <div class="shadow"></div>
-    <div class="popup pasPop">
+    <div class="shadow" style="display: block"></div>
+    <div class="popup join_form modal1" style="display: block">
         <div class="pop_head">
-            <p> 비밀번호변경</p>
+            <p>비밀번호변경</p>
             <a href="#" class="close_btn" onclick="close_pop()">닫기</a>
         </div>
-        <div class="pop_cont pop_cont02">
+        <div class="pop_cont">
             <h3 class="pop_tit">비밀번호 변경</h3>
-            <div class="join_form">
-            <div class="input_area">
-               <div class="item">
-                    <label for="password1">현재 비밀번호</label>
-                    <input type="password" id="password1" placeholder="현재 비밀번호를 입력하세요.">
-                </div>
-                <div class="item">
-                    <label for="password2">변경 비밀번호</label>
-                    <input type="password2" id="password" placeholder="변경희망 비밀번호를 입력하세요.">
-                    <p class="f14 red">
-                        비밀번호 규칙에 맞지 않습니다.
-비밀번호는 영문, 숫자, 특수문자 조합으로 8자 이상을 권장합니다. 
-                    </p>
-                </div>
-                <div class="item">
-                    <label for="password3">비밀번호 확인</label>
-                    <input type="password" id="password3" placeholder="비밀번호를 확인합니다.">
-                    <p class="f14 green">
-                        사용가능한 비밀번호입니다.
-                    </p>
-                </div>
-</div>
-            </div>
+            <div class="id_complete">
+                <div class="input_area">
+                    <div class="item">
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" placeholder="비밀번호를 입력하세요. ">
+                    </div>
+                        <div class="item">
+                        <label for="password02">변경 비밀번호</label>
+                        <input type="password" id="password02" placeholder="변경희망 비밀번호를 입력하세요. ">
+                        <p class="green tlt f14 mt10">
+                            사용가능한 비밀번호입니다.
+                        </p>
+                    </div>
+                    <div class="item">
+                        <label for="password">비밀번호 확인</label>
+                        <input type="password" id="password" placeholder="비밀번호를 확인합니다. ">
+                          <p class="red tlt f14 mt10">
+                            비밀번호 규칙에 맞지 않습니다.
 
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="btn_two">
-                <a href="#" class="blue_btn">비밀번호변경</a>
+                <a href="#" class="green_btn">비밀번호변경</a>
                 <a href="#" class="gray_btn" onclick="close_pop()">취소</a>
             </div>
         </div>
     </div>
     <!--//팝업-->
+
 
     <footer id="footer">
         <div class="inner">
