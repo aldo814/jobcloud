@@ -12,34 +12,9 @@
     <script src="js/run.js"></script>
 </head>
 <script language="JavaScript">
-// 새창 크기조정
-function WindowReset( win /* Window Object */ ){ // 새창의 크기와 위치 재설정
 
-//
-// 새창의 진행상황 체크 완료되면 코드실행
-//
-//while(win.document.readyState != 'complete'){}
-
-var winBody = win.document.body;
-
-//
-// 새창의 사이즈에 더해줄 marginWidth와 marginHeight
-//
-var marginHeight = parseInt(winBody.topMargin)+parseInt(winBody.bottomMargin);
-var marginWidth = parseInt(winBody.leftMargin)+parseInt(winBody.rightMargin);
-//
-// 새창의 사이즈 설정
-//
-var wid = winBody.scrollWidth + (winBody.offsetWidth - winBody.clientWidth) + marginWidth-5;
-var hei = winBody.scrollHeight + (winBody.offsetHeight - winBody.clientHeight) + marginHeight+17;
-//
-// 사이즈 재조정
-//
-win.resizeTo(wid, hei);
-}
-//-->
 </script>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" OnLoad="WindowReset(this)">
+<body>
       <!--팝업-->
                     <div class="popup mw700 video_pop window_pop">
                         <div class="pop_head">
