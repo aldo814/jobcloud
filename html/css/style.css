@@ -56,6 +56,7 @@ a{text-decoration: none;color: inherit;}
 body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
 .inner{width: 1200px;margin: auto;}
 .hide{text-indent: -99999px;position: absolute;left: -99999px;overflow: hidden}
+.not_scroll{overflow: hidden;}
 hr.border_gray{border: 0;border-top: 1px solid #cccccc;}
 hr.border_gray02{border: 0;border-top: 1px solid #eaeaea;}
 .tct{text-align: center;}

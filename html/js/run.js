@@ -357,10 +357,18 @@ $("#attachment").on('change', function(e){
 	});
 });
     
+    //팝업
+     if ($(".popup").css("display") == "none") { 
+        $('.shadow').hide();
+         $('body').removeClass('not_scroll');
+     } else {
+         $('.shadow').show();
+         $('body').addClass('not_scroll');
+    }
 });
 
 
-
+    /* 팝업 */
     function openModal(modalname) {
         document.get
         $("." + modalname).show();
