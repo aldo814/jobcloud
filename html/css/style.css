@@ -808,6 +808,9 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     /* 강의실 */
     .lr_view .section01 .right .progress > div span{padding: 5px;}
     .lvr_slide{padding: 0 50px;}
+    
+    /*통합검색*/
+    .in_search .lecture_list{padding: 0}
 }
 
 @media all and (max-width:1024px){
@@ -865,6 +868,11 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lr_view .section01 .left,
     .lr_view .section01 .right{width: 100%;}
     .lr_view .section01 .left{margin-bottom: 20px;}
+    
+    /* 통합게시판 */
+    .in_search .lecture_list .item{width: calc(33.333% - 13.333px);}
+    .in_search .lecture_list .item:nth-child(4n){margin-top: auto;margin-right: 20px;}
+    .in_search .lecture_list .item:nth-child(3n){margin-right: 0}
 }
 
 @media all and (max-width:768px){
@@ -1079,6 +1087,12 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .popup .pop_cont{max-height: calc(100vh - 200px)}
     
     .lecture_list .swiper-slide .img{height: 45vw}
+    
+    /* 통합검색 */
+    .in_search .lecture_list .item{width: calc(50% - 10px);}
+    .in_search .lecture_list .item:nth-child(3){margin-top: 20px}
+    .in_search .lecture_list .item:nth-child(2n){margin-right: 0}
+    .in_search .lecture_list .item:nth-child(3n){margin-right: auto}
 }
 
 
@@ -1160,6 +1174,9 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lr_view .survey .blue_btn{padding:  10px;font-size: 14px;margin: 20px auto 0 auto}
     
     .lecture_list .item .img{height: 45vw}
+    
+    /* 통합검색 */
+    .in_search .lecture_list .item{width: 100%;margin-right: 0}
 }
 
 
