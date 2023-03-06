@@ -1092,6 +1092,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .in_search .lecture_list .item{width: calc(50% - 10px);}
     .in_search .lecture_list .item:nth-child(3){margin-top: 20px}
     .in_search .lecture_list .item:nth-child(2n){margin-right: 0}
+    .in_search .lecture_list .item:nth-child(2){margin-top: 20px}
     .in_search .lecture_list .item:nth-child(3n){margin-right: auto}
 }
 
