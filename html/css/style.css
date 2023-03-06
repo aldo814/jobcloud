@@ -781,14 +781,10 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .company_view .sample_markup > div{width: 250px;height: 250px;background: #f9fafc;border-radius: 50%;border: 1px solid #eaeaea;}
 
 /* 통합검색 */
-.in_search .lecture_list{display: flex;flex-wrap: wrap}
+.in_search .lecture_list{display: flex;flex-wrap: wrap;align-items: flex-start}
 .in_search .lecture_list .item{width: calc(25% - 15px);margin-right: 20px;}
 .in_search .lecture_list .item:nth-child(4n){margin-right: 0}
-.in_search .lecture_list .item:nth-child(1),
-.in_search .lecture_list .item:nth-child(2),
-.in_search .lecture_list .item:nth-child(3),
-.in_search .lecture_list .item:nth-child(4){margin-top: 0}
-
+.in_search .notice_top{margin-bottom: 0}
 
 
 /* -----------반응형 start---------*/
