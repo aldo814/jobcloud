@@ -788,6 +788,11 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .in_search .notice_top{margin-bottom: 0}
 
 
+/*인증번호입력*/
+.cert_nb{display: flex;justify-content: space-between;align-items: center}
+.cert_nb input{width: calc(100% - 120px)}
+.cert_nb02 input{width: calc(100% - 110px)}
+
 /* -----------반응형 start---------*/
 @media all and (max-width:1500px){
     .mp_lecture .mp_lecture_list .item .more_cont{right: 0}
