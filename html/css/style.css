@@ -51,7 +51,6 @@ table {
 input:active,
 input:focus{outline: none}
 table caption{text-indent: -9999px;position: absolute;left: -999999px;}
-button{cursor: pointer}
 button,input,textarea{font-family: 'Noto SAns KR'}
 a{text-decoration: none;color: inherit;}
 body,html{font-family: 'Noto Sans KR', sans-serif ;color: #333}
@@ -324,7 +323,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .join_form .input_area > .item .f14{margin-top: 10px;}
 .join_form .input_area .id_wrap{display: flex;border-bottom: 1px solid #eaeaea;}
 .join_form .input_area .id_wrap input{border-bottom: 0}
-.join_form .input_area .id_wrap button{width: 80px;border-radius: 5px;height: 30px;background: #f8f8f8;color: #888888;font-size: 14px;border: 1px solid #ddd;font-family: 'Noto Sans KR';cursor: pointer}
+.join_form .input_area .id_wrap button{width: 80px;border-radius: 5px;height: 30px;background: #f8f8f8;color: #888888;font-size: 14px;border: 1px solid #ddd;font-family: 'Noto Sans KR'}
 .join_form .join_complete .f16{margin-top: 60px;line-height: 1.8;font-weight: 500}
 .join_form .join_complete .gray_box{display: inline-block;margin-top: 30px;}
 .pass_reset{max-width: 600px;}
@@ -788,11 +787,6 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .in_search .lecture_list .item:nth-child(4n){margin-right: 0}
 .in_search .notice_top{margin-bottom: 0}
 
-
-/*인증번호입력*/
-.cert_nb{display: flex;justify-content: space-between;align-items: center}
-.cert_nb input{width: calc(100% - 120px)}
-.cert_nb02 input{width: calc(100% - 110px)}
 
 /* -----------반응형 start---------*/
 @media all and (max-width:1500px){
