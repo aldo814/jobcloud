@@ -225,7 +225,7 @@ $(document).ready(function () {
     
     /* 좌측메뉴 */
  $(".snb .active ul").show();
-    $(".snb ul li > a").click(function() {
+    $(".snb > ul > li > a").click(function() {
         if ($(this).next().is(":hidden")) {
             $(".snb ul li ul").slideUp();
             $(this).next().slideDown();
@@ -234,6 +234,10 @@ $(document).ready(function () {
         } else {
             $(".snb ul li ul").slideUp();
         }
+    });
+    $(".snb > ul > li > ul a").click(function() {
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
     });
     
     //스크롤 이동
