@@ -6,20 +6,20 @@ $(document).ready(function () {
 
   
 	//Header
-	$('.gnb, .mega_menu').mouseenter(function () {
-		$(".all_menu").addClass('active');
-		$('.mega_menu').stop().slideDown(300)
-	});
-    
-    $('.gnb, .mega_menu').mouseleave(function () {
-		$(".all_menu").removeClass('active');
-		$('.mega_menu').stop().slideUp(300)
-	});
-
     if (window.innerWidth < 1024) {
         $('#header .header-nav .all_menu a').click(function () {
             $('body').toggleClass('lock');
         });
+    } else {
+    	$('.gnb, .mega_menu').mouseenter(function () {
+    		$(".all_menu").addClass('active');
+    		$('.mega_menu').stop().slideDown(300)
+    	});
+        
+        $('.gnb, .mega_menu').mouseleave(function () {
+    		$(".all_menu").removeClass('active');
+    		$('.mega_menu').stop().slideUp(300)
+    	});
     }
 
 
