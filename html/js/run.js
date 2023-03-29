@@ -1,7 +1,9 @@
 $(document).ready(function () {
+	$("[class$='wrong_message']").hide();
+	
     $('.all_menu').click(function () {
         $(this).toggleClass('active');
-        $('.mega_menu').slideToggle(300);
+        $('.mega_menu').slideToggle(200);
     });
 
   
@@ -10,17 +12,18 @@ $(document).ready(function () {
         $('#header .header-nav .all_menu a').click(function () {
             $('body').toggleClass('lock');
         });
-    } else {
-    	$('.gnb, .mega_menu').mouseenter(function () {
-    		$(".all_menu").addClass('active');
-    		$('.mega_menu').stop().slideDown(300)
-    	});
-        
-        $('.gnb, .mega_menu').mouseleave(function () {
-    		$(".all_menu").removeClass('active');
-    		$('.mega_menu').stop().slideUp(300)
-    	});
+        $('#header .mega_menu #mega_gnb li .tit').click(function (){
+           $(this).parent().toggleClass('active') 
+        });
     }
+    
+    $(window).resize( function() {
+          if (window.innerWidth < 1024) {
+          $('#header .mega_menu #mega_gnb li .tit').click(function (){
+           $(this).parent().toggleClass('active') 
+        });
+    }
+    });
 
 
     /*메인 비쥬얼*/
@@ -35,6 +38,7 @@ $(document).ready(function () {
             speed: 800,
             spaceBetween: 30,
             loop: false,
+            autoHeight : true,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
@@ -85,9 +89,9 @@ $(document).ready(function () {
                 slidesPerView: 3,
             },
             768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
             },
-            480: {
+            501: {
                 slidesPerView: 1,
             },
             280: {
@@ -111,9 +115,9 @@ $(document).ready(function () {
                 slidesPerView: 3,
             },
             768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
             },
-            480: {
+            501: {
                 slidesPerView: 1,
             },
             280: {
@@ -137,9 +141,9 @@ $(document).ready(function () {
                 slidesPerView: 3,
             },
             768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
             },
-            480: {
+            501: {
                 slidesPerView: 1,
             },
             280: {
@@ -164,6 +168,9 @@ $(document).ready(function () {
             },
             768: {
                 slidesPerView: 2,
+            },
+            481: {
+                slidesPerView: 1,
             },
             280: {
                 slidesPerView: 1,
@@ -227,18 +234,22 @@ $(document).ready(function () {
  $(".snb .active ul").show();
     $(".snb > ul > li > a").click(function() {
         if ($(this).next().is(":hidden")) {
-            $(".snb ul li ul").slideUp();
-            $(this).next().slideDown();
+            $(".snb ul li ul").hide();
+            $(this).next().show();
             $(this).parent().addClass('active');
              $(this).parent().siblings().removeClass('active')
         } else {
-            $(".snb ul li ul").slideUp();
+            $(".snb ul li ul").hide();
+            $(this).parent().removeClass('active');
         }
     });
+    
     $(".snb > ul > li > ul a").click(function() {
         $(this).parent().addClass('active');
-        $(this).parent().siblings().removeClass('active');
+        $(this).parent().removeClass('active');
     });
+    
+  
     
     //스크롤 이동
     $('.go_review a[href^="#"]').on('click',function (e) {
@@ -268,13 +279,14 @@ $(document).ready(function () {
        $(this).next().fadeOut(100); 
     });
     
-    $('.like_btn').click(function(){
+    /*$('.like_btn').click(function(){
        $(this).toggleClass('active') 
-    });
+    });*/
     
     /* 수강후기 더보기 btn */
     $(".lv_review_list .item").slice(0, 5).css("display", "flex"); // 초기갯수
     $("#load").click(function(e){ // 클릭시 more
+    	$(".pageCnt").text(parseInt($(".pageCnt").text())+5);
         e.preventDefault();
         $(".lv_review_list .item:hidden").slice(0, 5).fadeIn(200).css('display', 'flex'); // 클릭시 more 갯수 지저정
         if($(".lv_review_list .item:hidden").length == 0){ // 컨텐츠 남아있는지 확인
