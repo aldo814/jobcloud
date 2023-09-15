@@ -1,30 +1,74 @@
 $(document).ready(function () {
-	$("[class$='wrong_message']").hide();
-	
+    $("[class$='wrong_message']").hide();
+
     $('.all_menu').click(function () {
         $(this).toggleClass('active');
         $('.mega_menu').slideToggle(200);
     });
 
-  
-	//Header
+
+    //Header
     if (window.innerWidth < 1024) {
         $('#header .header-nav .all_menu a').click(function () {
             $('body').toggleClass('lock');
         });
-        $('#header .mega_menu #mega_gnb li .tit').click(function (){
-           $(this).parent().toggleClass('active') 
+        $('#header .mega_menu #mega_gnb li .tit').click(function () {
+            $(this).parent().toggleClass('active')
         });
     }
-    
-    $(window).resize( function() {
-          if (window.innerWidth < 1024) {
-          $('#header .mega_menu #mega_gnb li .tit').click(function (){
-           $(this).parent().toggleClass('active') 
-        });
-    }
+
+    $(window).resize(function () {
+        if (window.innerWidth < 1024) {
+            $('#header .mega_menu #mega_gnb li .tit').click(function () {
+                $(this).parent().toggleClass('active')
+            });
+        }
     });
 
+    function snb() {
+
+        if (window.innerWidth < 768) {
+            //snb
+            $('.list_wrap .snb .tit').click(function () {
+                $(this).toggleClass('active');
+                $(this).next().toggleClass('active');
+            });
+
+            $(".snb > ul > li > a").click(function () {
+                if ($(this).next().is(":hidden")) {
+                    $(".snb ul li ul").hide();
+                    $(this).next().show();
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active')
+                } else {
+                    $(".snb ul li ul").hide();
+                    $(this).parent().removeClass('active');
+                }
+            });
+        } else {
+            /* 좌측메뉴 */
+            $(".snb > ul > li > a").click(function () {
+                if ($(this).next().is(":hidden")) {
+                    $(".snb ul li ul").hide();
+                    $(this).next().show();
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active')
+                } else {
+                    $(".snb ul li ul").hide();
+                    $(this).parent().removeClass('active');
+                }
+            });
+
+            $(".snb > ul > li > ul a").click(function () {
+                $(this).parent().addClass('active');
+                $(this).parent().removeClass('active');
+            });
+        }
+
+    }
+
+    snb();
+    $(window).resize(snb);
 
     /*메인 비쥬얼*/
     function updSwiperNumericPagination() {
@@ -38,7 +82,7 @@ $(document).ready(function () {
             speed: 800,
             spaceBetween: 30,
             loop: false,
-            autoHeight : true,
+            autoHeight: true,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
@@ -74,12 +118,38 @@ $(document).ready(function () {
     });
 
     /* 인기 강좌 슬라이드*/
-    var swiper = new Swiper('.slide01 .swiper-container', {
+    var swiper = new Swiper('.lecture_list02.slide01 .swiper-container', {
         slidesPerView: 4,
         spaceBetween: 20,
         navigation: {
             nextEl: '.slide01 .lt_swiper-button-next',
             prevEl: '.slide01 .lt_swiper-button-prev',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 4,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            501: {
+                slidesPerView: 1,
+            },
+            280: {
+                slidesPerView: 1,
+            },
+        }
+    });
+    
+     var swiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.slide02 .lt_swiper-button-next',
+            prevEl: '.slide02 .lt_swiper-button-prev',
         },
         breakpoints: {
             1200: {
@@ -229,30 +299,12 @@ $(document).ready(function () {
         $(this).parent().parent().next().find('div').slideToggle("200");
         $(this).parent().parent().next().toggleClass('active')
     });
-    
-    /* 좌측메뉴 */
- $(".snb .active ul").show();
-    $(".snb > ul > li > a").click(function() {
-        if ($(this).next().is(":hidden")) {
-            $(".snb ul li ul").hide();
-            $(this).next().show();
-            $(this).parent().addClass('active');
-             $(this).parent().siblings().removeClass('active')
-        } else {
-            $(".snb ul li ul").hide();
-            $(this).parent().removeClass('active');
-        }
-    });
-    
-    $(".snb > ul > li > ul a").click(function() {
-        $(this).parent().addClass('active');
-        $(this).parent().removeClass('active');
-    });
-    
-  
-    
+
+
+
+
     //스크롤 이동
-    $('.go_review a[href^="#"]').on('click',function (e) {
+    $('.go_review a[href^="#"]').on('click', function (e) {
         e.preventDefault();
 
         var target = this.hash;
@@ -264,37 +316,37 @@ $(document).ready(function () {
             window.location.hash = target;
         });
     });
-    
+
     /* 공유하기 */
-    $('.share > a').click(function(){
-       $('.share_layer').fadeToggle(100); 
+    $('.share > a').click(function () {
+        $('.share_layer').fadeToggle(100);
     });
-    
+
 
     /*툴팁*/
-    $('.qa_wrap a').mouseenter(function(){
-       $(this).next().fadeIn(100); 
+    $('.qa_wrap a').mouseenter(function () {
+        $(this).next().fadeIn(100);
     });
-     $('.qa_wrap a').mouseleave(function(){
-       $(this).next().fadeOut(100); 
+    $('.qa_wrap a').mouseleave(function () {
+        $(this).next().fadeOut(100);
     });
-    
+
     /*$('.like_btn').click(function(){
        $(this).toggleClass('active') 
     });*/
-    
+
     /* 수강후기 더보기 btn */
     $(".lv_review_list .item").slice(0, 5).css("display", "flex"); // 초기갯수
-    $("#load").click(function(e){ // 클릭시 more
-    	$(".pageCnt").text(parseInt($(".pageCnt").text())+5);
+    $("#load").click(function (e) { // 클릭시 more
+        $(".pageCnt").text(parseInt($(".pageCnt").text()) + 5);
         e.preventDefault();
         $(".lv_review_list .item:hidden").slice(0, 5).fadeIn(200).css('display', 'flex'); // 클릭시 more 갯수 지저정
-        if($(".lv_review_list .item:hidden").length == 0){ // 컨텐츠 남아있는지 확인
-            $('#load').fadeOut(100); 
+        if ($(".lv_review_list .item:hidden").length == 0) { // 컨텐츠 남아있는지 확인
+            $('#load').fadeOut(100);
         }
     });
-    
-    
+
+
     var swiper = new Swiper('.lv_slide .swiper-container', {
         slidesPerView: 4,
         spaceBetween: 20,
@@ -320,15 +372,15 @@ $(document).ready(function () {
             },
         }
     });
-    
+
     // a href='#' 클릭 무시 스크립트
-      $('a[href="#"]').click(function (ignore) {
-         ignore.preventDefault();
-      });
-    
-    
+    $('a[href="#"]').click(function (ignore) {
+        ignore.preventDefault();
+    });
+
+
     /* 강의실 슬라이드 */
-     var swiper = new Swiper('.lvr_slide .swiper-container', {
+    var swiper = new Swiper('.lvr_slide .swiper-container', {
         slidesPerView: 3,
         spaceBetween: 20,
         navigation: {
@@ -353,55 +405,168 @@ $(document).ready(function () {
             },
         }
     });
-    
+
+   
+
     // input file
     const dt = new DataTransfer(); // Permet de manipuler les fichiers de l'input file
 
-$("#attachment").on('change', function(e){
-   for(var i = 0; i < this.files.length; i++){
-      let fileBloc = $('<span/>', {class: 'file-block'}),
-          fileName = $('<span/>', {class: 'name', text: this.files.item(i).name});
-      fileBloc.prepend('<span class="file-delete"><span class="del">삭제</span></span>')
-         .prepend(fileName);
-      $("#filesList > #files-names").append(fileBloc);
-   };
-   for (let file of this.files) {
-      dt.items.add(file);
-   }
-   this.files = dt.files;
+    $("#attachment").on('change', function (e) {
+        for (var i = 0; i < this.files.length; i++) {
+            let fileBloc = $('<span/>', {
+                    class: 'file-block'
+                }),
+                fileName = $('<span/>', {
+                    class: 'name',
+                    text: this.files.item(i).name
+                });
+            fileBloc.prepend('<span class="file-delete"><span class="del">삭제</span></span>')
+                .prepend(fileName);
+            $("#filesList > #files-names").append(fileBloc);
+        };
+        for (let file of this.files) {
+            dt.items.add(file);
+        }
+        this.files = dt.files;
 
-   $('span.file-delete').click(function(){
-      let name = $(this).next('span.name').text();
-      $(this).parent().remove();
-      for(let i = 0; i < dt.items.length; i++){
-         if(name === dt.items[i].getAsFile().name){
-            dt.items.remove(i);
-            continue;
-         }
-      }
-      document.getElementById('attachment').files = dt.files;
-   });
+        $('span.file-delete').click(function () {
+            let name = $(this).next('span.name').text();
+            $(this).parent().remove();
+            for (let i = 0; i < dt.items.length; i++) {
+                if (name === dt.items[i].getAsFile().name) {
+                    dt.items.remove(i);
+                    continue;
+                }
+            }
+            document.getElementById('attachment').files = dt.files;
+        });
+    });
+
+    var videoElements = document.querySelectorAll('.customVideo');
+var progressBarElements = document.querySelectorAll('.progressBar');
+var playButtons = document.querySelectorAll('.playButton');
+var videoContainers = document.querySelectorAll('.video_area');
+
+
+    $('.hot_lecture').slick({
+        arrows: true,
+        dots: false,
+        slidesToShow: 3,
+        centerMode: true,
+        speed: 200
+    });
+    
+   // 페이지 로드 시 활성 슬라이드의 비디오를 재생
+        var initialSlide = $('.hot_lecture .slick-current .video_area');
+        initialSlide.addClass('active');
+        var initialVideo = initialSlide.find('video.customVideo')[0];
+        initialVideo.play();
+
+        // 슬라이드가 변경될 때 비디오 관리
+        $('.hot_lecture').on('afterChange', function(event, slick, currentSlide){
+            // 모든 슬라이드의 video_area에서 active 클래스를 제거합니다.
+            $('.video_area').removeClass('active');
+            
+            // 현재 활성 슬라이드의 video_area에 active 클래스를 추가합니다.
+            var currentVideoArea = $('.slick-current .video_area');
+            currentVideoArea.addClass('active');
+            
+            // 모든 비디오를 일시 중지합니다.
+            $('video.customVideo').each(function(index, video){
+                video.pause();
+            });
+
+        });
+
+// 각 비디오 및 관련 이벤트 처리
+videoElements.forEach(function (video, index) {
+  video.addEventListener('play', function () {
+    videoContainers[index].classList.remove('active');
+  });
+
+  video.addEventListener('pause', function () {
+    videoContainers[index].classList.add('active');
+  });
+
+  video.addEventListener('ended', function () {
+    playButtons[index].innerText = 'Play';
+  });
+
+  video.addEventListener('click', function () {
+    toggleVideo(video, playButtons[index]);
+  });
+
+  playButtons[index].addEventListener('click', function () {
+    toggleVideo(video, playButtons[index]);
+  });
 });
 
+// 비디오 프로그래스 바
+videoElements.forEach(function (video, index) {
+  video.addEventListener('timeupdate', function () {
+    var progress = (100 / video.duration) * video.currentTime;
+    progressBarElements[index].style.width = progress + '%';
+  });
+
+  progressBarElements[index].addEventListener('click', function (e) {
+    var goToTime = (e.offsetX / progressBarElements[index].offsetWidth) * video.duration;
+    video.currentTime = goToTime;
+  });
 });
 
+function toggleVideo(video, playButton) {
+  if (video.paused || video.ended) {
+    video.play();
+    playButton.innerText = 'Pause';
+  } else {
+    video.pause();
+    playButton.innerText = 'Play';
+  }
+}
 
-    /* 팝업 */
-    function openModal(modalname) {
-        document.get
-        $("." + modalname).show();
-        $('body').addClass('not_scroll');
-        $('.shadow').show();
-    }
+var heightArray = $(".empower_wrap>div .box").map( function(){ 
 
-    function close_pop(flag) {
-        $('.popup').hide();
-        $('body').removeClass('not_scroll');
-        $('.shadow').hide();
-    };
+             return  $(this).height(); 
 
- 
-    /*윈도우창 닫기*/
-       function closeWindow() {  
-        window.close();  
-        }  
+    }).get(); 
+
+  var maxHeight = Math.max.apply( Math, heightArray); 
+
+ $(".empower_wrap>div .box").height(maxHeight + 50); 
+    
+
+});
+
+$(window).resize(function(){
+    
+var heightArray = $(".empower_wrap>div .box").map( function(){ 
+
+             return  $(this).height(); 
+
+    }).get(); 
+
+  var maxHeight = Math.max.apply( Math, heightArray) 
+
+ $(".empower_wrap>div .box").height(maxHeight + 50)  ; 
+})
+
+
+/* 팝업 */
+function openModal(modalname) {
+    document.get
+    $("." + modalname).show();
+    $('body').addClass('not_scroll');
+    $('.shadow').show();
+}
+
+function close_pop(flag) {
+    $('.popup').hide();
+    $('body').removeClass('not_scroll');
+    $('.shadow').hide();
+};
+
+
+/*윈도우창 닫기*/
+function closeWindow() {
+    window.close();
+}
