@@ -130,71 +130,13 @@ $(document).ready(function () {
                 slidesPerView: 4,
             },
             1024: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            501: {
-                slidesPerView: 1,
-            },
-            280: {
-                slidesPerView: 1,
-            },
-        }
-    });
-    
-     var swiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.slide02 .lt_swiper-button-next',
-            prevEl: '.slide02 .lt_swiper-button-prev',
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 4,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            501: {
-                slidesPerView: 1,
-            },
-            280: {
-                slidesPerView: 1,
+                slidesPerView: 'auto',
+                initialSlide: 0,
+
             },
         }
     });
 
-    var swiper = new Swiper('.slide02 .swiper-container', {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.slide02 .lt_swiper-button-next',
-            prevEl: '.slide02 .lt_swiper-button-prev',
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 4,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            501: {
-                slidesPerView: 1,
-            },
-            280: {
-                slidesPerView: 1,
-            },
-        }
-    });
 
     var swiper = new Swiper('.slide03 .swiper-container', {
         slidesPerView: 4,
@@ -406,7 +348,7 @@ $(document).ready(function () {
         }
     });
 
-   
+
 
     // input file
     const dt = new DataTransfer(); // Permet de manipuler les fichiers de l'input file
@@ -443,9 +385,9 @@ $(document).ready(function () {
     });
 
     var videoElements = document.querySelectorAll('.customVideo');
-var progressBarElements = document.querySelectorAll('.progressBar');
-var playButtons = document.querySelectorAll('.playButton');
-var videoContainers = document.querySelectorAll('.video_area');
+    var progressBarElements = document.querySelectorAll('.progressBar');
+    var playButtons = document.querySelectorAll('.playButton');
+    var videoContainers = document.querySelectorAll('.video_area');
 
 
     $('.hot_lecture').slick({
@@ -453,101 +395,267 @@ var videoContainers = document.querySelectorAll('.video_area');
         dots: false,
         slidesToShow: 3,
         centerMode: true,
-        speed: 200
+        speed: 200,
+        centerPadding: '30px',
+        responsive: [ // 반응형 웹 구현 옵션
+            {
+                breakpoint: 1024, //화면 사이즈 960px
+                settings: {
+                    //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                    slidesToShow: 3,
+                    centerPadding: '0',
+                }
+					},
+				]
     });
-    
-   // 페이지 로드 시 활성 슬라이드의 비디오를 재생
-        var initialSlide = $('.hot_lecture .slick-current .video_area');
-        initialSlide.addClass('active');
-        var initialVideo = initialSlide.find('video.customVideo')[0];
-        initialVideo.play();
 
-        // 슬라이드가 변경될 때 비디오 관리
-        $('.hot_lecture').on('afterChange', function(event, slick, currentSlide){
-            // 모든 슬라이드의 video_area에서 active 클래스를 제거합니다.
-            $('.video_area').removeClass('active');
-            
-            // 현재 활성 슬라이드의 video_area에 active 클래스를 추가합니다.
-            var currentVideoArea = $('.slick-current .video_area');
-            currentVideoArea.addClass('active');
-            
-            // 모든 비디오를 일시 중지합니다.
-            $('video.customVideo').each(function(index, video){
-                video.pause();
-            });
+    // 페이지 로드 시 활성 슬라이드의 비디오를 재생
+    var initialSlide = $('.hot_lecture .slick-current .video_area');
+    initialSlide.addClass('active');
+    var initialVideo = initialSlide.find('video.customVideo')[0];
+    initialVideo.play();
 
+    // 슬라이드가 변경될 때 비디오 관리
+    $('.hot_lecture').on('afterChange', function (event, slick, currentSlide) {
+        // 모든 슬라이드의 video_area에서 active 클래스를 제거합니다.
+        $('.video_area').removeClass('active');
+
+        // 현재 활성 슬라이드의 video_area에 active 클래스를 추가합니다.
+        var currentVideoArea = $('.slick-current .video_area');
+        currentVideoArea.addClass('active');
+
+        // 모든 비디오를 일시 중지합니다.
+        $('video.customVideo').each(function (index, video) {
+            video.pause();
         });
 
-// 각 비디오 및 관련 이벤트 처리
-videoElements.forEach(function (video, index) {
-  video.addEventListener('play', function () {
-    videoContainers[index].classList.remove('active');
-  });
+    });
 
-  video.addEventListener('pause', function () {
-    videoContainers[index].classList.add('active');
-  });
+    // 슬라이더 변경 시 이벤트를 통해 이전 슬라이드에 클래스 추가
+    $('.hot_lecture').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        // 모든 슬라이드에서 클래스 제거
+        $('.slick-slide').removeClass('prev-slide');
 
-  video.addEventListener('ended', function () {
-    playButtons[index].innerText = 'Play';
-  });
+        // 이전 슬라이드에 클래스 추가
+        var prevSlideIndex = nextSlide - 1;
+        if (prevSlideIndex < 0) {
+            prevSlideIndex = slick.slideCount - 1; // 마지막 슬라이드로 이동
+        }
+        $('.slick-slide[data-slick-index="' + prevSlideIndex + '"]').addClass('prev-slide');
+    });
 
-  video.addEventListener('click', function () {
-    toggleVideo(video, playButtons[index]);
-  });
+    var initialSlideIndex = $('.hot_lecture').slick('slickCurrentSlide'); // 현재 슬라이드의 인덱스 가져오기
+    var prevSlideIndex = initialSlideIndex - 1;
+    if (prevSlideIndex < 0) {
+        prevSlideIndex = $('.hot_lecture').slick('getSlick').slideCount - 1; // 마지막 슬라이드로 이동
+    }
+    $('.slick-slide[data-slick-index="' + prevSlideIndex + '"]').addClass('prev-slide');
 
-  playButtons[index].addEventListener('click', function () {
-    toggleVideo(video, playButtons[index]);
-  });
+
+
+    // 각 비디오 및 관련 이벤트 처리
+    videoElements.forEach(function (video, index) {
+        video.addEventListener('play', function () {
+            videoContainers[index].classList.remove('active');
+        });
+
+        video.addEventListener('pause', function () {
+            videoContainers[index].classList.add('active');
+        });
+
+        video.addEventListener('ended', function () {
+            playButtons[index].innerText = 'Play';
+        });
+
+        video.addEventListener('click', function () {
+            toggleVideo(video, playButtons[index]);
+        });
+
+        playButtons[index].addEventListener('click', function () {
+            toggleVideo(video, playButtons[index]);
+        });
+    });
+
+    // 비디오 프로그래스 바
+    videoElements.forEach(function (video, index) {
+        video.addEventListener('timeupdate', function () {
+            var progress = (100 / video.duration) * video.currentTime;
+            progressBarElements[index].style.width = progress + '%';
+        });
+
+        progressBarElements[index].addEventListener('click', function (e) {
+            var goToTime = (e.offsetX / progressBarElements[index].offsetWidth) * video.duration;
+            video.currentTime = goToTime;
+        });
+    });
+
+    function toggleVideo(video, playButton) {
+        if (video.paused || video.ended) {
+            video.play();
+            playButton.innerText = 'Pause';
+        } else {
+            video.pause();
+            playButton.innerText = 'Play';
+        }
+    }
+
+    var heightArray = $(".empower_wrap>div .box").map(function () {
+
+        return $(this).height();
+
+    }).get();
+
+    var maxHeight = Math.max.apply(Math, heightArray);
+
+    $(".empower_wrap>div .box").height(maxHeight + 50);
+
+
+    var gnbOffset = $('#gnb-wrap').offset();
+    var dw = $(document).width();
+
+
+    $('#newHeader .h_search').on('click', function () {
+        $('.modal_search_wrapper').show();
+        $('.search_menu').show();
+        $('.search_menu input[type="text"]').focus();
+    });
+
+    $('.h_mobile_close').click(function () {
+        $('.h_mobile').removeClass('show');
+        $('.h_menu').removeClass('active');
+    });
+
+    $('.btn_search_close').click(function () {
+        $('.modal_search_wrapper').hide();
+        $('.search_menu').hide();
+    });
+
+    $('.footer_btn').click(function () {
+        $(this).toggleClass('active');
+        var footerWrap = $('.footer_wrap');
+
+        footerWrap.slideToggle(300, function () {
+            if (footerWrap.is(':visible')) {
+                // Scroll to the bottom of the screen
+                $('html, body').animate({
+                    scrollTop: $(document).height()
+                }, 300);
+            }
+        });
+    });
+
+    if (window.innerWidth < 1024) {
+        $('.empower_wrap').slick({
+            arrows: false,
+            dots: true,
+            slidesToShow: 1,
+        });
+
+        $(".empower_wrap>div .box").css('height', 'auto');
+
+        $('.lecture_list02.slide02 .item').hide();
+        $(".lecture_list02.slide02 .item").slice(0, 4).css("display", "block");
+        $(".m_more").click(function (e) {
+            e.preventDefault();
+            $(".lecture_list02.slide02 .item:hidden").slice(0, 5).fadeIn(200).css('display', 'block'); // 클릭시 more 갯수 지저정
+            if ($(".lecture_list02.slide02 .item:hidden").length == 0) { // 컨텐츠 남아있는지 확인
+                $('.m_more').fadeOut(100); // 컨텐츠 없을 시 버튼 사라짐
+            }
+        });
+    } else {
+
+
+        var swiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.slide02 .lt_swiper-button-next',
+                prevEl: '.slide02 .lt_swiper-button-prev',
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                501: {
+                    slidesPerView: 1,
+                },
+                280: {
+                    slidesPerView: 1,
+                },
+            }
+        });
+    }
+
+
+
+
 });
 
-// 비디오 프로그래스 바
-videoElements.forEach(function (video, index) {
-  video.addEventListener('timeupdate', function () {
-    var progress = (100 / video.duration) * video.currentTime;
-    progressBarElements[index].style.width = progress + '%';
-  });
-
-  progressBarElements[index].addEventListener('click', function (e) {
-    var goToTime = (e.offsetX / progressBarElements[index].offsetWidth) * video.duration;
-    video.currentTime = goToTime;
-  });
-});
-
-function toggleVideo(video, playButton) {
-  if (video.paused || video.ended) {
-    video.play();
-    playButton.innerText = 'Pause';
-  } else {
-    video.pause();
-    playButton.innerText = 'Play';
-  }
-}
-
-var heightArray = $(".empower_wrap>div .box").map( function(){ 
-
-             return  $(this).height(); 
-
-    }).get(); 
-
-  var maxHeight = Math.max.apply( Math, heightArray); 
-
- $(".empower_wrap>div .box").height(maxHeight + 50); 
+$(window).resize(function () {
     
+     if (window.innerWidth < 1024) {
+        $('.empower_wrap').slick({
+            arrows: false,
+            dots: true,
+            slidesToShow: 1,
+        });
 
-});
+        $(".empower_wrap>div .box").css('height', 'auto');
 
-$(window).resize(function(){
-    
-var heightArray = $(".empower_wrap>div .box").map( function(){ 
+        $('.lecture_list02.slide02 .item').hide();
+        $(".lecture_list02.slide02 .item").slice(0, 4).css("display", "block");
+        $(".m_more").click(function (e) {
+            e.preventDefault();
+            $(".lecture_list02.slide02 .item:hidden").slice(0, 5).fadeIn(200).css('display', 'block'); // 클릭시 more 갯수 지저정
+            if ($(".lecture_list02.slide02 .item:hidden").length == 0) { // 컨텐츠 남아있는지 확인
+                $('.m_more').fadeOut(100); // 컨텐츠 없을 시 버튼 사라짐
+            }
+        });
+    } else {
 
-             return  $(this).height(); 
 
-    }).get(); 
+        var swiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.slide02 .lt_swiper-button-next',
+                prevEl: '.slide02 .lt_swiper-button-prev',
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                501: {
+                    slidesPerView: 1,
+                },
+                280: {
+                    slidesPerView: 1,
+                },
+            }
+        });
+    }
 
-  var maxHeight = Math.max.apply( Math, heightArray) 
+    var heightArray = $(".empower_wrap>div .box").map(function () {
 
- $(".empower_wrap>div .box").height(maxHeight + 50)  ; 
+        return $(this).height();
+
+    }).get();
+
+    var maxHeight = Math.max.apply(Math, heightArray)
+
+    $(".empower_wrap>div .box").height(maxHeight + 50);
 })
 
 
@@ -569,4 +677,211 @@ function close_pop(flag) {
 /*윈도우창 닫기*/
 function closeWindow() {
     window.close();
+}
+
+// gnb menu
+function allMenu() {
+    if (window.innerWidth < 860) {
+        $('.h_mobile').toggleClass('show');
+    } else {
+        $('.h_gnb_bg').stop().slideToggle(300);
+        $('.h_menu').toggleClass('active');
+    }
+}
+$(document).mouseup(function (e) {
+    var navMenu = $(".h_gnb_bg");
+    var navBg = $('.h_ui');
+    var navBtn = $('.h_menu');
+    if (navMenu.has(e.target).length === 0 && navBg.has(e.target).length === 0) {
+        navMenu.stop().slideUp(300);
+        navBtn.removeClass('active');
+    }
+});
+
+
+
+//자동완성 스크립트
+function onSearch(type, keycode) {
+    //1입력 방지 20200610
+    var srchTxt = $("#srchTxt").val();
+    if (srchTxt == "1") {
+        return false;
+    }
+
+    var code = keycode.keyCode; // 키보드 이벤트 키 값
+    var nLenth = $("#srchTxt").val().trim().length;
+    if (nLenth != '') {
+        var index = 0; // index 설정값
+        var originTag = jQuery('input[name=srchTxt]').val(); // 최초 입력한 검색어
+        var len = jQuery('#autoComplete > ul > li').length; // 검색된 리스트 수
+        if (len > 0) { // 검색된 리스트가 하나라도 있는 경우
+
+            if (code == 40) { // ↓ 키 눌렀을 때
+
+            } else if (code == 38) { // ↑ 키 눌렀을 때
+
+            } else {
+                if ($("#autoWordFlag").val() == 'Y') {
+                    onAutoSearch();
+                }
+            }
+        } else {
+            if ($("#autoWordFlag").val() == 'Y') {
+                onAutoSearch();
+            }
+        }
+        /* if ($("#autoWordFlag").val() == 'Y') {
+        	onAutoSearch();
+        } */
+    } else {
+        $("#autoComplete").hide();
+        $("#wordList li").remove();
+    }
+}
+
+$('body').on('click', function (e) {
+    var clickTarget = e.target;
+    if ($(clickTarget).closest('.search-input-wrap').length == 0) {
+        $("#autoComplete").hide();
+    }
+});
+
+//자동완성 단어 조회
+function onAutoSearch() {
+    //onAutoSearchDelete();
+    $.ajax({
+        url: "/search.jsp",
+        type: "POST",
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        dataType: "json",
+        data: {
+            "srchType": "05",
+            "srchTxt": $("#srchTxt").val(),
+            "currentPageNo": "1",
+            "limit": "10"
+        },
+        success: (
+            function (obj) {
+                onAutoSearchCallBack(obj);
+            }
+        ),
+        error: (
+            function (errMsg) {
+                //alert("처리 중 문제가 발생하였습니다.");
+            }
+        )
+    });
+}
+
+function onAutoSearchCallBack(obj) {
+    if (obj.totalCount > 0) {
+        $("#autoComplete").show();
+
+        var list = obj.list;
+        var li = "";
+        var srchTxt = $("#srchTxt").val();
+        for (var i = 0, nCnt = list.length; i < nCnt; i++) {
+            var data = list[i][0];
+            li += "<li><a href=\"#none\"  onclick=\"setSearchText('" + data + "')\" onmouseover=\"onAutoPreview('" + data + "')\" title=\"" + data + " 이동\">" + replaceAll(data, srchTxt, "<strong>" + srchTxt + "</strong>") + "</a></li>\n";
+        }
+
+        if (li != "")
+            $("#wordList").html(li);
+    } else {
+        $("#autoComplete").hide();
+        onAutoSearchDelete()
+    }
+}
+
+function onAutoSearchDelete() {
+    $("#wordList li").remove();
+}
+
+function onAutoSearchClose(e) {
+    $("#autoComplete").hide();
+}
+
+function onAutoSearchNone() {
+    var autoWordFlag = $("#autoWordFlag").val();
+    if (autoWordFlag == "Y") {
+        onAutoSearchDelete();
+        onAutoPreviewDelete();
+        $("#autoWordFlag").val("N");
+        $("#autoSearchBtn").html("자동완성 켜기");
+    } else {
+        $("#autoWordFlag").val("Y");
+        onAutoSearch();
+        $("#autoSearchBtn").html("자동완성 끄기");
+    }
+}
+
+function onAutoPreview(srchTxt) {
+    onAutoPreviewDelete();
+    if ($("#autoPreviewFlag").val() == "Y") {
+        $("#subSrchTxt").val(srchTxt);
+        $.ajax({
+            url: "/search.jsp",
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            dataType: "json",
+            data: {
+                "srchType": "06",
+                "srchTxt": srchTxt,
+                "currentPageNo": "1",
+                "limit": "2"
+            },
+            success: (
+                function (obj) {
+                    onAutoPreviewCallBack(obj);
+                }
+            ),
+            error: (
+                function (errMsg) {
+                    //alert("처리 중 문제가 발생하였습니다.");
+                }
+            )
+        });
+    }
+}
+
+function onAutoPreviewCallBack(obj) {
+    if (obj.totalCount > 0) {
+
+        var list = obj.list;
+        var li = "";
+        var srchSubTxt = $("#subSrchTxt").val();
+        for (var i = 0, nCnt = list.length; i < nCnt; i++) {
+            var data = list[i];
+            var seq = data.seq;
+            var mainTitle = data.main_title;
+            var encptFileNm = data.encpt_file_nm;
+            var imgSrc = "<span></span>";
+            if (encptFileNm != "") {
+                imgSrc = "<img src=\"/file/image.do?filePath=" + encptFileNm + "\" alt=\"썸네일 이미지\" style=\"height:50px; width:50px;\"/>";
+            }
+            li += "<li><a href=\"#none\" onclick=\"onSearchView('" + data.seq + "')\" title=\"" + mainTitle + " 이동\">" + imgSrc + replaceAll(mainTitle, srchSubTxt, "<strong>" + srchSubTxt + "</strong>") + "</a></li>\n";
+        }
+
+        if (li != "")
+            $("#previewList").html(li);
+    } else {
+        onAutoPreviewDelete()
+    }
+    $("#subSrchTxt").val("");
+}
+
+function onAutoPreviewDelete() {
+    $("#previewList li").remove();
+}
+
+function onAutoPreviewNone() {
+    var autoPreviewFlag = $("#autoPreviewFlag").val();
+    if (autoPreviewFlag == "Y") {
+        onAutoPreviewDelete();
+        $("#autoPreviewFlag").val("N");
+        $("#autoPreviewBtn").html("미리보기 켜기");
+    } else {
+        $("#autoPreviewFlag").val("Y");
+        $("#autoPreviewBtn").html("미리보기 끄기");
+    }
 }
