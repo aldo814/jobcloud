@@ -131,7 +131,6 @@ $(document).ready(function () {
             },
             1024: {
                 slidesPerView: 'auto',
-                initialSlide: 0,
 
             },
         }
@@ -413,7 +412,6 @@ $(document).ready(function () {
     var initialSlide = $('.hot_lecture .slick-current .video_area');
     initialSlide.addClass('active');
     var initialVideo = initialSlide.find('video.customVideo')[0];
-    initialVideo.play();
 
     // 슬라이드가 변경될 때 비디오 관리
     $('.hot_lecture').on('afterChange', function (event, slick, currentSlide) {

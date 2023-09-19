@@ -2122,7 +2122,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .hot_lecture .slick-slide.slick-slide.slick-center + .slick-slide{transform: scale(0.9) translate(-60%)}
     
     .visual .swiper-slide > div .txt{width: 100%;position: static;transform: none;}
-    .visual .swiper-slide > div{background-size: 40% !important;background-position:  bottom 20px right  20px!important;min-height: 280px !important}
+    .visual .swiper-slide > div{background-size: 25% !important;background-position:  bottom 10px right  20px!important;min-height: 280px !important;padding-bottom: 60px}
     .visual .swiper-slide .tit{font-size: 30px}
     .visual .swiper-slide .desc{font-size: 16px}
     .visual{padding-bottom: 80px}
@@ -2566,6 +2566,18 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 
     #newFooter .f_address .f_addr {
         display: block;
+    }
+    
+    .lecture_list02{width: 100%}
+    .lecture_list02 .lt_swiper-button-next,
+    .lecture_list02 .lt_swiper-button-prev{display: none}
+     /* footer */
+    #newFooter .f_business .f_logo > a img {
+        width: 100px;
+    }
+
+    #newFooter .f_enquiry dl {
+        font-size: 13px;
     }
 }
 
