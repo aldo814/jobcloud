@@ -1967,6 +1967,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .content .lecture_list02 > .item{width: calc(33.333% - 13.333px);margin-right: 20px;margin-top: 30px;}
 .content .lecture_list02 > .item:nth-child(3n){margin-right: 0}
 
+.m_more{display: none}
+
 /* -----------반응형 start---------*/
 @media all and (max-width:1500px){
     .mp_lecture .mp_lecture_list .item .more_cont{right: 0}
@@ -2148,7 +2150,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .empower .empower_wrap .slick-dots li button{background: #aaaaaa;opacity: 1;width: 10px;height: 12px;}
     
     .lecture_list02.slide02 .swiper-wrapper{flex-wrap: wrap}
-    .lecture_list02.slide02 .item{width: calc(50% - 5px) !important;margin-top: 20px}
+    .lecture_list02.slide02 .item{width: calc(50% - 5px) !important;margin-top: 20px;margin-right: 0 !important}
     .lecture_list02.slide02 .item:nth-child(2n){margin-left: 10px;}
     .lecture_list02.slide02 .item:nth-child(-n + 2){margin-top: 0}
     .m_more{display: block;margin: 30px auto 0 auto;background:#e8e8e8 url(../images/user/more_arrow02.png) no-repeat right 90px center;text-align: center;max-width: 280px;position: relative;padding: 10px 30px 10px 10px;border-radius: 50px;font-size: 14px;color: #888888;}
@@ -2167,11 +2169,12 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
         position: absolute;
     }
 
-    .modal_search_wrapper .containerNew {
+    .modal_search_wrapper .inner {
         width: 100%;
         height: 100%;
         padding: 32px;
         top: 0;
+        left: 0;
         transform: none;
         border-radius: 0;
     }

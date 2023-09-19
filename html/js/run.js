@@ -119,24 +119,16 @@ $(document).ready(function () {
 
     /* 인기 강좌 슬라이드*/
     var swiper = new Swiper('.lecture_list02.slide01 .swiper-container', {
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         spaceBetween: 20,
         navigation: {
             nextEl: '.slide01 .lt_swiper-button-next',
             prevEl: '.slide01 .lt_swiper-button-prev',
         },
         breakpoints: {
-            1200: {
+            769: {
                 slidesPerView: 4,
-            },
-            1024: {
-                slidesPerView: 'auto',
-                initialSlide: 0,
-                autoHeight: true,
-                loop:true,
-                
-
-            },
+            }
         }
     });
 
@@ -552,6 +544,7 @@ $(document).ready(function () {
             dots: true,
             slidesToShow: 1,
         });
+        $('.empower_wrap').slick('refresh');
 
         $(".empower_wrap>div .box").css('height', 'auto');
 
@@ -567,7 +560,7 @@ $(document).ready(function () {
     } else {
 
 
-        var swiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
+        var mySwiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
             slidesPerView: 4,
             spaceBetween: 20,
             navigation: {
@@ -592,6 +585,7 @@ $(document).ready(function () {
                 },
             }
         });
+        
     }
 
 
@@ -600,6 +594,7 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
+    $('.hot_lecture').slick('refresh');
     
      if (window.innerWidth < 1024) {
         $('.empower_wrap').slick({
@@ -607,6 +602,7 @@ $(window).resize(function () {
             dots: true,
             slidesToShow: 1,
         });
+         
 
         $(".empower_wrap>div .box").css('height', 'auto');
 
@@ -620,9 +616,14 @@ $(window).resize(function () {
             }
         });
     } else {
+        
+        $('.empower_wrap').slick('refresh');
+        
+         $('.empower_wrap').slick('unslick');
 
 
-        var swiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
+        
+        var mySwiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
             slidesPerView: 4,
             spaceBetween: 20,
             navigation: {
@@ -647,7 +648,11 @@ $(window).resize(function () {
                 },
             }
         });
+        
+      mySwiper.reInit()
+      mySwiper.update();
     }
+    $(window).trigger("resize")
 
     var heightArray = $(".empower_wrap>div .box").map(function () {
 
