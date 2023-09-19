@@ -2533,7 +2533,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .hot_lecture .slick-list{overflow: visible}
     .hot_lecture .slick-slide{overflow: hidden}
     .hot_lecture .slick-slide.slick-center{transform: scale(2)}
-    .hot_lecture .slick-slide.slick-active:not(.slick-center){transform: scale(1.8) translate(0%)}
+    .hot_lecture .slick-slide.slick-active:not(.slick-center){transform: scale(1.8) translate(10%)}
     .hot_lecture .slick-slide.slick-slide.slick-center + .slick-slide{transform: scale(1.8) translate(0%)}
     .hot_lecture .slick-arrow{background-size: 13px;width: 13px;height: 26px}
     
