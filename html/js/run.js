@@ -79,7 +79,7 @@ $(document).ready(function () {
         this.slidesQuantity = this.querySelectorAll(".swiper-slide").length;
 
         var mySwiper = new Swiper('.visual', {
-            speed: 800,
+            speed: 3000,
             spaceBetween: 30,
             loop: false,
             autoHeight: true,
@@ -121,6 +121,7 @@ $(document).ready(function () {
     var swiper = new Swiper('.lecture_list02.slide01 .swiper-container', {
         slidesPerView: 4,
         spaceBetween: 20,
+        
         navigation: {
             nextEl: '.slide01 .lt_swiper-button-next',
             prevEl: '.slide01 .lt_swiper-button-prev',
