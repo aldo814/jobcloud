@@ -585,7 +585,7 @@ $(document).ready(function () {
                 },
             }
         });
-
+        
     }
 
 
@@ -595,17 +595,17 @@ $(document).ready(function () {
 
 $(window).resize(function () {
     $('.hot_lecture').slick('refresh');
-
-
-
-
-    if (window.innerWidth < 1024) {
+    
+    
+    
+    
+     if (window.innerWidth < 1024) {
         $('.empower_wrap').slick({
             arrows: false,
             dots: true,
             slidesToShow: 1,
         });
-
+         
 
         $(".empower_wrap>div .box").css('height', 'auto');
 
@@ -618,56 +618,50 @@ $(window).resize(function () {
                 $('.m_more').fadeOut(100); // 컨텐츠 없을 시 버튼 사라짐
             }
         });
-
-        swiper.destroy();
+         
+         swiper.destroy();
     } else {
-
+        
         $('.empower_wrap').slick('refresh');
+        
+         $('.empower_wrap').slick('unslick');
 
-        $('.empower_wrap').slick('unslick');
 
-    }
-
-    function initSwiper() {
-        var ww = $(window).width();
-        var mySwiper = undefined;
-        if (ww < 1280 && mySwiper == undefined) {
-            var mySwiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
-                slidesPerView: 4,
-                spaceBetween: 20,
-                observeParents: true,
-                observer: true,
-                navigation: {
-                    nextEl: '.slide02 .lt_swiper-button-next',
-                    prevEl: '.slide02 .lt_swiper-button-prev',
+        
+    var ww = $(window).width();
+var mySwiper = undefined;
+        
+        var mySwiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            observeParents : true,
+            observer : true,
+            navigation: {
+                nextEl: '.slide02 .lt_swiper-button-next',
+                prevEl: '.slide02 .lt_swiper-button-prev',
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
                 },
-                breakpoints: {
-                    1200: {
-                        slidesPerView: 4,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    501: {
-                        slidesPerView: 1,
-                    },
-                    280: {
-                        slidesPerView: 1,
-                    },
-                }
-            });
-
-        } else if (ww >= 1280 && mySwiper != undefined) {
-            mySwiper.destroy();
-            mySwiper = undefined;
-        }
+                1024: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                501: {
+                    slidesPerView: 1,
+                },
+                280: {
+                    slidesPerView: 1,
+                },
+            }
+        });
+        
+      mySwiper.reInit()
+      mySwiper.update();
     }
-    initSwiper();
-
-
     $(window).trigger("resize")
 
     var heightArray = $(".empower_wrap>div .box").map(function () {
