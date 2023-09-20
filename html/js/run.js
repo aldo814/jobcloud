@@ -392,6 +392,7 @@ $(document).ready(function () {
         centerMode: true,
         speed: 200,
         centerPadding: '30px',
+        loop:true,
         responsive: [ // 반응형 웹 구현 옵션
             {
                 breakpoint: 1024, //화면 사이즈 960px
@@ -471,16 +472,6 @@ $(document).ready(function () {
     });
     
     
-    // video 요소를 가져옵니다.
-
-            // 현재 video의 src를 가져옵니다.
-            var currentSrc = initialVideo.getAttribute('src');
-
-            // #t=0.5를 src에 추가합니다.
-            var newSrc = currentSrc + '#t=0.5';
-
-            // 새로운 src를 video에 설정합니다.
-            initialVideo.setAttribute('src', newSrc);
 
     // 비디오 프로그래스 바
     videoElements.forEach(function (video, index) {
