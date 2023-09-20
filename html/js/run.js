@@ -591,7 +591,10 @@ $(document).ready(function () {
         
     }
 
-
+    
+    $('.h_mobile_close').click(function(){
+        $('.h_mobile ').removeClass('show')
+    })
 
 
 });
