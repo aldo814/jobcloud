@@ -1912,24 +1912,25 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .hot_lecture .video_area.active .playButton{background: url(../images/user/start_btn.png) no-repeat;}
 .hot_lecture .video_area.active:after{content: '';display: block;background: rgba(0, 0, 0, 0.32);position: absolute;width: 100%;height: 100%;left: 0;top: 0;z-index: 1}
 .hot_lecture .video_area:not(.active) .playButton{display: none}
-
-.hot_lecture .slick-slide{  transform: scale(0.8)  translate(420px);box-shadow: 5px 0 15px rgba(0, 0, 0, 0.12);filter: blur(2px)}
-.hot_lecture .slick-slide img{display: block !important;max-width: 100%}
-.hot_lecture .slick-slide.slick-slide.slick-center + .slick-slide {
+.hot_lecture.small_item .slick-list{margin: 0 -10px}
+.hot_lecture.small_item .slick-slide{margin: 0 10px}
+.hot_lecture:not(.small_item) .slick-slide{  transform: scale(0.8)  translate(420px);box-shadow: 5px 0 15px rgba(0, 0, 0, 0.12);filter: blur(2px)}
+.hot_lecture:not(.small_item) .slick-slide img{display: block !important;max-width: 100%}
+.hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide {
   transform: scale(0.9) translate(-200px);
   z-index: 4;
     position: relative;
 }
-.hot_lecture .slick-center + .slick-slide + .slick-slide {
+.hot_lecture:not(.small_item) .slick-center + .slick-slide + .slick-slide {
   transform: scale(0.8)  translate(-420px);
   z-index: 3;
     position: relative;
 }
 
-.hot_lecture .slick-slide.slick-active {
+.hot_lecture:not(.small_item) .slick-slide.slick-active {
   transform: scale(0.9) translate(200px);
 }
-.hot_lecture .slick-slide.slick-center {
+.hot_lecture:not(.small_item) .slick-slide.slick-center {
   /* margin: 0 -10%; */
   transform: scale(1);
   z-index: 30;
@@ -1937,8 +1938,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     filter: none;
 }
 
-.hot_lecture .slick-slide.slick-center:only-child{transform: none}
-.hot_lecture .slick-track{margin: 0}
+.hot_lecture:not(.small_item) .slick-slide.slick-center:only-child{transform: none}
+.hot_lecture:not(.small_item) .slick-track{margin: 0}
 
 .hot_lecture .slick-prev,
 .hot_lecture .slick-next{opacity: 0.5;width: 26px;height: 50px;}
@@ -2001,7 +2002,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     /*통합검색*/
     .in_search .lecture_list{padding: 0}
     
-     .hot_lecture:after{content: '';display: block;width: 80px;height: 100%;background: #fff;position: absolute;top: 0;}
+     .hot_lecture:not(.small_item):after{content: '';display: block;width: 80px;height: 100%;background: #fff;position: absolute;top: 0;}
 }
 
 @media all and (max-width:1024px){
@@ -2122,11 +2123,11 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .in_search .lecture_list .item:nth-child(3n){margin-right: 0}
     
     .hot_lecture:after{display: none}
-    .hot_lecture .slick-slide{opacity: 0}
-    .hot_lecture .slick-slide.slick-active:not(.slick-center){transform: scale(0.9) translate(60%)}
-    .hot_lecture .slick-slide.slick-active{opacity: 1;}
+    .hot_lecture:not(.small_item) .slick-slide{opacity: 0}
+    .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center){transform: scale(0.9) translate(60%)}
+    .hot_lecture :not(.small_item).slick-slide.slick-active{opacity: 1;}
     .hot_lecture .playButton{height: 50px;width: 50px;background-size: 50px !important}
-    .hot_lecture .slick-slide.slick-slide.slick-center + .slick-slide{transform: scale(0.9) translate(-60%)}
+    .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide{transform: scale(0.9) translate(-60%)}
     
     .visual .swiper-slide > div .txt{width: 100%;position: static;transform: none;}
     .visual .swiper-slide > div{background-size: 25% !important;background-position:  bottom 10px right  20px!important;min-height: 280px !important;padding-bottom: 60px}
@@ -2537,9 +2538,9 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     .hot_lecture .slick-list{overflow: visible}
     .hot_lecture .slick-slide{overflow: hidden}
-    .hot_lecture .slick-slide.slick-center{transform: scale(2);}
-    .hot_lecture .slick-slide.slick-active:not(.slick-center){transform: scale(1.8) translate(20%);}
-    .hot_lecture .slick-slide.slick-slide.slick-center + .slick-slide{transform: scale(1.8) translate(-20%);}
+    .hot_lecture:not(.small_item) .slick-slide.slick-center{transform: scale(2);}
+    .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center){transform: scale(1.8) translate(20%);}
+    .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide{transform: scale(1.8) translate(-20%);}
     .hot_lecture .slick-arrow{background-size: 13px;width: 13px;height: 26px}
     
     .lecture_list02 .swiper-slide{width: 180px !important;}
@@ -2551,7 +2552,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .main_tit02{font-size: 18px;margin-bottom: 20px}
     
     .empower{padding: 40px 0}
-    .hot_lecture{margin: 60px  0 80px 0}
+    .hot_lecture:not(.small_item){margin: 60px  0 80px 0}
     .hot_lecture .slick-arrow{display: none !important}
     
        /* ëª¨ë°”ì¼ ë°°ë„ˆ */

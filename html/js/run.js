@@ -1,17 +1,17 @@
 $(document).ready(function () {
-    
-     $('.h_mobile_close').click(function () {
+
+    $('.h_mobile_close').click(function () {
         $('.h_mobile').removeClass('show');
         $('.h_menu').removeClass('active');
-     });
-         
-         $('#newHeader .h_search').on('click', function () {
+    });
+
+    $('#newHeader .h_search').on('click', function () {
         $('.modal_search_wrapper').show();
         $('.search_menu').show();
         $('.search_menu input[type="text"]').focus();
     });
 
-   
+
 
     $('.btn_search_close').click(function () {
         $('.modal_search_wrapper').hide();
@@ -403,27 +403,29 @@ $(document).ready(function () {
     var videoContainers = document.querySelectorAll('.video_area');
 
 
-    $('.hot_lecture').slick({
-        arrows: true,
-        dots: false,
-        slidesToShow: 3,
-        centerMode: true,
-        speed: 200,
-        centerPadding: '30px',
-        loop:true,
-        responsive: [ // 반응형 웹 구현 옵션
-            {
-                breakpoint: 1024, //화면 사이즈 960px
-                settings: {
-                    //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                    slidesToShow: 3,
-                    centerPadding: '0',
-                }
+    var items = $(".hot_lecture .item");
+    if (items.length >= 5) {
+        $('.hot_lecture').slick({
+            arrows: true,
+            dots: false,
+            slidesToShow: 3,
+            centerMode: true,
+            speed: 200,
+            centerPadding: '30px',
+            loop: true,
+            responsive: [ // 반응형 웹 구현 옵션
+                {
+                    breakpoint: 1024, //화면 사이즈 960px
+                    settings: {
+                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                        slidesToShow: 3,
+                        centerPadding: '0',
+                    }
 					},
 				]
-    });
-
-    // 페이지 로드 시 활성 슬라이드의 비디오를 재생
+        });
+        
+         // 페이지 로드 시 활성 슬라이드의 비디오를 재생
     var initialSlide = $('.hot_lecture .slick-current .video_area');
     initialSlide.addClass('active');
     var initialVideo = initialSlide.find('video.customVideo')[0];
@@ -443,6 +445,26 @@ $(document).ready(function () {
         });
 
     });
+    } else {
+        $('.hot_lecture').addClass('small_item');
+        $('.hot_lecture').slick({
+            slidesToShow: 2,
+            arrows: true,
+            dots: false,
+        });
+        var initialSlide = $('.hot_lecture .video_area');
+        initialSlide.addClass('active');
+         $('.hot_lecture').on('afterChange', function (event, slick, currentSlide) {
+                 // 모든 비디오를 일시 중지합니다.
+        $('video.customVideo').each(function (index, video) {
+            video.pause();
+        });
+         })
+    }
+
+   var initialSlide = $('.hot_lecture .slick-current .video_area');
+    initialSlide.addClass('active');
+    var initialVideo = initialSlide.find('video.customVideo')[0]
 
     // 슬라이더 변경 시 이벤트를 통해 이전 슬라이드에 클래스 추가
     $('.hot_lecture').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
@@ -488,8 +510,8 @@ $(document).ready(function () {
             toggleVideo(video, playButtons[index]);
         });
     });
-    
-    
+
+
 
     // 비디오 프로그래스 바
     videoElements.forEach(function (video, index) {
@@ -529,7 +551,7 @@ $(document).ready(function () {
     var dw = $(document).width();
 
 
-    
+
 
     $('.footer_btn').click(function () {
         $(this).toggleClass('active');
@@ -592,26 +614,26 @@ $(document).ready(function () {
                 },
             }
         });
-        
+
     }
 
-    
+
 
 });
 
 $(window).resize(function () {
     $('.hot_lecture').slick('refresh');
-    
-    
-    
-    
-     if (window.innerWidth < 1024) {
+
+
+
+
+    if (window.innerWidth < 1024) {
         $('.empower_wrap').slick({
             arrows: false,
             dots: true,
             slidesToShow: 1,
         });
-         
+
 
         $(".empower_wrap>div .box").css('height', 'auto');
 
@@ -624,24 +646,24 @@ $(window).resize(function () {
                 $('.m_more').fadeOut(100); // 컨텐츠 없을 시 버튼 사라짐
             }
         });
-         
-         swiper.destroy();
+
+        swiper.destroy();
     } else {
-        
+
         $('.empower_wrap').slick('refresh');
-        
-         $('.empower_wrap').slick('unslick');
+
+        $('.empower_wrap').slick('unslick');
 
 
-        
-    var ww = $(window).width();
-var mySwiper = undefined;
-        
+
+        var ww = $(window).width();
+        var mySwiper = undefined;
+
         var mySwiper = new Swiper('.lecture_list02.slide02 .swiper-container', {
             slidesPerView: 4,
             spaceBetween: 20,
-            observeParents : true,
-            observer : true,
+            observeParents: true,
+            observer: true,
             navigation: {
                 nextEl: '.slide02 .lt_swiper-button-next',
                 prevEl: '.slide02 .lt_swiper-button-prev',
@@ -664,9 +686,9 @@ var mySwiper = undefined;
                 },
             }
         });
-        
-      mySwiper.reInit()
-      mySwiper.update();
+
+        mySwiper.reInit()
+        mySwiper.update();
     }
     $(window).trigger("resize")
 
