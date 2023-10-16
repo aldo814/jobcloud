@@ -396,13 +396,30 @@ $(document).ready(function () {
             document.getElementById('attachment').files = dt.files;
         });
     });
-
     var videoElements = document.querySelectorAll('.customVideo');
     var progressBarElements = document.querySelectorAll('.progressBar');
     var playButtons = document.querySelectorAll('.playButton');
     var videoContainers = document.querySelectorAll('.video_area');
+    var youtubeFrames = $(".youtubeVideo");
 
+    youtubeFrames.each(function () {
+        // 현재의 src 속성 가져오기
+        var currentSrc = $(this).attr("src");
 
+        // URL에 'https://www.youtube.com'이 포함되어 있는지 확인
+        if (currentSrc.indexOf('https://www.youtube.com') !== -1) {
+            var currentSrc = $(this).attr("src");
+            // URL에 매개 변수 추가
+            var newSrc = currentSrc + "?enablejsapi=1&version=3&playerapiid=ytplayer";
+
+            // 새로운 src 속성 설정
+            $(this).attr("src", newSrc);
+
+        } else {
+            $(this).addClass("ny");
+            $('.ny').parent().addClass("ny_wrap");
+        }
+    });
     var items = $(".hot_lecture .item");
     if (items.length >= 5) {
         $('.hot_lecture').slick({
@@ -424,27 +441,36 @@ $(document).ready(function () {
 					},
 				]
         });
-        
-         // 페이지 로드 시 활성 슬라이드의 비디오를 재생
-    var initialSlide = $('.hot_lecture .slick-current .video_area');
-    initialSlide.addClass('active');
-    var initialVideo = initialSlide.find('video.customVideo')[0];
 
-    // 슬라이드가 변경될 때 비디오 관리
-    $('.hot_lecture').on('afterChange', function (event, slick, currentSlide) {
-        // 모든 슬라이드의 video_area에서 active 클래스를 제거합니다.
-        $('.video_area').removeClass('active');
 
-        // 현재 활성 슬라이드의 video_area에 active 클래스를 추가합니다.
-        var currentVideoArea = $('.slick-current .video_area');
-        currentVideoArea.addClass('active');
 
-        // 모든 비디오를 일시 중지합니다.
-        $('video.customVideo').each(function (index, video) {
-            video.pause();
+
+        // 페이지 로드 시 활성 슬라이드의 비디오를 재생
+        var initialSlide = $('.hot_lecture .slick-current .video_area');
+        var initialVideo = $('.youtubeVideo')[0];
+        var video = $('.youtubeVideo');
+        var url = $('.youtubeVideo').attr('src');
+        $('.hot_lecture').on('beforeChange', function (event, slick, currentSlide) {
+            // 모든 슬라이드의 video_area에서 active 클래스를 제거합니다.
+
+            // 현재 활성 슬라이드의 video_area에 active 클래스를 추가합니다.
+            var currentVideoArea = $('.slick-current .video_area');
+
+            // 모든 비디오를 일시 중지합니다.
+            $('.youtubeVideo').each(function () {
+                $(this).get(0).contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                $('.ny').each(function () {
+                    var iframe2 = $(this);
+
+                    var src = iframe2.attr('src');
+                    // Modify the src value as needed
+                    // For example, you can set a new source for each iframe here
+                    // src = 'new_source_url';
+                    iframe2.attr('src', src);
+                });
+
+            });
         });
-
-    });
     } else {
         $('.hot_lecture').addClass('small_item');
         $('.hot_lecture').slick({
@@ -453,88 +479,23 @@ $(document).ready(function () {
             dots: false,
         });
         var initialSlide = $('.hot_lecture .video_area');
-        initialSlide.addClass('active');
-         $('.hot_lecture').on('afterChange', function (event, slick, currentSlide) {
-                 // 모든 비디오를 일시 중지합니다.
-        $('video.customVideo').each(function (index, video) {
-            video.pause();
+        $('.hot_lecture').on('beforeChange', function (event, slick, currentSlide) {
+            // 모든 슬라이드의 video_area에서 active 클래스를 제거합니다.
+
+            // 현재 활성 슬라이드의 video_area에 active 클래스를 추가합니다.
+            var currentVideoArea = $('.slick-current .video_area');
+
+            // 모든 비디오를 일시 중지합니다.
+            $('.youtubeVideo').each(function () {
+                $(this).get(0).contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                $(this).pause()
+            });
+
+
         });
-         })
     }
 
-   var initialSlide = $('.hot_lecture .slick-current .video_area');
-    initialSlide.addClass('active');
-    var initialVideo = initialSlide.find('video.customVideo')[0]
 
-    // 슬라이더 변경 시 이벤트를 통해 이전 슬라이드에 클래스 추가
-    $('.hot_lecture').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        // 모든 슬라이드에서 클래스 제거
-        $('.slick-slide').removeClass('prev-slide');
-
-        // 이전 슬라이드에 클래스 추가
-        var prevSlideIndex = nextSlide - 1;
-        if (prevSlideIndex < 0) {
-            prevSlideIndex = slick.slideCount - 1; // 마지막 슬라이드로 이동
-        }
-        $('.slick-slide[data-slick-index="' + prevSlideIndex + '"]').addClass('prev-slide');
-    });
-
-    var initialSlideIndex = $('.hot_lecture').slick('slickCurrentSlide'); // 현재 슬라이드의 인덱스 가져오기
-    var prevSlideIndex = initialSlideIndex - 1;
-    if (prevSlideIndex < 0) {
-        prevSlideIndex = $('.hot_lecture').slick('getSlick').slideCount - 1; // 마지막 슬라이드로 이동
-    }
-    $('.slick-slide[data-slick-index="' + prevSlideIndex + '"]').addClass('prev-slide');
-
-
-
-    // 각 비디오 및 관련 이벤트 처리
-    videoElements.forEach(function (video, index) {
-        video.addEventListener('play', function () {
-            videoContainers[index].classList.remove('active');
-        });
-
-        video.addEventListener('pause', function () {
-            videoContainers[index].classList.add('active');
-        });
-
-        video.addEventListener('ended', function () {
-            playButtons[index].innerText = 'Play';
-        });
-
-        video.addEventListener('click', function () {
-            toggleVideo(video, playButtons[index]);
-        });
-
-        playButtons[index].addEventListener('click', function () {
-            toggleVideo(video, playButtons[index]);
-        });
-    });
-
-
-
-    // 비디오 프로그래스 바
-    videoElements.forEach(function (video, index) {
-        video.addEventListener('timeupdate', function () {
-            var progress = (100 / video.duration) * video.currentTime;
-            progressBarElements[index].style.width = progress + '%';
-        });
-
-        progressBarElements[index].addEventListener('click', function (e) {
-            var goToTime = (e.offsetX / progressBarElements[index].offsetWidth) * video.duration;
-            video.currentTime = goToTime;
-        });
-    });
-
-    function toggleVideo(video, playButton) {
-        if (video.paused || video.ended) {
-            video.play();
-            playButton.innerText = 'Pause';
-        } else {
-            video.pause();
-            playButton.innerText = 'Play';
-        }
-    }
 
     var heightArray = $(".empower_wrap>div .box").map(function () {
 
