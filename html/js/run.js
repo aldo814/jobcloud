@@ -360,6 +360,7 @@ $(document).ready(function () {
             },
         }
     });
+    
 
 
 
@@ -402,7 +403,7 @@ $(document).ready(function () {
     var videoContainers = document.querySelectorAll('.video_area');
     var youtubeFrames = $(".youtubeVideo");
 
-    youtubeFrames.each(function () {
+    $('.video_area  iframe').each(function () {
         // 현재의 src 속성 가져오기
         var currentSrc = $(this).attr("src");
 
@@ -441,8 +442,21 @@ $(document).ready(function () {
 					},
 				]
         });
+        
+        // .slick-current 클래스를 가진 요소를 선택합니다.
+        var currentSlide = $(".hot_lecture .slick-current");
 
+        // 현재 슬라이드의 인덱스를 가져옵니다.
+        var currentIndex = currentSlide.index();
 
+        // 3개 이전의 슬라이드를 찾기 위해 인덱스를 계산합니다.
+        var targetIndex = currentIndex - 2;
+
+        // targetIndex가 0 이상인 경우 해당 슬라이드에 "hide" 클래스를 추가합니다.
+        if (targetIndex >= 0) {
+          var targetSlide = currentSlide.prevAll(".slick-slide").eq(targetIndex);
+          targetSlide.addClass("hide_div");
+        }
 
 
         // 페이지 로드 시 활성 슬라이드의 비디오를 재생
@@ -450,14 +464,17 @@ $(document).ready(function () {
         var initialVideo = $('.youtubeVideo')[0];
         var video = $('.youtubeVideo');
         var url = $('.youtubeVideo').attr('src');
-        $('.hot_lecture').on('beforeChange', function (event, slick, currentSlide) {
+        
+        
+        // 슬라이더를 초기화합니다. (이 코드는 슬라이더가 최초로 로드될 때 초기화합니다.)
+        $('.hot_lecture').on('afterChange', function (event, slick, currentSlide, nextSlide) {
             // 모든 슬라이드의 video_area에서 active 클래스를 제거합니다.
 
             // 현재 활성 슬라이드의 video_area에 active 클래스를 추가합니다.
             var currentVideoArea = $('.slick-current .video_area');
 
             // 모든 비디오를 일시 중지합니다.
-            $('.youtubeVideo').each(function () {
+            $('.customVideo').each(function () {
                 $(this).get(0).contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
                 $('.ny').each(function () {
                     var iframe2 = $(this);
@@ -470,7 +487,28 @@ $(document).ready(function () {
                 });
 
             });
+            // .slick-current 클래스를 가진 요소를 선택합니다.
+            var currentSlide = $(".hot_lecture .slick-current");
+
+            // 현재 슬라이드의 인덱스를 가져옵니다.
+            var currentIndex = currentSlide.index();
+
+            // 3개 이전의 슬라이드를 찾기 위해 인덱스를 계산합니다.
+            var targetIndex = currentIndex - 3;
+            
+
+        	$('.hot_lecture').find('.slick-slide').removeClass('hide_div');
+            // targetIndex가 0 이상인 경우 해당 슬라이드에 "hide_div" 클래스를 추가합니다.
+            if (targetIndex >= 0) {
+              var targetSlide = $('.hot_lecture').find('.slick-slide').eq(targetIndex);
+              targetSlide.addClass('hide_div');
+            } 
+            
+         
         });
+        
+     
+      
     } else {
         $('.hot_lecture').addClass('small_item');
         $('.hot_lecture').slick({
@@ -494,6 +532,7 @@ $(document).ready(function () {
 
         });
     }
+
 
 
 
@@ -611,9 +650,9 @@ $(window).resize(function () {
         swiper.destroy();
     } else {
 
-        $('.empower_wrap').slick('refresh');
+        //$('.empower_wrap').slick('refresh');
 
-        $('.empower_wrap').slick('unslick');
+        //$('.empower_wrap').slick('unslick');
 
 
 
@@ -662,6 +701,8 @@ $(window).resize(function () {
     var maxHeight = Math.max.apply(Math, heightArray)
 
     $(".empower_wrap>div .box").height(maxHeight + 50);
+    
+ 
 })
 
 

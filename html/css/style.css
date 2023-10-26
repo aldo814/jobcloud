@@ -170,6 +170,7 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
     justify-content: space-between;
     height: 70px;
     margin-top: 25px;
+    position:relative;
 }
 
 #newHeader .h_cont .logo {
@@ -180,13 +181,12 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
 #newHeader .h_cont .logo a {
     display: block;
     max-width: 100%;
-    height: 100%;
 }
 
 #newHeader .h_cont .logo img {
     max-width: 100%;
-    height: 100%;
     object-fit: contain;
+    max-height:70px
 }
 
 #newHeader .nheader_mid {
@@ -204,6 +204,7 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
     width: 26px;
     height: 16px;
     cursor: pointer;
+    display:none;
 }
 
 #newHeader .h_menu.mobile_menu {
@@ -274,7 +275,7 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
     width: 100%;
     height: 70px;
     color: #000;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 70px;
 }
 
@@ -557,7 +558,7 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
 }
 
 #newHeader .h_mobile_btn .logo img {
-    height: 100%;
+    max-height: 69px;
 }
 
 #newHeader .h_mobile_close {
@@ -808,6 +809,8 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
     padding: 15px 0;
     background: #eeeeee;
 }
+
+.hidden{overflow:hidden}
 
 #newHeader .h_mobile_sns li {
     display: flex;
@@ -1921,6 +1924,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .hot_lecture .video_area:not(.active) .playButton{display: none}
 .hot_lecture.small_item .slick-list{margin: 0 -10px}
 .hot_lecture.small_item .slick-slide{margin: 0 10px}
+.hot_lecture:not(.small_item) .hide_div{opacity:0}
 .hot_lecture:not(.small_item) .slick-slide{  transform: scale(0.8)  translate(420px);box-shadow: 5px 0 15px rgba(0, 0, 0, 0.12);filter: blur(2px)}
 .hot_lecture:not(.small_item) .slick-slide img{display: block !important;max-width: 100%}
 .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide {
@@ -2009,8 +2013,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     /*통합검색*/
     .in_search .lecture_list{padding: 0}
-    
-     .hot_lecture:not(.small_item):after{content: '';display: block;width: 80px;height: 100%;background: #fff;position: absolute;top: 0;}
+    .hot_lecture:after{display:none;}
+     
 }
 
 @media all and (max-width:1024px){
@@ -2131,7 +2135,6 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .in_search .lecture_list .item:nth-child(3n){margin-right: 0}
     
     .hot_lecture:after{display: none}
-    .hot_lecture:not(.small_item) .slick-slide{opacity: 0}
     .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center){transform: scale(0.9) translate(60%)}
     .hot_lecture :not(.small_item).slick-slide.slick-active{opacity: 1;}
     .hot_lecture .playButton{height: 50px;width: 50px;background-size: 50px !important}
@@ -2291,6 +2294,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     #newHeader .h_menu {
         width: 20px;
         height: 12px;
+        display:block;
     }
 
     #newHeader .h_menu span {
@@ -2545,7 +2549,6 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .notice_top.in_slt select{padding:5px 20px 5px 10px;border-radius:5px;font-size:15px;top:-9px}
     
     .hot_lecture .slick-list{overflow: visible}
-    .hot_lecture .slick-slide{overflow: hidden}
     .hot_lecture:not(.small_item) .slick-slide.slick-center{transform: scale(2);}
     .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center){transform: scale(1.8) translate(20%);}
     .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide{transform: scale(1.8) translate(-20%);}
@@ -2588,6 +2591,21 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lecture_list02{width: 100%}
     .lecture_list02 .lt_swiper-button-next,
     .lecture_list02 .lt_swiper-button-prev{display: none}
+    
+    .hot_lecture:not(.small_item) .main_tit02{margin-bottom:60px}
+    .hot_lecture:not(.small_item) .slick-slide{opacity:0}
+    .hot_lecture:not(.small_item) .slick-slide.slick-active{opacity:1}
+    
+    .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center){transform:none}
+    .hot_lecture:not(.small_item) .slick-slide.slick-center{transform:none}
+    .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide{transform:none}
+    .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center) iframe {transform:scale(1.8) translate(20%)}
+    .hot_lecture:not(.small_item) .slick-slide.slick-center iframe {transform:scale(2)}
+    .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide iframe {transform:scale(1.8) translate(-20%)}
+    .hot_lecture{padding:0}   
+    
+    
+
 }
 
 
