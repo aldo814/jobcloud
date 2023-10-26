@@ -2701,7 +2701,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     /* 통합검색 */
     .in_search .lecture_list .item{width: 100%;margin-right: 0}
     .hot_lecture .slick-arrow{display: none !important}
-    .hot_lecture{padding: 0;margin-top: 50px;margin-bottom: 80px}  
+    .hot_lecture{margin-top: 50px;margin-bottom: 80px}  
     .main_tit02{font-size: 18px;margin-bottom: 25px}
     
        /* footer */
