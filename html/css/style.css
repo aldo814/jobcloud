@@ -1910,9 +1910,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     width: 100%;
     height: 0;overflow:hidden}
 .hot_lecture .video_area video{width: 100%;height: 100%}
-.hot_lecture .video_area iframe,
-.hot_lecture .video_area object,
-.hot_lecture .video_area embed{position: absolute;
+.hot_lecture .video_area iframe{position: absolute;
     top: 0;
     bottom:0;
     left: 0;
