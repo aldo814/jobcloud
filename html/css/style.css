@@ -2159,9 +2159,9 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .empower .empower_wrap .apply p{display: inline-flex;}
     .empower .empower_wrap .item {border-radius: 10px;overflow: hidden;}
     .empower .empower_wrap .item .box{padding: 20px 30px 50px 80px;border-radius: 0;}
-    .empower .empower_wrap .item:nth-child(1) .box{background: url(../images/user/empower01.png) no-repeat #fff left 20px bottom 40px;}
-    .empower .empower_wrap .item:nth-child(2) .box{background: url(../images/user/empower02.png) no-repeat #fff left 20px bottom 40px;}
-    .empower .empower_wrap .item:nth-child(3) .box{background: url(../images/user/empower03.png) no-repeat #fff left 20px bottom 40px;}
+    .empower .empower_wrap .item.item01 .box{background: url(../images/user/empower01.png) no-repeat #fff left 20px bottom 40px;}
+    .empower .empower_wrap .item.item02 .box{background: url(../images/user/empower02.png) no-repeat #fff left 20px bottom 40px;}
+    .empower .empower_wrap .item.item03 .box{background: url(../images/user/empower03.png) no-repeat #fff left 20px bottom 40px;}
     .empower .empower_wrap .apply{display: flex;align-items: center;background: #ddecf2;padding: 20px}
     .empower .empower_wrap .apply p{font-weight: 500;text-align: left}
     .empower .empower_wrap .apply a{margin-top: 0;font-size: 12px;border-radius: 5px;padding: 5px 10px;width: auto;margin-right: 0}
@@ -2601,7 +2601,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
 
     
-    
+    .m_more{background:#e8e8e8 url(../images/user/more_arrow02.png) no-repeat right 40px center}
 
 }
 
