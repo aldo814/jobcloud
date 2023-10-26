@@ -433,7 +433,7 @@ $(document).ready(function () {
             loop: true,
             responsive: [ // 반응형 웹 구현 옵션
                 {
-                    breakpoint: 1024, //화면 사이즈 960px
+                    breakpoint: 1024, 
                     settings: {
                         //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
                         slidesToShow: 3,
@@ -441,12 +441,11 @@ $(document).ready(function () {
                     }
 					},
 					 {
-	                    breakpoint: 1024, //화면 사이즈 960px
+	                    breakpoint: 480, 
 	                    settings: {
 	                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
 	                        variableWidth: true,
 	                        swipeToSlide: true, // 터치 슬라이드 활성화
-                            dots:true
 	                    }
 					 }
 				]
