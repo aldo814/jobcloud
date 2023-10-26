@@ -1906,7 +1906,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 
 .hot_lecture {position: relative}
 .hot_lecture .video_area{position: relative;position: relative;
-     padding-bottom:56.25%;padding-top:30px;
+     padding-bottom:56.25%;
     width: 100%;
     height: 0;overflow:hidden}
 .hot_lecture .video_area video{width: 100%;height: 100%}
