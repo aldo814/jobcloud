@@ -2705,6 +2705,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .hot_lecture:not(.small_item) .slick-slide.slick-center {width:250px !important;}
     .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide {width:200px !important;}
     .hot_lecture{padding:0}   
+    .hot_lecture:not(.small_item) .slick-slide iframe{min-width:100%}
     .hot_lecture:not(.small_item) .slick-slide{transform:none !important;}
     .hot_lecture:not(.small_item) .slick-track{display:flex;align-items:center;}
     .hot_lecture:not(.small_item) .slick-slide{float:none;}
