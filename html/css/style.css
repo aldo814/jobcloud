@@ -2700,15 +2700,15 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .content .lecture_list02 .img{height: 130px}
     
     .hot_lecture:not(.small_item){margin:30px 0 0 0}
-    .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center){transform:translate(2%)}
+    /*.hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center){transform:translate(2%)}
     .hot_lecture:not(.small_item) .slick-slide.slick-center{transform:translateX(-33%)}
-    .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide{transform:translate(-6%)}
-    .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center) .video_area {width:150px !important;height:130px !important}
-    .hot_lecture:not(.small_item) .slick-slide.slick-center .video_area {margin-top:-10px;width:250px !important;height:150px !important}
-    .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide .video_area {width:150px !important;height:130px !important}
+    .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide{transform:translate(-6%)}*/
+    .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center) {width:200px !important;transform:translateX(80%) !important}
+    .hot_lecture:not(.small_item) .slick-slide.slick-center {width:250px !important;}
+    .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide {width:200px !important;transform:translateX(-73%) !important}
     .hot_lecture{padding:0}   
-    .hot_lecture:not(.small_item) .slick-slide{transform:none;}
-    .hot_lecture:not(.small_item) .slick-track{display:flex;}
+    .hot_lecture:not(.small_item) .slick-slide{transform:none !important;}
+    .hot_lecture:not(.small_item) .slick-track{display:flex;align-items:center;}
     .hot_lecture:not(.small_item) .slick-slide{float:none;}
 }
 

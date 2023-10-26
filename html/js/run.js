@@ -440,6 +440,13 @@ $(document).ready(function () {
                         centerPadding: '0',
                     }
 					},
+					 {
+	                    breakpoint: 1024, //화면 사이즈 960px
+	                    settings: {
+	                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+	                        variableWidth: true
+	                    }
+					 }
 				]
         });
         
