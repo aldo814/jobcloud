@@ -1027,6 +1027,7 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
 .visual .swiper-slide > div .txt{position: absolute;top: 50%;transform: translateY(-50%);width: calc(100% - 600px)}
 .visual .swiper-slide img{display: block;border-radius: 10px;overflow: hidden;width: 100%}
 .visual .swiper-slide .blue_banner{background: #549cf4;color: #fff;position: relative;}
+.visual .swiper-slide .blue_banner .m{display: none}
 .visual .swiper-slide .blue_banner .img{position: absolute;right: 40px;top: 50%;transform: translateY(-50%);width: auto;z-index: 5}
 .visual .swiper-slide .tit{font-size: 40px;font-weight: bold;margin-bottom: 20px}
 .visual .swiper-slide .desc{font-size: 18px;color: #fff;}
@@ -2620,6 +2621,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .hot_lecture:not(.small_item){overflow:hidden}
     
     .visual .swiper-slide .blue_banner .img{width: 200px}
+    .visual .swiper-slide .blue_banner .m{display: block}
+    .visual .swiper-slide .blue_banner .pc{display: none}
 }
 
 
