@@ -12,9 +12,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src=”//play.acs.wecandeo.com/html/utils/iframeAPI.js”></script>
     <script src="https://www.jobaba.net/resource/bxslider/slick.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="js/run.js"></script>
 </head>
 
@@ -203,6 +201,114 @@
     </header>
 
     <div class="container">
+        <div class="qna_wrap">
+            <h3 class="new_tit">Q&amp;A</h3>
+            
+            <div class="qna_search mt60">
+                <input type="text" placeholder="검색어를 입력해주세요.">
+                <input type="submit" value="검색">
+            </div>
+            <div class="qna_list">
+                <table>
+                    <caption>Q&amp;A 리스트</caption>
+                    <colgroup>
+                        <col style="width: 15%" class="m_hide">
+                        <col>
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="m_hide">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">작성일</th>
+                            <th scope="col">답변상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="m_hide">3</td>
+                            <td class="tlt private">
+                               <p>
+                                <a href="#">3기 인증 챌린지 </a>
+                                </p>
+                            </td>
+                            <td>홍길동(abc12)</td>
+                            <td>2022.01.01</td>
+                            <td><span class="wait">답변대기</span></td>
+                        </tr>
+                        <tr>
+                            <td class="m_hide">3</td>
+                            <td class="tlt private">
+                               <p>
+                                <a href="#">3기 인증 챌린지</a>
+                                </p>
+                            </td>
+                            <td>홍길동(abc12)</td>
+                            <td>2022.01.01</td>
+                            <td><span class="complete">답변완료</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn_area02 mt50">
+            <a href="#" class="btn_style06 cyan_btn">등록하기</a>
+        </div>
+        <!--페이징-->
+                <ul class="paging02">
+                    <li class="prev arrow disabled"><a href="#">이전페이지로</a></li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                     <li>
+                        <a href="#">6</a>
+                    </li>
+                     <li>
+                        <a href="#">7</a>
+                    </li>
+                     <li>
+                        <a href="#">8</a>
+                    </li>
+                     <li>
+                        <a href="#">9</a>
+                    </li>
+                     <li>
+                        <a href="#">10</a>
+                    </li>
+                    <li class="next arrow">
+                        <a href="#">다음페이지로</a>
+                    </li>
+                </ul>
+
+                <!--모바일 페이징-->
+                <div class="m_paging">
+                    <a href="#" class="prev">이전페이지로</a>
+                    <p>
+                        <span class="cut">1</span>/
+                        <span>10</span>
+                    </p>
+                    <a href="#" class="next">다음페이지로</a>
+                </div>
+                <!--//모바일 페이징-->
+
+                <!--//페이징-->
+        </div>
+        
+
     </div>
 
     <footer id="newFooter">
