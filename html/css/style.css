@@ -96,11 +96,15 @@ hr.border_gray02{border: 0;border-top: 1px solid #eaeaea;}
 .btn_style03{font-size: 14px;padding: 7px 27px;border-radius: 5px;display: inline-block;}
 .btn_style04{font-size: 16px;padding: 10px;width: 100px;text-align: center;border-radius: 10px; border-radius: 5px;display: inline-block;}
 .btn_style05{font-size: 16px;padding: 10px 25px;text-align: center;border-radius: 10px; border-radius: 5px;display: inline-block;}
+.btn_style06{font-size: 16px;width: 130px;padding: 10px;text-align: center;display: inline-block;border-radius: 50px;font-weight: 500}
 button.ready{font-size:14px;background: #f5f5f5;border:1px solid #eaeaea;padding:2px 5px;border-radius:5px}
 button.complete{font-size:14px;background:#0082cc;color:#fff;border:0;padding:2px 5px;border-radius:5px}
 button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-radius:5px}
 .gray_btn02{background: #f5f5f5;border: 1px solid #eaeaea;color: #888888;}
 .gray_btn03{background: #ebeaea;color: #888888;}
+.gray_btn04{color: #fff;background: #d6d6d6;}
+.cyan_btn{background: #67c3be;color: #fff}
+
 .btn_wrap{text-align: center;margin-top: 30px;}
 .btn_wrap a + a{margin-left: 10px;}
 .bar_list li{margin-bottom: 5px;position: relative;padding-left: 10px;}
@@ -1026,9 +1030,7 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
 .visual .swiper-slide > div {padding:40px;position: relative;min-height: 400px;box-sizing: border-box}
 .visual .swiper-slide > div .txt{position: absolute;top: 50%;transform: translateY(-50%);width: calc(100% - 600px)}
 .visual .swiper-slide img{display: block;border-radius: 10px;overflow: hidden;width: 100%}
-.visual .swiper-slide .blue_banner{background: #549cf4;color: #fff;position: relative;}
-.visual .swiper-slide .blue_banner .m{display: none}
-.visual .swiper-slide .blue_banner .img{position: absolute;right: 40px;top: 50%;transform: translateY(-50%);width: auto;z-index: 5}
+.visual .swiper-slide .blue_banner{background: url(../images/user/main_visal.png) no-repeat right 40px center #549cf4;color: #fff;}
 .visual .swiper-slide .tit{font-size: 40px;font-weight: bold;margin-bottom: 20px}
 .visual .swiper-slide .desc{font-size: 18px;color: #fff;}
 .swiper_bottom{background: #fff;width: 290px;position: absolute;bottom: 25px;left: 50px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);height: 50px;z-index: 222;border-radius: 10px;line-height: 1.5}
@@ -1987,6 +1989,44 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .content .lecture_list02 > .item:nth-child(3n){margin-right: 0}
 
 .m_more{display: none}
+.new_tit {text-align: center;font-size: 30px;font-weight: bold;}
+
+/* 신규 페이지 */
+.qna_wrap{margin: 60px 0}
+.qna_wrap .qna_write{border-top: 1px solid #000;border-bottom: 1px solid #000;margin-top: 70px;padding: 30px 0}
+.qna_wrap .qna_write .item{display: flex;margin-bottom: 25px;}
+.qna_wrap .qna_write .item:last-child{margin-bottom: 0; }
+.qna_wrap .qna_write .item > label{font-size: 16px;font-weight: 500;padding-left: 50px;width: 180px;box-sizing: border-box; }
+.qna_wrap .qna_write .item.file_up{border-top: 1px solid #e8ebed;padding-top: 25px}
+.qna_wrap .qna_write .item .con{width: calc(100% - 180px)}
+.qna_wrap .qna_write .item .con.inCheck{display: flex;align-items: center;}
+.qna_wrap .qna_write .item .con input[type="text"],
+.qna_wrap .qna_write .item .con textarea{border: 0;resize: none;background: #f7f8fa;width: 100%;box-sizing: border-box;padding: 10px 20px}
+.qna_wrap .qna_write .item .con input[type="text"]{font-size: 14px;width: calc(100% - 200px);margin-right: 15px}
+.qna_wrap .qna_write .item .con input[type="text"]::placeholder{color: #9ea4aa;}
+.qna_wrap .qna_write .item .con .check label{font-size: 14px;color: #666}
+.qna_wrap .qna_write .item .con textarea{height: 230px;}
+.table_style02 table{border: 1px solid #e8ebed;width: 100%;}
+.table_style02 table th{background: #f7f8fa;}
+.table_style02 table th,
+.table_style02 table td{border: 1px solid #e8ebed;padding: 10px;}
+.table_style02 table th{border-bottom: 0}
+.input-file03 { position:relative; overflow:hidden;  padding:0;display:block;max-width:100%;cursor:pointer;}
+.input-file03 .btn { white-space:nowrap; display:inline-block; vertical-align:top;font-family: 'Gullim';font-size: 12px;color: #72787f;border: 1px solid #72787f;padding: 5px 15px;border-radius: 5px;}
+.input-file03 .fileInput02{position: absolute;left: -9999px;width: 0;height: 0;overflow: hidden;}
+.file_up .con{display: flex;}
+
+.file_up .con .input-file03{width: 84px;margin-right: 20px}
+.file_up .con .file_view{width: calc(100% - 304px)}
+.file_up .con .file_view p{font-size: 12px;font-family: 'Gullim';color: #666}
+.file_up .con .file_view table{font-size: 12px;font-family: 'Gullim';text-align: center;}
+.file_up .con .file_view table td{vertical-align: middle}
+.file_up .con .file_view .del_btn{background: url(../images/user/close_btn.png) no-repeat;width: 12px;height: 12px;text-indent: -9999px;margin-left: 10px;display: block;}
+.file_up .name_wrap{display: flex;align-items: center;}
+.file_up .name_area{max-width: calc(100% - 30px);display: flex;}
+.file_up .name_area span{max-width: 300px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+
+.btn_area{display: flex;justify-content: space-between;}
 
 /* -----------반응형 start---------*/
 @media all and (max-width:1500px){
@@ -2142,9 +2182,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .hot_lecture:not(.small_item) .slick-slide.slick-slide.slick-center + .slick-slide{transform: scale(0.9) translate(-60%)}
     
     .visual .swiper-slide > div .txt{width: 100%;position: static;transform: none;}
-    .visual .swiper-slide > div{min-height: 280px !important;padding-bottom: 130px}
-    .visual .swiper-slide .blue_banner .img{width: 230px ;transform: none ;bottom: 10px;top: auto;}
-    .visual .swiper-slide .img img{width: 100%;}
+    .visual .swiper-slide > div{background-size: 25% !important;background-position:  bottom 10px right  20px!important;min-height: 280px !important;padding-bottom: 60px}
     .visual .swiper-slide .tit{font-size: 30px}
     .visual .swiper-slide .desc{font-size: 16px}
     .visual{padding-bottom: 80px}
@@ -2180,6 +2218,11 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .content .lecture_list02 > .item{width: calc(50% - 10px)}
     .content .lecture_list02 > .item:nth-child(3n){margin-right: 20px}
     .content .lecture_list02 > .item:nth-child(2n){margin-right: 0 !important}
+    
+    .qna_wrap .qna_write .item > label{padding-left: 0;width: 150px;}
+    .qna_wrap .qna_write .item .con{width: calc(100% - 150px)}
+    .file_up .con .file_view > p{word-break: keep-all}
+    .file_up .con .file_view{width: calc(100% - 124px)}
     
     
 }
@@ -2620,9 +2663,21 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .hot_lecture:not(.small_item) .slick-slide{float:none;}
     .hot_lecture:not(.small_item){overflow:hidden}
     
-    .visual .swiper-slide .blue_banner .img{width: 200px}
-    .visual .swiper-slide .blue_banner .m{display: block}
-    .visual .swiper-slide .blue_banner .pc{display: none}
+    .qna_wrap .qna_write .item{display: block;}
+    .qna_wrap .qna_write .item > label{display: block;width: 100%;margin-bottom: 10px;}
+    .qna_wrap .qna_write .item .con{width: 100%;}
+    .qna_wrap .qna_write .item .con input[type="text"]{width: 100%;margin-right: 0;margin-bottom: 10px;}
+    .qna_wrap .qna_write .item .con.inCheck{display: block;}
+    .qna_wrap .qna_write .item .con textarea{height: 100px;font-size: 14px}
+    .qna_wrap .qna_write .item.file_up .con{display: block;}
+    .file_up .con .file_view{width: 100%;margin-top: 15px}
+    .qna_wrap .qna_write .item > label{font-size: 14px}
+    .qna_wrap .qna_write .item .con input[type="text"]{font-size: 14px;padding: 10px}
+    .btn_style06{font-size: 14px;width: 100px}
+    
+    .qna_wrap{margin: 40px 0}
+    .new_tit{font-size: 22px;}
+    .qna_wrap .qna_write{margin-top: 30px;padding: 20px 0}
 }
 
 
@@ -2719,9 +2774,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     }
     .content .lecture_list02 .img{height: 130px}
     
-    .visual .swiper-slide .tit{font-size: 24px}
-    .visual .swiper-slide > div{padding-bottom: 100px}
-    .visual .swiper-slide .blue_banner .img{width: 150px}
+  
 
 }
 

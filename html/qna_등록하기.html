@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잡클라우드</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://www.jobaba.net//resource/bxslider/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://www.jobaba.net/resource/bxslider/slick.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <header id="newHeader">
+        <div class="nheader_top">
+            <div class="inner">
+                <div class="h_util">
+                    <!-- 상단 죄측 메뉴 -->
+                    <ul>
+                        <li>
+                            <a href="https://www.gjf.or.kr" target="_blank" title="경기도일자리재단 이동">
+                                경기도일자리재단
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://apply.jobaba.net" target="_blank" title="잡아바어플라이 이동">
+                                잡아바어플라이
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youth.jobaba.net" target="_blank" title="청년지원사업·청년몰 이동">
+                                청년지원사업·청년몰
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youthedu.jobaba.net" target="_blank" title="잡아바러닝센터 이동">
+                                잡아바러닝센터
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 상단 우측 메뉴 -->
+                    <ul>
+
+
+                        <!-- 로그인 전 -->
+                        <li><a href="#none;">로그인</a></li>
+                        <li><a href="#" title="회원가입 이동">회원가입</a></li>
+
+
+
+                        <li>
+                            <a href="#" title="고객센터 이동">
+                                고객센터
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 상단 로고 / 전체메뉴, 검색 버튼 -->
+        <div class="nheader_mid">
+            <div class="inner">
+                <div class="h_cont">
+                    <!-- 상단 로고 -->
+                    <h1 class="logo">
+                        <a href="#" title="메인화면 이동">
+                            <img src="images/user/logo.png" alt="잡아바 로고">
+                        </a>
+                    </h1>
+                    <div class="h_gnb_wrap">
+                        <ul class="h_gnb">
+                            <li>
+                                <a href="#">
+                                    오프라인(집합교육)
+                                </a>
+                                <ul class="depth_02">
+                                    <li><a href="#"><span class="menu_txt">일자리지원사업</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    온라인 취업교육
+                                </a>
+                                <ul class="depth_02">
+                                    <li><a href="#"><span class="menu_txt">온라인취업교육</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    취업지원서비스
+                                </a>
+                                <ul class="depth_02">
+                                    <li><a href="#"><span class="menu_txt">취업지원서비스</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    커뮤니티
+                                </a>
+                                <ul class="depth_02">
+                                    <li><a href="#"><span class="menu_txt">커뮤니티</span></a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="h_ui">
+                        <!-- 통합 검색 버튼 -->
+                        <div class="h_search">
+                            <button><img src="images/user/search_btn02.png" alt="검색"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 레이어 : 통합검색 -->
+        <div class="modal_search_wrapper" style="display: none;">
+            <div class="inner">
+                <div class="search_menu clearfix">
+                    <div class="btn_search_close">닫기<img src="images/user/btn_search_close.png" alt=""></div>
+                    <form id="topSrchFrm" name="topSrchFrm" action="/search/search.do" method="post" class="clearfix" novalidate="novalidate">
+                        <input type="hidden" name="autoWordFlag" id="autoWordFlag" value="Y">
+                        <input type="hidden" name="autoWordFlag" id="autoPreviewFlag" value="N">
+                        <input type="hidden" name="subSrchTxt" id="subSrchTxt" value="">
+                        <input type="hidden" name="srchOldTxt" id="srchOldTxt" value="">
+                        <input class="menu_search" type="text" name="srchTxt" id="srchTxt" title="검색어 입력" placeholder="검색어를 입력하세요." autocomplete="off" onkeyup="onSearch('onkeyup',event);">
+                        <input type="submit" value="검색">
+                    </form>
+
+                    <!-- 자동완성 -->
+                    <div id="autoComplete" class="search-title layer-box" style="display:none;">
+                        <button type="button" class="search_close" onclick="onAutoSearchClose();">닫기</button>
+                        <ul id="wordList" class="tag-txt">
+                        </ul>
+                        <div class="col-xs-8">
+                            <ul id="previewList" class="tag-txt"></ul>
+                        </div>
+                        <div class="btn_g clearfix">
+                            <button onclick="onAutoSearchNone()" id="autoSearchBtn">자동완성 끄기</button>
+                        </div>
+                    </div>
+                    <!--//자동완성 -->
+
+                    <div class="search_list clearfix">
+                        <div class="search_rank">
+                            <p class="tit">인기검색어</p>
+                            <ul id="hotListRank">
+                                <li><a href="#none" onclick="setSearchText('청년기본소득')" title="청년기본소득 이동"><span class="rank">1</span><span class="keyword">청년기본소득</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('청년기본소득 4분기')" title="청년기본소득 4분기 이동"><span class="rank">2</span><span class="keyword">청년기본소득 4분기</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('오산')" title="오산 이동"><span class="rank">3</span><span class="keyword">오산</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('면접수당')" title="면접수당 이동"><span class="rank">4</span><span class="keyword">면접수당</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('청년지원금')" title="청년지원금 이동"><span class="rank">5</span><span class="keyword">청년지원금</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('경기도')" title="경기도 이동"><span class="rank">6</span><span class="keyword">경기도</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('청년몰')" title="청년몰 이동"><span class="rank">7</span><span class="keyword">청년몰</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('정장대여')" title="정장대여 이동"><span class="rank">8</span><span class="keyword">정장대여</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('면접')" title="면접 이동"><span class="rank">9</span><span class="keyword">면접</span></a></li>
+                                <li><a href="#none" onclick="setSearchText('직업상담사')" title="직업상담사 이동"><span class="rank">10</span><span class="keyword">직업상담사</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="search_tag">
+                            <p class="tit">인기태그</p>
+                            <ul>
+                                <!-- DefaultInterceptor 에서 가져옴  -->
+
+                                <li><a href="#none" onclick="setSearchText('경영지원')" title="경영지원 이동">#경영지원</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('금융지원')" title="금융지원 이동">#금융지원</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('생활비지원')" title="생활비지원 이동">#생활비지원</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('청년')" title="청년 이동">#청년</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('구직활동지원')" title="구직활동지원 이동">#구직활동지원</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('취업')" title="취업 이동">#취업</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('중소기업')" title="중소기업 이동">#중소기업</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('일경험지원')" title="일경험지원 이동">#일경험지원</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('자본금지원')" title="자본금지원 이동">#자본금지원</a></li>
+
+                                <li><a href="#none" onclick="setSearchText('취업지원')" title="취업지원 이동">#취업지원</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //레이어 : 통합검색 -->
+
+    </header>
+
+    <div class="container">
+        <div class="qna_wrap">
+            <h3 class="new_tit">Q&amp;A</h3>
+            <div class="qna_write">
+                <div class="item">
+                    <label for="tit">제목</label>
+                    <div class="con inCheck">
+                        <input type="text" id="tit" placeholder="제목 (20자 이내로 입력해 주세요)
+">
+                        <div class="check">
+                            <input type="checkbox" id="private">
+                            <label for="private">비공개</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label for="cont">내용</label>
+                    <div class="con">
+                        <textarea></textarea>
+                    </div>
+                </div>
+                <div class="item file_up">
+                    <label for="file">첨부파일</label>
+                    <div class="con">
+                        <label class="input-file03">
+                            <b class="btn">
+                                파일 선택</b>
+                            <input type="file" class="fileInput02" multiple>
+                        </label>
+                        <div class="file_view">
+                            <p>업로드 가능 확장자 : jpg, jpeg, gif, png, pdf, hwp, hwpx, txt, doc, docx, xls, xlsx, ppt, pptx, zip, alz, 7z, rar, egg, mp3
+                                에디터에 삽입된 파일을 삭제하면 정상 출력되지 않습니다.
+                            </p>
+                            <div class="table_style02 mt20">
+                                <table>
+                                    <caption>첨부파일리스트</caption>
+                                    <colgroup>
+                                        <col style="width: 60%">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">파일명</th>
+                                            <th scope="col">크기</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="fileList">
+                                        <tr>
+                                            <td class="name"></td>
+                                            <td class="size"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_area mt50">
+            <a href="#" class="btn_style06 gray_btn04">취소</a>
+            <a href="#" class="btn_style06 cyan_btn">등록하기</a>
+        </div>
+        </div>
+        
+
+    </div>
+
+    <footer id="newFooter">
+        <div class="nfooter_top">
+            <div class="inner">
+                <div class="f_util">
+                    <ul class="f_nav">
+                        <li>
+
+                            <a href="https://gjf.or.kr/web/gjf/contents/M010-08" target="_blank">
+                                <strong>개인정보처리방침</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gjf.or.kr" target="_blank">
+                                경기도일자리재단
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.jobaba.net/mber/siteMap/terms.do">
+                                이용약관
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.jobaba.net/jobabaApi/apiMain.do">
+                                API신청
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- SNS : PC -->
+                    <ul class="f_sns">
+                        <li>
+                            <a href="https://blog.naver.com/jobaba_" title="잡아바 블로그 이동" class="blog" target="_blank">잡아바 블로그</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/jobabanet" title="잡아바 페이스북 이동" class="face" target="_blank">잡아바 페이스북</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/jobabanet" title="잡아바 인스타그램 이동" class="insta" target="_blank">잡아바 인스타그램</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UC69DhLD0FUmLgP9BsxitbDw" title="잡아바 유튜브 이동" class="youtu" target="_blank">잡아바 유튜브</a>
+                        </li>
+                        <li>
+                            <a href="https://apps.apple.com/us/app/%EC%9E%A1%EC%95%84%EB%B0%94/id1260278304?l=ko&amp;ls=1" title="잡아바 앱스토어 이동" class="app" target="_blank">잡아바 앱스토어</a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=net.jobaba.app" title="잡아바 플레이스토어 이동" class="play" target="_blank">잡아바 플레이스토어</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nfooter_mid">
+            <div class="f_btn_wrap">
+                <button type="button" class="footer_btn" title="닫기"><span>ⓒ 2016 GJF</span><span>더보기</span></button>
+            </div>
+            <div class="inner">
+                <div class="footer_wrap">
+                    <div class="f_business">
+                        <div class="f_logo">
+                            <a href="https://www.gjf.or.kr" target="_blank" title="경기도일자리재단 이동" class="f_gyeonggi_logo">
+                                <img src="images/user/gyeonggi_logo.png" alt="경기도일자리재단 로고">
+                            </a>
+                            <p class="f_addr">경기도 부천시 부천로 136번길 27, 3층 경기도일자리재단</p>
+                            <!-- SNS : 모바일 -->
+                            <ul class="f_sns">
+                                <li>
+                                    <a href="https://blog.naver.com/jobaba_" title="잡아바 블로그 이동" class="blog" target="_blank">잡아바 블로그</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/jobabanet" title="잡아바 페이스북 이동" class="face" target="_blank">잡아바 페이스북</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/jobabanet" title="잡아바 인스타그램 이동" class="insta" target="_blank">잡아바 인스타그램</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UC69DhLD0FUmLgP9BsxitbDw" title="잡아바 유튜브 이동" class="youtu" target="_blank">잡아바 유튜브</a>
+                                </li>
+                                <li>
+                                    <a href="https://apps.apple.com/us/app/%EC%9E%A1%EC%95%84%EB%B0%94/id1260278304?l=ko&amp;ls=1" title="잡아바 앱스토어 이동" class="app" target="_blank">잡아바 앱스토어</a>
+                                </li>
+                                <li>
+                                    <a href="https://play.google.com/store/apps/details?id=net.jobaba.app" title="잡아바 플레이스토어 이동" class="play" target="_blank">잡아바 플레이스토어</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="f_enquiry">
+                            <dl>
+                                <dt>문의안내</dt>
+                                <dd>평일 09:00~18:00 <span>※ 토, 일요일 및 법정공휴일 휴무</span></dd>
+                            </dl>
+                            <dl>
+                                <dt>잡아바 이용문의</dt>
+                                <dd><a href="tel:031-270-9688">031-270-9988</a> / <a href="mailto:jobaba@GJF.or.kr">jobaba@GJF.or.kr</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>재단 사업문의</dt>
+                                <dd><a href="tel:031-270-9600">031-270-9600</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="f_address">
+                        <p class="f_addr">경기도 부천시 부천로 136번길 27, 3층 경기도일자리재단</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    </script>
+</body>
+
+</html>

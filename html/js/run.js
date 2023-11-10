@@ -360,7 +360,34 @@ $(document).ready(function () {
             },
         }
     });
-    
+
+    $('.fileInput02').on('change', function () {
+        var $fileTable = $('.file_up .table_style02 table tbody');
+
+        // Clear existing rows
+        $fileTable.empty();
+
+        for (var i = 0; i < this.files.length; i++) {
+            var file = this.files[i];
+            var totalBytes = file.size / 1024;
+
+            var filename = file.name;
+            var fileNameWithoutExtension = filename.substring(0, filename.lastIndexOf('.'));
+            var fileExtension = filename.substring(filename.lastIndexOf('.') + 1);
+
+            $fileTable.append('<tr><td class="name">' + '<div class="name_wrap">' + '<p class="name_area">' + '<span>' + fileNameWithoutExtension + '</span>' + '.' + fileExtension + '</p>' + '<a href="javascript:void();" class="del_btn">삭제</a>' + '</div>' + '</td><td class="size">' + (totalBytes).toLocaleString() + ' KB' + '</td></tr>');
+        }
+
+        $('.file_up .table_style02 table').addClass('active');
+    });
+
+    $('.file_up .table_style02 table').on('click', '.del_btn', function () {
+        $(this).closest('tr').remove();
+
+        if ($('.file_up .table_style02 table tbody tr').length === 0) {
+            $('.file_up .table_style02 table tbody').append('<tr><td></td><td></td></tr>');
+        }
+    });
 
 
 
@@ -433,24 +460,24 @@ $(document).ready(function () {
             loop: true,
             responsive: [ // 반응형 웹 구현 옵션
                 {
-                    breakpoint: 1024, 
+                    breakpoint: 1024,
                     settings: {
                         //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
                         slidesToShow: 3,
                         centerPadding: '0',
                     }
 					},
-                 {
-	                    breakpoint: 768, 
-	                    settings: {
-                            variableWidth: true,
-	                        swipeToSlide: true, // 터치 슬라이드 활성화
-                            dots:true
-	                    }
+                {
+                    breakpoint: 768,
+                    settings: {
+                        variableWidth: true,
+                        swipeToSlide: true, // 터치 슬라이드 활성화
+                        dots: true
+                    }
 					 },
 				]
         });
-        
+
         // .slick-current 클래스를 가진 요소를 선택합니다.
         var currentSlide = $(".hot_lecture .slick-current");
 
@@ -462,8 +489,8 @@ $(document).ready(function () {
 
         // targetIndex가 0 이상인 경우 해당 슬라이드에 "hide" 클래스를 추가합니다.
         if (targetIndex >= 0) {
-          var targetSlide = currentSlide.prevAll(".slick-slide").eq(targetIndex);
-          targetSlide.addClass("hide_div");
+            var targetSlide = currentSlide.prevAll(".slick-slide").eq(targetIndex);
+            targetSlide.addClass("hide_div");
         }
 
 
@@ -472,8 +499,8 @@ $(document).ready(function () {
         var initialVideo = $('.youtubeVideo')[0];
         var video = $('.youtubeVideo');
         var url = $('.youtubeVideo').attr('src');
-        
-        
+
+
         // 슬라이더를 초기화합니다. (이 코드는 슬라이더가 최초로 로드될 때 초기화합니다.)
         $('.hot_lecture').on('afterChange', function (event, slick, currentSlide, nextSlide) {
             // 모든 슬라이드의 video_area에서 active 클래스를 제거합니다.
@@ -503,20 +530,20 @@ $(document).ready(function () {
 
             // 3개 이전의 슬라이드를 찾기 위해 인덱스를 계산합니다.
             var targetIndex = currentIndex - 3;
-            
 
-        	$('.hot_lecture').find('.slick-slide').removeClass('hide_div');
+
+            $('.hot_lecture').find('.slick-slide').removeClass('hide_div');
             // targetIndex가 0 이상인 경우 해당 슬라이드에 "hide_div" 클래스를 추가합니다.
             if (targetIndex >= 0) {
-              var targetSlide = $('.hot_lecture').find('.slick-slide').eq(targetIndex);
-              targetSlide.addClass('hide_div');
-            } 
-            
-         
+                var targetSlide = $('.hot_lecture').find('.slick-slide').eq(targetIndex);
+                targetSlide.addClass('hide_div');
+            }
+
+
         });
-        
-     
-      
+
+
+
     } else {
         $('.hot_lecture').addClass('small_item');
         $('.hot_lecture').slick({
@@ -627,6 +654,7 @@ $(document).ready(function () {
 
 
 
+
 });
 
 $(window).resize(function () {
@@ -708,8 +736,21 @@ $(window).resize(function () {
     var maxHeight = Math.max.apply(Math, heightArray)
 
     $(".empower_wrap>div .box").height(maxHeight + 50);
-    
- 
+
+    //파일
+    $(document).on('click', '.file_close', function () {
+        $(this).parents('.file').remove();
+        $('#uploadFile').val("");
+        if ($('#upload_prev  .file').length) {} else {
+            $('.file_wrap label').removeClass('active')
+        }
+
+    });
+
+
+
+
+
 })
 
 
