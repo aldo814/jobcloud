@@ -264,7 +264,7 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
 
 #newHeader .h_gnb {
     display: flex;
-    max-width: 750px;
+    max-width: 770px;
     width: 100%;
     margin-right: 60px;
 }
@@ -2030,6 +2030,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .btn_area{display: flex;justify-content: space-between;}
 .btn_area02{display: flex;}
 .btn_area02 > *{margin-left: auto;}
+.btn_area03{display: flex;justify-content: center;}
+.btn_area03 > * + *{margin-left: 15px;}
 .qna_search{display: flex;align-items: center;;border-bottom: 1px solid #c9ccd1;width: 280px;margin-left: auto;justify-content: space-between;padding: 10px 10px 10px 5px;box-sizing: border-box;margin-bottom: 30px}
 .qna_search input[type="text"]{border: 0;font-size: 14px;}
 .qna_search input[type="text"]::placeholder{color: #9ea4aa}
@@ -2125,6 +2127,44 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .lr_review .item .bottom  .info li + li{margin-left: 5px;}
 .rate_wrap .rate{position: relative;background: url(../images/user/star_bg03.png) no-repeat;width: 86px;height: 14px;}
 .rate_wrap .rate span{display: block;text-indent: -9999px;height: 100%;background: url(../images/user/star03.png) no-repeat;position: absolute;left: 0;top: 0;z-index: 5}
+.lecture_viewer{padding: 100px 0;}
+.lecture_viewer .lv_wrap{display: flex;justify-content: space-between;}
+.lecture_viewer .left{width: 360px;}
+.lecture_viewer .left > div + div{margin-top: 60px}
+.lecture_viewer .tit_lv{border-bottom: 1px solid #000;padding-bottom: 10px;display: flex;justify-content: space-between;align-items: center;margin-bottom: 15px}
+.lecture_viewer .tit_lv h3{font-weight: bold;font-size: 24px;}
+.lecture_viewer .tit_lv a{font-size: 14px;display: flex;color: #888888;border: 1px solid #cccccc;padding: 8px 15px;border-radius: 5px;}
+.lecture_viewer .tit_lv a:before{content: '';display: block;background: url(../images/user/exit.png) no-repeat;width: 16px;height: 16px;margin-right: 5px}
+.lecture_viewer .lb_idx_list,
+.lecture_viewer .lv_dlist{max-height: 300px;overflow-y: auto;}
+.lecture_viewer .lb_idx_list::-webkit-scrollbar,
+.lecture_viewer .lv_dlist::-webkit-scrollbar{width: 6px;}
+.lecture_viewer .lb_idx_list::-webkit-scrollbar-track,
+.lecture_viewer .lv_dlist::-webkit-scrollbar-track{background:#f8f9fa;border-radius: 50px}
+.lecture_viewer .lb_idx_list::-webkit-scrollbar-thumb,
+.lecture_viewer .lv_dlist::-webkit-scrollbar-thumb{background: #f1f3f4;border-radius: 50px;border: 1px solid #e8eaed}
+.lecture_viewer .lb_idx_list .item{border-bottom: 1px solid #cccccc;padding: 10px;}
+.lecture_viewer .lb_idx_list .item a{display: flex;align-items: center;justify-content: space-between;opacity: 0.4}
+.lecture_viewer .lb_idx_list .item.active{background: #f1f4f6}
+.lecture_viewer .lb_idx_list .item.active a{opacity: 1}
+.lecture_viewer .lb_idx_list .item.active p:not(.date){color: #333}
+.lecture_viewer .lb_idx_list .item p:nth-child(1){width: 40px;margin-right: 10px}
+.lecture_viewer .lb_idx_list .item .date{font-size: 14px;width: 70px;}
+.lecture_viewer .lb_idx_list .item .tlt{width: calc(100% - 120px)}
+.lecture_viewer .right{width: calc(100% - 400px);}
+.lecture_viewer .lv_data .no_data{text-align: center;padding: 10px 0}
+.lecture_viewer .lv_data .lv_dlist li{border-bottom: 1px solid #cccccc;padding-bottom: 10px;display: flex;justify-content: space-between;align-items: center;}
+.lecture_viewer .lv_data .lv_dlist li .btn_style03{padding: 7px 15px;background: #cccccc}
+.lecture_viewer .lv_data .lv_dlist li + li{margin-top: 10px}
+.lecture_viewer .lv_data .lv_dlist li p{max-width: calc(100% - 85px)}
+.lecture_viewer .lv_video{border-radius: 10px;overflow: hidden;position: relative;padding-top: 56%;width: 100%;height: 0}
+.lecture_viewer .lv_video iframe{position: absolute;top: 0;left: 0;width: 100%;height: 100%}
+.lecture_viewer .right .btn_area03 > *{border: 1px solid #cccccc;display: flex;padding: 7px 15px;border-radius: 30px;font-size: 14px;}
+.lecture_viewer .right .btn_area03 .prev_btn{color: rgba(0, 0, 0, 0.8);background: #fff;}
+.lecture_viewer .right .btn_area03 .next_btn{background: #f1f4f6;color: #000;}
+.video_wrap{position: relative;width: 100%;height: 0;padding-top: 56%;}
+.video_wrap iframe{position: absolute;width: 100%;height: 100%;left: 0;top: 0;}
+.border_top{border-radius: 15px;overflow: hidden}
 
 /* -----------반응형 start---------*/
 @media all and (max-width:1500px){
@@ -2336,6 +2376,18 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     .lecture_room .lt_table{width: 100%;overflow-x: auto;}
     .lecture_room .lt_table table{min-width: 100%;width: auto;white-space: nowrap;}
+    
+    .lecture_viewer{padding: 40px 0}
+    .lecture_viewer .lv_wrap{flex-direction: column-reverse;}
+    .lecture_viewer .left{width: 100%;display: flex;justify-content: space-between}
+    .lecture_viewer .left > div + div{margin-top: 0;margin-left: 20px;}
+    .lecture_viewer .left > div{flex:1 auto;}
+    .lecture_viewer .right{width: 100%;margin-bottom: 30px}
+    .lecture_viewer .lv_data .tit_lv{padding-bottom: 15px}
+    .lecture_viewer .lv_data .lv_dlist li{padding-bottom: 4.5px;}
+    .lecture_viewer .lv_data .lv_dlist li:first-child{padding-top: 4px}
+    .lecture_viewer .lv_data .lv_dlist li + li{margin-top: 0;padding-top: 4px}
+    .lecture_viewer .lb_idx_list, .lecture_viewer .lv_dlist{max-height: 162px}
     
 }
 
@@ -2820,6 +2872,14 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lqa_list .item > div{padding: 15px 10px 15px 40px}
     .lqa_list .item > div:before{font-size: 13px;width: 20px;height: 20px;left: 10px}
     .lr_review .item{padding: 15px 0}
+    
+    .lecture_viewer .left{display: block;}
+    .lecture_viewer .left > div + div{margin-top: 30px;margin-left: 0}
+    .lecture_viewer .tit_lv h3{font-size: 20px;}
+    .lecture_viewer .lb_idx_list .item p,
+    .lecture_viewer .lv_data .lv_dlist li{font-size: 13px;}
+    .lecture_viewer .lv_data .lv_dlist li .btn_style03{font-size: 13px}
+    .lecture_viewer .lv_data .no_data{font-size: 14px;}
 }
 
 
