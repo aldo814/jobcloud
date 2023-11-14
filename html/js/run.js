@@ -33,6 +33,11 @@ $(document).ready(function () {
         $('#header .mega_menu #mega_gnb li .tit').click(function () {
             $(this).parent().toggleClass('active')
         });
+          $('#newHeader .h_mobile_mid .mobile_menu > li > a').click(function(){
+            $(this).parent().toggleClass('active');
+           })
+    } else {
+      
     }
 
     $(window).resize(function () {
