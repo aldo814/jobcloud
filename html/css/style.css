@@ -75,7 +75,7 @@ hr.border_gray02{border: 0;border-top: 1px solid #eaeaea;}
 .mb20{margin-bottom: 20px}
 .mt10{margin-top: 10px}
 .mt5{margin-top: 5px}
-.pd60{padding: 60px 0 0 0}
+.pd60{padding: 60px 0 }
 .f20{font-size: 20px}
 .f18{font-size: 18px}
 .f16{font-size: 16px !important}
@@ -1471,7 +1471,7 @@ input[type=checkbox]:checked + label:before {color: #0082cc;}
 .pw_reset .id_find div label{font-size: 16px}
 
 /*.list_wrap*/
-.list_wrap{display: flex;margin-top: 60px;}
+.list_wrap{display: flex;margin: 60px 0;}
 .snb{width: 250px;margin-right: 50px;}
 .snb .tit{font-size: 20px;font-weight: bold;padding-bottom: 30px;border-bottom: 2px solid #000;}
 .snb  li.active > a{color: #0082cc;font-weight: 500}
@@ -1895,9 +1895,14 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 /* 메인 변경 */
 .main_tit02{text-align: center;margin-bottom: 40px;font-weight: bold;font-size: 30px}
 .lecture_list02{position: relative}
+.lecture_list02.sty01 {display: flex;flex-wrap: wrap;}
+.lecture_list02.sty01 > .item{width: calc(25% - 16px);margin-right: 20px;margin-top: 30px}
+.lecture_list02.sty01 > .item:nth-child(4n){margin-right: 0}
+.lecture_list02.sty01 > .item:nth-child(3n){margin-right: auto}
 .lecture_list02 .swiper-container{overflow: hidden}
 .lecture_list02 .main_tit{}
-.lecture_list02 .img{border-radius: 10px;overflow: hidden;height: 238px;}
+.lecture_list02 .img{border-radius: 10px;overflow: hidden;height: 238px;position: relative}
+.lecture_list02 .img .state{top: 10px;left: 10px}
 .lecture_list02 .img img{display: block;width: 100%;height: 100%;}
 .lecture_list02 p{font-size: 20px;font-weight: bold;margin-top: 20px;}
 
@@ -1981,8 +1986,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .m_ico_set li{border-radius: 50%;width: 120px;height: 120px;display: flex;flex-direction: column;justify-content: center;align-items: center;background: #eef3fb;font-size: 14px;}
 .m_ico_set li .ico{width: 40px;height: 40px;display: block;margin: 0 auto 5px auto}
 .m_ico_set li:nth-child(1) .ico{background: url(../images/user/ist_01.png) no-repeat center; }
-.m_ico_set li:nth-child(2) .ico{background: url(../images/user/ist_01.png) no-repeat center; }
-.m_ico_set li:nth-child(3) .ico{background: url(../images/user/ist_01.png) no-repeat center; }
+.m_ico_set li:nth-child(2) .ico{background: url(../images/user/ist_02.png) no-repeat center; }
+.m_ico_set li:nth-child(3) .ico{background: url(../images/user/ist_03.png) no-repeat center; }
 
 .content .lecture_list02{display: flex;flex-wrap: wrap}
 .content .lecture_list02 > .item{width: calc(33.333% - 13.333px);margin-right: 20px;margin-top: 30px;}
@@ -2333,6 +2338,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .empower .empower_wrap .gray{margin-bottom: 0}
     .empower .empower_wrap .apply p{display: inline-flex;}
     .empower .empower_wrap .item {border-radius: 10px;overflow: hidden;}
+    .empower .empower_wrap .slick-list{margin: 0 -10px}
+    .empower .empower_wrap .slick-list .slick-slide{margin: 0 10px}
     .empower .empower_wrap .item .box{padding: 20px 30px 50px 80px;border-radius: 0;}
     .empower .empower_wrap .item.item01 .box{background: url(../images/user/empower01.png) no-repeat #fff left 20px bottom 40px;}
     .empower .empower_wrap .item.item02 .box{background: url(../images/user/empower02.png) no-repeat #fff left 20px bottom 40px;}
@@ -2890,6 +2897,9 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     .hot_lecture:not(.small_item) .slick-slide.slick-current img{height: 190px}
     .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center) img{height: 150px}
+    
+    #newHeader .h_cont .logo img{width: 130px}
+    #newHeader .h_ui{top: 15px}
 }
 
 

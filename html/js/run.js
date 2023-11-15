@@ -476,8 +476,9 @@ $(document).ready(function () {
                     breakpoint: 768,
                     settings: {
                         variableWidth: true,
-                        swipeToSlide: true, // 터치 슬라이드 활성화
-                        dots: true
+                        dots: true,
+                        autoplay:true,
+                        autoplaySpeed:5000
                     }
 					 },
 				]
