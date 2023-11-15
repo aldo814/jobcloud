@@ -760,18 +760,27 @@ $(window).resize(function () {
 
 
 /* 팝업 */
+var scrollPosition; // scrollPosition을 함수 외부에서 정의
+
 function openModal(modalname) {
-    document.get
+    // scrollPosition 설정
+    scrollPosition = $('body').scrollTop();
+
+    // 모달 열기
     $("." + modalname).show();
     $('body').addClass('not_scroll');
     $('.shadow').show();
 }
 
 function close_pop(flag) {
+    // 모달 닫기
     $('.popup').hide();
     $('body').removeClass('not_scroll');
     $('.shadow').hide();
-};
+
+    // 이전 스크롤 위치로 이동
+    $('body').scrollTop(scrollPosition);
+}
 
 
 /*윈도우창 닫기*/

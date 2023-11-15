@@ -19,20 +19,6 @@
 </head>
 
 <body>
-    <div class="shadow" style="display: block;"></div>
-    <!--팝업-->
-    <div class="popup mw700 border_top" style="display: block;">
-        <div class="pop_head">
-            <p>팝업 제목입니다.</p>
-            <a href="#" class="close_btn" onclick="closeWindow()">닫기</a>
-        </div>
-        <div class="pop_cont pop_cont02">
-            <div class="video_wrap">
-                <iframe width="894" height="503" src="https://www.youtube.com/embed/QRvjLoxIuOU" title="2 시간 지브리 치유 휴식 🌎 여름 지브리 BGM ⛅ 지브리 스튜디오 음악" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <!--//팝업-->
     <header id="newHeader">
         <div class="nheader_top">
             <div class="inner">
@@ -128,6 +114,11 @@
 	                </ul>
                    </div>
                     <div class="h_ui">
+                       <div class="h_menu" onclick="allMenu();">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                         <!-- 통합 검색 버튼 -->
                         <div class="h_search">
                             <button><img src="images/user/search_btn02.png" alt="검색"></button>
@@ -202,6 +193,164 @@
 			</div>
 		</div>
 		<!-- //레이어 : 통합검색 -->
+    
+    <div class="h_mobile">
+            <!-- 메뉴 상단 : 모바일 -->
+            <div class="h_mobile_top">
+                <div class="h_mobile_btn">
+                    <h1 class="logo">
+                    	<a href="/gjf/home.do"><img src="/comm/image_view.do?objectType=3&amp;objectId=1&amp;thumbnail=true0" alt="잡아바 러닝센터 로고"></a>
+                   	</h1>
+                    <div class="h_mobile_close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- 모바일 버튼 : 로그인,회원가입 / 로그아웃,마이페이지 -->
+                <div class="h_mobile_login">
+               	
+			        	<a href="/accounts/logout.do" class="btn01 loginBtn">로그아웃</a>
+			        	<a href="/gjf/service/hr/my_class.do" class="btn01 joinBtn">마이페이지</a>
+		        	
+		        		<a href="/operator/ba/dashboard.do" class="btn01 joinBtn">관리자</a>
+		        	
+		                	   
+                </div>
+                <ul class="h_mobile_info">
+                    <li>
+                        <a href="https://apply.jobaba.net" target="_blank" class="mobile_icon01">
+                        	잡아바<br> 어플라이
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youth.jobaba.net" target="_blank" class="mobile_icon02">
+                        	청년지원사업<br> 청년몰
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youthedu.jobaba.net" target="_blank" class="mobile_icon03">
+                        	잡아바<br> 러닝센터
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 메뉴 중간 : 모바일 -->
+            <div class="h_mobile_mid">
+                <ul class="mobile_menu">
+                    <li>
+                        <a href="#">정책정보</a>
+                        <ul class="mobileGnb"><li><a href="https://www.jobaba.net/sprtPlcy/info/list2020.do">일자리 지원사업</a></li>
+                                <li><a href="https://www.jobaba.net/entCntnts/sprtPlcy/list2020.do">기업지원정책</a></li>
+                                <li><a href="https://www.jobaba.net/edutrn/list2020.do">취업교육</a></li>
+                                <li><a href="https://www.jobaba.net/evtIfo/list2020.do">대외활동</a></li>
+                                <li><a href="https://www.jobaba.net/usrReg/cmmn/intro.do">정책등록</a></li>
+                            
+                            <li>
+                                <ul class="mobileSub">
+                                    <li><a href="https://apply.jobaba.net" target="_blank"><span>정책신청은</span>잡아바 어플라이 바로가기</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">취업준비</a>
+                        <ul class="mobileGnb">
+                            <li>
+                                <a href="https://www.jobaba.net/jobDiagnose/diagnoseView.do">취업진로진단</a>
+                            </li>
+                            <li>
+                                <a href="https://www.jobaba.net/psychology/mainList.do">진로 취업상담</a>
+                            </li>
+                            <li>
+                                <a href="https://www.jobaba.net/introduction/mainList.do">자기소개서 첨삭</a>
+                            </li>
+                            <li>
+                                <a href="https://www.jobaba.net/interview/mainList.do">AI역량검사</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">러닝센터</a>
+                        <ul class="mobileGnb">
+                            <li>
+                                <a href="https://www.jobaba.net/youthedu/apply/intro.do">알아보기</a>
+                            </li>
+                            <li>
+                                <a href="https://www.jobaba.net/thema/vocEduList.do">동영상교육</a>
+                            </li>
+                            <li>
+                                <a href="https://www.jobaba.net/youthedu/apply/form.do">연계신청</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">채용정보</a>
+                        <ul class="mobileGnb">
+                            <li><a href="https://www.jobaba.net/cntn/covJobInfoCntr.do">탐나는 일자리정보관</a></li>
+                            <li><a href="https://www.jobaba.net/empmn/enterpriseEmployListNew.do">기업채용정보</a></li>
+                            <li><a href="https://www.jobaba.net/empmn/recruitListJob.do">일경험 채용관</a></li>
+                            <li><a href="https://www.jobaba.net/pblcEmpmn/list.do">공공일자리</a></li>
+                            <li><a href="https://www.jobaba.net/empmn/desEntNew.do">탐나는 기업관</a></li>
+                            <li>
+                                <ul class="mobileSub">
+                                    <li><a href="https://www.jobaba.net/entCntnts/exhb/exhbListNew.do"><span>경기도민을 위한 일자리 기회 제공</span>온ㆍ오프라인 채용박람회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 메뉴 하단 : 모바일 -->
+            <div class="h_mobile_bottom">
+                <!-- 패밀리 사이트 바로가기 : 모바일 -->
+                <div class="h_mobile_family">
+                    <strong>패밀리 사이트 바로가기</strong>
+                    <ul>
+                        <li>
+                            <a href="https://www.gjf.or.kr" target="_blank">
+                                <img src="/resource/images/main2023/mobile_logo01.png" alt="경기도일자리재단">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.dreammaru.or.kr" target="_blank">
+                                <img src="/resource/images/main2023/mobile_logo02.png" alt="꿈마루">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.dream.go.kr" target="_blank">
+                                <img src="/resource/images/main2023/mobile_logo03.png" alt="꿈날개">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youthedu.jobaba.net" target="_blank">
+                                <img src="/resource/images/main2023/mobile_logo04.png" alt="잡아바러닝센터">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- SNS 링크 : 모바일 -->
+                <ul class="h_mobile_sns">
+                    <li>
+                        <a href="https://blog.naver.com/jobaba_" title="잡아바 블로그 이동" class="blog" target="_blank">잡아바 블로그</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/jobabanet" title="잡아바 페이스북 이동" class="face" target="_blank">잡아바 페이스북</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/jobabanet" title="잡아바 인스타그램 이동" class="insta" target="_blank">잡아바 인스타그램</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC69DhLD0FUmLgP9BsxitbDw" title="잡아바 유튜브 이동" class="youtu" target="_blank">잡아바 유튜브</a>
+                    </li>
+                    <li>
+                        <a href="https://apps.apple.com/us/app/%EC%9E%A1%EC%95%84%EB%B0%94/id1260278304?l=ko&amp;ls=1" title="잡아바 앱스토어 이동" class="app" target="_blank">잡아바 앱스토어</a>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=net.jobaba.app" title="잡아바 플레이스토어 이동" class="play" target="_blank">잡아바 플레이스토어</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
     </header>
     <!--메인 배너-->
@@ -310,71 +459,41 @@
             </div>
         </div>
         
+        <div class="shadow"></div>
+    <!--팝업-->
+    <div class="popup mw700 border_top modal1">
+        <div class="pop_head">
+            <p>팝업 제목입니다.</p>
+            <a href="#" class="close_btn" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="pop_cont pop_cont02">
+            <div class="video_wrap">
+                <iframe width="894" height="503" src="https://www.youtube.com/embed/QRvjLoxIuOU" title="2 시간 지브리 치유 휴식 🌎 여름 지브리 BGM ⛅ 지브리 스튜디오 음악" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!--//팝업-->
         <div class="section hidden">
             <h3 class="main_tit02">신규강좌! 미리보기
             </h3>
             <div class="hot_lecture">
                 <div class="item">
-                    <div class="video_area">
-                        <iframe width="1271" height="715" src="http://content.learning-hub.co.kr/contents/Course/m_1093442/docs/01/F001.mp4"  class="customVideo" id="player" name="player" sandbox=""></iframe>
-                           
-                            <!-- 
-                        <div class="progressBarContainer">
-                            <div class="progressBar"></div>
-                        </div>
-                        <button class="playButton">Play</button>
-                        -->
-                    </div>
+                   <a href="javascript:void()" onclick="javascript:openModal('modal1');">
+                    <img src="images/user/sample_img01.png" alt="">
+                    </a>
                 </div>
                 <div class="item">
-                    <div class="video_area">
-                        <iframe width="1271" height="715" src="http://play.wecandeo.com/video/v/?key=BOKNS9AQWrHg9vm2wipgMz1JkSUa8cHSx06oYPnAjRzUD2ya4BJxsqLKGKgfKFPwplFGipd7WMv3b27rE983vAVwieie"  class="customVideo" id="player2" name="player2" sandbox=""></iframe>
-                           
-                            <!-- 
-                        <div class="progressBarContainer">
-                            <div class="progressBar"></div>
-                        </div>
-                        <button class="playButton">Play</button>
-                        -->
-                    </div>
+                    <img src="images/user/sample_img01.png" alt="">
                 </div>
                 <div class="item">
-                    <div class="video_area">
-                        <iframe width="1271" height="715" src="https://www.youtube.com/embed/5Jn198qc9X4"  class="customVideo"></iframe>
-                           
-                            <!-- 
-                        <div class="progressBarContainer">
-                            <div class="progressBar"></div>
-                        </div>
-                        <button class="playButton">Play</button>
-                        -->
-                    </div>
+                    <img src="images/user/sample_img01.png" alt="">
                 </div>
                 <div class="item">
-                    <div class="video_area">
-                        <iframe width="1271" height="715" src="https://www.youtube.com/embed/5Jn198qc9X4"  class="customVideo"></iframe>
-                           
-                            <!-- 
-                        <div class="progressBarContainer">
-                            <div class="progressBar"></div>
-                        </div>
-                        <button class="playButton">Play</button>
-                        -->
-                    </div>
+                    <img src="images/user/sample_img01.png" alt="">
                 </div>
                 <div class="item">
-                    <div class="video_area">
-                        <iframe width="1271" height="715" src="https://www.youtube.com/embed/5Jn198qc9X4"  class="customVideo"></iframe>
-                           
-                            <!-- 
-                        <div class="progressBarContainer">
-                            <div class="progressBar"></div>
-                        </div>
-                        <button class="playButton">Play</button>
-                        -->
-                    </div>
+                    <img src="images/user/sample_img01.png" alt="">
                 </div>
-                
             </div>
 
         </div>
