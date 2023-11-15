@@ -1921,7 +1921,9 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .hot_lecture.small_item .slick-list{margin: 0 -10px}
 .hot_lecture.small_item .slick-slide{margin: 0 10px}
 .hot_lecture:not(.small_item) .hide_div{opacity:0}
-.hot_lecture:not(.small_item) .slick-slide{  transform: scale(0.8)  translate(420px);;filter: blur(2px)}
+.hot_lecture:not(.small_item) .slick-slide{  transform: scale(0.8)  translate(420px);;filter: blur(2px);height: auto;}
+.hot_lecture:not(.small_item) .slick-slide > div,
+.hot_lecture:not(.small_item) .slick-slide > div > div{height: 100%;}
 .hot_lecture:not(.small_item) .slick-slide img{display: block !important;max-width: 100%;box-shadow: 5px 0 15px rgba(0, 0, 0, 0.12);height: 270px}
 .hot_lecture .slick-current .item{position: relative;}
 .hot_lecture .slick-current .item:before{content: '';display: block; background: url(../images/user/start_btn.png) no-repeat;width: 136px;height: 136px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);z-index: 55}
@@ -1951,7 +1953,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 
 
 .hot_lecture:not(.small_item) .slick-slide.slick-center:only-child{transform: none}
-.hot_lecture:not(.small_item) .slick-track{margin: 0}
+.hot_lecture:not(.small_item) .slick-track{margin: 0;display: flex;}
 .hot_lecture img{width: 100%;height: 100%;display: block}
 
 .hot_lecture .slick-prev,
@@ -2385,6 +2387,9 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lecture_viewer .lv_data .lv_dlist li:first-child{padding-top: 4px}
     .lecture_viewer .lv_data .lv_dlist li + li{margin-top: 0;padding-top: 4px}
     .lecture_viewer .lb_idx_list, .lecture_viewer .lv_dlist{max-height: 162px}
+    
+    .hot_lecture:not(.small_item) .slick-slide img{height: 200px}
+    
 }
 
 @media all and (max-width:768px){
@@ -2880,6 +2885,11 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     .visual .swiper-slide .m{display: block}
     .visual .swiper-slide .pc{display: none}
+    
+    .hot_lecture .slick-current .item:before{background-size: 70px;width: 70px;height: 70px;}
+    
+    .hot_lecture:not(.small_item) .slick-slide.slick-current img{height: 190px}
+    .hot_lecture:not(.small_item) .slick-slide.slick-active:not(.slick-center) img{height: 150px}
 }
 
 

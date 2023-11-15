@@ -752,11 +752,12 @@ $(window).resize(function () {
 
     });
 
+    
 
 
 
+});
 
-})
 
 
 /* 팝업 */
@@ -994,3 +995,5 @@ function onAutoPreviewNone() {
         $("#autoPreviewBtn").html("미리보기 끄기");
     }
 }
+
+
