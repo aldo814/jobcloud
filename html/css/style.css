@@ -1018,10 +1018,10 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
 .visual_wrap{position: relative;width: 1200px;margin: auto;}
 .visual{margin: 30px 0;overflow: hidden}
 .visual .swiper-slide{border-radius: 10px;overflow: hidden;}
-.visual .swiper-slide > div {padding:40px;position: relative;min-height: 400px;box-sizing: border-box}
+.visual .swiper-slide > div {position: relative;box-sizing: border-box}
 .visual .swiper-slide > div .txt{position: absolute;top: 50%;transform: translateY(-50%);width: calc(100% - 600px)}
 .visual .swiper-slide img{margin-left: auto}
-.visual .swiper-slide img{display: block;border-radius: 10px;overflow: hidden;max-width: 530px;}
+.visual .swiper-slide img{display: block;border-radius: 10px;overflow: hidden;width: 100%;}
 .visual .swiper-slide .m{display: none;max-width: 100%;}
 .visual .swiper-slide .blue_banner{background: #549cf4;color: #fff;}
 .visual .swiper-slide .tit{font-size: 40px;font-weight: bold;margin-bottom: 20px}
