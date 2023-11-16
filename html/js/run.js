@@ -142,7 +142,7 @@ $(document).ready(function () {
 
     /* 인기 강좌 슬라이드*/
     var swiper = new Swiper('.lecture_list02.slide01 .swiper-container', {
-        slidesPerView: 'auto',
+        slidesPerView: 4,
         spaceBetween: 20,
         navigation: {
             nextEl: '.slide01 .lt_swiper-button-next',
@@ -150,7 +150,7 @@ $(document).ready(function () {
         },
         breakpoints: {
             769: {
-                slidesPerView: 4,
+                slidesPerView: 'auto',
             }
         }
     });
@@ -621,30 +621,29 @@ $(document).ready(function () {
         $('.lecture_list02.slide02 .item').hide();
         $(".lecture_list02.slide02 .item").slice(0, 4).css("display", "block");
 
-        // 클릭 이벤트 처리
-        $(".m_more").click(function (e) {
-            e.preventDefault();
+           // 숨겨진 항목이 없을 때
+if ($(".lecture_list02.slide02 .item:hidden").length === 0) {
+    $('.lecture_list02.slide02 .item').hide();
+    $(".lecture_list02.slide02 .item").slice(0, 4).css("display", "block");
+    $('.m_more').text('강좌 접기').addClass('active');
+}
 
-            // 숨겨진 항목이 없을 때
-            if ($(".lecture_list02.slide02 .item:hidden").length === 0) {
-                $('.m_more').text('강좌 접기').addClass('active');
-                $('.lecture_list02.slide02 .item').hide();
-                $(".lecture_list02.slide02 .item").slice(0, 4).css("display", "block");
-            } else {
-                // 숨겨진 항목이 있을 때
-                $(".lecture_list02.slide02 .item:hidden").slice(0, 4).fadeIn(200).css('display', 'block');
-            }
-        });
-
-        // '강좌 접기' 버튼 클릭 시 처리
-        $(document).on("click", ".m_more.active", function (e) {
-            $('.lecture_list02.slide02 .item').hide();
-            $(".lecture_list02.slide02 .item").slice(0, 4).css("display", "block");
-            $(this).text('더 많은 강좌 보기').removeClass('active');
-        });
-
-
-
+$(".m_more").click(function (e) {
+    e.preventDefault();
+    
+     if ($(".lecture_list02.slide02 .item:hidden").length === 0) {
+        $('.lecture_list02.slide02 .item').fadeOut(200);
+        $(".lecture_list02.slide02 .item").slice(0, 4).fadeIn(200).css('display', 'block');
+         $('.m_more').text('더 많은 강좌 보기').removeClass('active');
+    } else if ($(".lecture_list02.slide02 .item:hidden").length < 5) {
+        
+        $(".lecture_list02.slide02 .item:hidden").slice(0, 4).fadeIn(200).css('display', 'block');
+        $('.m_more').text('강좌 접기').addClass('active');
+    } else {
+        $(".lecture_list02.slide02 .item:hidden").slice(0, 4).fadeIn(200).css('display', 'block');
+    }
+});
+   
     } else {
 
 
