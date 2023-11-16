@@ -33,11 +33,11 @@ $(document).ready(function () {
         $('#header .mega_menu #mega_gnb li .tit').click(function () {
             $(this).parent().toggleClass('active')
         });
-          $('#newHeader .h_mobile_mid .mobile_menu > li > a').click(function(){
+        $('#newHeader .h_mobile_mid .mobile_menu > li > a').click(function () {
             $(this).parent().toggleClass('active');
-           })
+        })
     } else {
-      
+
     }
 
     $(window).resize(function () {
@@ -477,8 +477,8 @@ $(document).ready(function () {
                     settings: {
                         variableWidth: true,
                         dots: true,
-                        autoplay:true,
-                        autoplaySpeed:5000
+                        autoplay: true,
+                        autoplaySpeed: 5000
                     }
 					 },
 				]
@@ -624,9 +624,18 @@ $(document).ready(function () {
             e.preventDefault();
             $(".lecture_list02.slide02 .item:hidden").slice(0, 5).fadeIn(200).css('display', 'block'); // 클릭시 more 갯수 지저정
             if ($(".lecture_list02.slide02 .item:hidden").length == 0) { // 컨텐츠 남아있는지 확인
-                $('.m_more').fadeOut(100); // 컨텐츠 없을 시 버튼 사라짐
+                $('.m_more').text('강좌 접기');
+                $('.m_more').addClass('active');
+                
+                 $('.m_more').click(function(){
+                     $('.lecture_list02.slide02 .item').hide();
+        $(".lecture_list02.slide02 .item").slice(0, 4).css("display", "block");
+                     $(this).text('더 많은 강좌 보기');
+                     $(this).removeClass('active')
+                 });
             }
         });
+
     } else {
 
 
@@ -753,7 +762,7 @@ $(window).resize(function () {
 
     });
 
-    
+
 
 
 
@@ -996,5 +1005,3 @@ function onAutoPreviewNone() {
         $("#autoPreviewBtn").html("미리보기 끄기");
     }
 }
-
-
