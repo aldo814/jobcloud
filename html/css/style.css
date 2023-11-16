@@ -2205,7 +2205,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .h_gnb_wrap{width: 100%}
     #newHeader .h_gnb{justify-content: space-between;max-width: 100%}
     #newHeader .h_gnb > li{margin-left: 0}
-    #newHeader .h_ui{position: absolute;right: 0;top: 30px}
+    #newHeader .h_ui{position: absolute;right: 0;top: 5px}
      /* 헤더 */ #newHeader .nheader_mid {
         overflow: hidden;
     }
@@ -2901,6 +2901,9 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     
     #newHeader .h_cont .logo img{width: 130px}
     #newHeader .h_ui{top: 15px}
+    
+    .lecture_list02.sty01 > .item{width: calc(50% - 10px);margin-right: 20px;}
+    .lecture_list02.sty01 > .item:nth-child(2n){margin-right: 0}
 }
 
 
@@ -3012,6 +3015,8 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .lecture_cont .goPlay{margin: 20px auto 0 auto;padding: 10px;flex-direction: row;height: auto;border-radius: 5px}
     .lecture_cont .goPlay:before{margin:0;background-size: 10px;width: 10px;height: 15px;margin-right: 5px}
     .lecture_room .box h3{font-size: 15px;}
+    
+    .lecture_list02.sty01 > .item .img{height: 150px}
 
 }
 
