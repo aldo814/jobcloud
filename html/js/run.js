@@ -1013,3 +1013,10 @@ function onAutoPreviewNone() {
         $("#autoPreviewBtn").html("미리보기 끄기");
     }
 }
+
+
+    function close_pop03(flag) {
+        $('.sch_pop').hide();
+        $('body').removeClass('not_scroll');
+        $('.shadow').hide();
+    };
