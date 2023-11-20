@@ -2180,7 +2180,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .btn_chk li input:checked+label{background: #0082cc;border-color: #0082cc;color: #fff} 
 .btn_chk li input[type=checkbox] + label:before{display: none !important}
 
-.courseSearch{border-radius: 15px;overflow: hidden;box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.03)}
+.courseSearch{border-radius: 15px;overflow: hidden;box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.03);position: relative;}
 .courseSearch table{width: 100%;}
 .courseSearch caption{position: absolute;left: -99999px;width: 0;height: 0;overflow: hidden;}
 .courseSearch table tr{border-bottom: 1px solid #ddd;}
@@ -2191,7 +2191,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .courseSearch table td{background: #fff;}
 .bc_warp{position: relative;}
 .bc_warp .btn_chk{max-width: calc(100% - 26px);width: 100%;}
-.courseSearch .cls_btn{background: url(../images/user/close.png) no-repeat;width: 16px;height: 16px;position: absolute;right: 10px;top: 50%;transform: translateY(-50%);text-indent: -9999px;display: block;}
+.courseSearch .cls_btn{background: url(../images/user/close.png) no-repeat;width: 16px;height: 16px;position: absolute;right: 20px;top: 25px;;text-indent: -9999px;display: block;z-index: 999999999999}
 .blue_scr_button {text-align: center;margin-top: 40px;}
 .blue_scr_button input{display: flex;margin: auto;border: 0;color: #fff;background: url(../images/user/sch.png) no-repeat left 30px center#0093d5;padding: 10px 40px 10px 55px;border-radius: 30px;font-size: 18px;}
 .input_style02{font-size: 14px;background: #fff;border: 1px solid #dddddd;padding: 5px 15px;}
@@ -2955,6 +2955,7 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .blue_scr_button input{font-size: 15px;}
     .btn_chk li input + label{font-size: 13px;padding: 5px 15px}
     .blue_scr_button{margin-top: 20px;}
+    .courseSearch .cls_btn{top:22px}
 }
 
 

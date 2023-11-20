@@ -149,6 +149,9 @@ $(document).ready(function () {
             prevEl: '.slide01 .lt_swiper-button-prev',
         },
         breakpoints: {
+            1024:{
+                slidesPerView: 4,
+            },
             769: {
                 slidesPerView: 'auto',
             }
